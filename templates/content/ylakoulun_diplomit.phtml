@@ -1,0 +1,89 @@
+<!-- START of: Content/ylakoulun_diplomit.phtml -->
+<? $this->headTitle('Ylakoulun-diplomit'); $this->content()->setHeading('Yläkoulun lukudiplomit'); ?>
+
+<div class="row">
+    <div class="haasteluokka">
+    <div class="col-sm-7">
+        <h2>Kirjalistat</h2>
+        <p>Alla on lukudiplomin kirjasuosituslistat. Ne auttavat sinua löytämään lukemista. 
+        Voit kuitenkin aina lukea lukudiplomia varten näiden kirjalistojen ulkopuolelta oman 
+        valitsemasi kirjan. Alla on lukudiplomin kirjasuosituslistat. 
+        Ne auttavat sinua löytämään lukemista. Listasta näet kirjojen tiedot ja saatavuuden. 
+        Kirjautumalla sisään voit myös varata kirjan. 
+        Voit kuitenkin aina lukea lukudiplomia varten näiden kirjalistojen ulkopuolelta oman valitsemasi kirjan.</p>
+
+
+
+    <h3>Lyhyttä luettavaa</h3>
+  <?= $this->feed('ylakoulun-lyhytta-luettavaa'); ?>  
+
+    <h3>Sarjakuvat</h3>
+<?= $this->feed('ylakoulun-sarjakuvat'); ?> 
+
+     <h3>Ahdistavat aiheet </h3>
+<?= $this->feed('ylakoulun-ahdistavat-aiheet'); ?> 
+
+    <h3>Elämää ennen </h3>
+<?= $this->feed('ylakoulun-elamaa-ennen'); ?> 
+
+    <h3>Kirjallisuuden genret </h3>
+<?= $this->feed('ylakoulun-kirjallisuuden-genret'); ?>  
+
+    <h3>Tietokirjat</h3>
+<?= $this->feed('ylakoulun-tietokirjat'); ?> 
+
+     <h2>Kirjaan perustuvat elokuvat </h2>
+<?= $this->feed('ylakoulun-kirjaan-perustuvat-elokuvat'); ?> 
+
+     <h3>Runot & säeromaanit</h3>
+<?= $this->feed('ylakoulun-saeromaanit'); ?>  
+
+
+     <h3>Muut maat ja kulttuurit</h3>
+<?= $this->feed('ylakoulun-muut-maat'); ?> 
+
+
+     <h3>Kotimaiset klassikot</h3>
+<?= $this->feed('ylakoulun-kotimaiset'); ?> 
+
+
+     <h3>Harrastukset</h3>
+<?= $this->feed('ylakoulun-harrastukset'); ?> 
+
+
+     <h3>Tasa-arvo/hlbtiqa+ </h3>
+<?= $this->feed('ylakoulun-tasa-arvo'); ?> 
+
+</div>
+</div>
+   
+    
+<div class="col-sm-5">
+    <h2>Lukudiplomin voi suorittaa opettajan ohjeiden mukaan koulussa tai tehdä itse kotona</h2>
+        
+    <p>Kirjastosta saa neuvoja hyvän kirjan löytämiseksi. Myös kaverin suositukset ja erilaiset kirjablogit ja -vinkit kannattaa hyödyntää.
+Lukudiplomin voi suorittaa myös kuuntelemalla äänikirjoja tai
+Lukemalla e-kirjoja. Ne, joilla on todettu lukemiseste, voivat suorittaa diplomin Celia-kirjastoa käyttäen.
+Kulta-diplomin saa lukemalla 6 kirjaa.
+Platina-diplomin saa lukemalla 11 kirjaa.
+Kun tavoite on täynnä, lukijalle annetaan lukudiplomi.
+Kotona suoritetusta lukudiplomista saat diplomin kirjastosta, kun palautat lukudiplomilomakkeen kirjastoon.
+</p>
+    
+
+    <h2>Tulostettavat</h2>
+
+    <ul class="list-bullets">
+        
+    <li><a href="<?=$this->fileSrc('ylakoulun_kirjasuosituslista.pdf')?>" target="_blank">Kirjasuosituslista (pdf)</a></li>
+    
+    <li><a href="<?=$this->fileSrc('ylakoulun_lukudiplomilomake.pdf')?>" target="_blank">Lukudiplomilomake (pdf)</a></li> 
+    
+    <li><a href="<?=$this->fileSrc('ylakoulun_diplomi.pdf')?>" target="_blank">Lukudiplomi (pdf)</a></li> 
+    
+    </ul>  	
+        	
+</div>
+</div>
+
+<!-- END of: Content/ylakoulun_diplomit.phtml -->

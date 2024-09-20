@@ -1,0 +1,54 @@
+<!-- Työpöytäsivun aineistonostokarusellit korkeammilla kansilla -->
+<div class="hidden-xs">
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('poimintoja-kokoelmista'); ?>
+        </div>    
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('carousel-uutuudet'); ?> 
+        </div>    
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('carousel-sampokommentit'); ?> 
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('varatuimmat'); ?>
+        </div>    
+    </div>
+</div>
+
+<!-- Mobiilisivun aineistonostokarusellit matalammilla kansilla -->
+<div class="hidden-lg hidden-md hidden-sm">
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('poimintoja-kokoelmista_mobiili'); ?>
+        </div>    
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('carousel-uutuudet_mobiili'); ?> 
+        </div>    
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('carousel-sampokommentit_mobiili'); ?> 
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('varatuimmat_mobiili'); ?>
+        </div>    
+    </div>
+</div>
+

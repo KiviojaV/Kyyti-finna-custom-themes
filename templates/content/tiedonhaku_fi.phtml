@@ -1,0 +1,68 @@
+<? $this->headTitle('Tiedonhaku'); $this->content()->setHeading('Tiedonhaku');  ?>
+ 
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('tiedonhaun-lahteita'); ?> 
+    </div>
+</div>
+ 
+<div class="row">
+    <div class="col-md-4 kysy-kirjastonhoitajalta">
+        <h2>Kysy kirjastonhoitajalta</h2>
+        <p>Kysy kirjastonhoitajalta on kirjastojen yhteinen verkkotietopalvelu. Vastaamme kolmen arkipäivän kuluessa. <a target="_blank" href="https://www.kirjastot.fi/kysy/tietoa-palvelusta">Tietoa palvelusta</a>.</p>
+        <iframe src="https://www.kirjastot.fi/asklib/embed/257600" style="height:520px; width:100%; border:0"></iframe>
+    </div>
+    <div class="col-md-4 feed-no-m-p">
+        <h2>Kirjastonhoitajalta kysyttyä</h2>
+        <?= $this->feed('kysy-kirjastonhoitajalta'); ?> 
+        <p>
+            <a target="_blank" href="https://www.kirjastot.fi/kysy/vastaukset">Lisää kysymyksiä</a><br />
+            <a target="_blank" href="https://www.kirjastot.fi/kysy/haku">Vastausten haku</a>
+        </p>
+    </div>
+    <div class="col-md-4 feed-no-m-p">
+        <h2>Makupalat.fi</h2>
+        <p>Kirjaston valikoimat laadukkaat verkkosivut tiedonhakijoille. Voit selata aiheen mukaan tai hakea. Tutustu myös valmiisiin aihepaketteihin.</p>
+        <h3>Uusimmat linkit</h3>
+        <?= $this->feed('makupalat-linkit'); ?> 
+        <h3>Uusimmat kokoelmat</h3>
+        <?= $this->feed('makupalat-kokoelmat'); ?> 
+        <p>
+            <a target="_blank" href="http://www.makupalat.fi/">Lisää linkkejä</a><br />
+            <a target="_blank" href="http://www.makupalat.fi/fi/kokoelmat">Kokoelmat</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Tiedonhaun avuksi</h2>
+        <p>Perusopastusta ja vinkkejä tiedonhaun tekemiseen, lähteiden valintaan ja tulosten arviointiin.</p>
+        <p>
+            <a target="_blank" href="https://www.kirjastot.fi/tiedonhaun-opastus">Tiedonhaun opastus</a><br />
+            
+            <a target="_blank" href="https://www.kirjastot.fi/tiedonhaun-opastus/tietokantoja-ja-hakemistoja">Tietokantoja ja hakemistoja</a>
+        </p>
+        <div class="embed-16-9">
+            <?=$this->iframe()->vimeo('252289390', ['video'])?>
+        </div>
+    </div>
+    <div class="col-md-4 feed-no-m-p">
+        <h2>Digitreenit</h2>
+        <p>Ylen Digitreeneistä löydät apua ja niksejä kännyköiden, tietokoneiden ja ohjelmien käyttöön.</p>
+        <?= $this->feed('digitreenit'); ?>
+        <p><a target="_blank" href="https://yle.fi/aihe/digitreenit">Ylen Digitreenit</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Finna.fi</h2>
+        <p>Suomen arkistojen, kirjastojen ja museoiden aarteet samalla haulla. Finnasta löydät kirja-aineiston lisäksi  karttoja, arkistojen aineistoja ja museoiden esineitä, valokuvia, videoita, elokuvia – melkein mitä vaan. Suuri osa materiaalia on heti käytettävissä verkossa.</p>
+        <p><a target="_blank" href="https://finna.fi">Finna.fi</a></p>
+        <div class="finna-campaign-item">
+            <h3 class="finna-campaign-title">Finna Street</h3>
+            <p>Löydä historiallisia kuvia sieltä missä olet!</p>
+            <div class="finna-campaign-content">
+                <a class="btn btn-lg btn-primary" href="https://finna.fi/Search/StreetSearch?go=1"><i class="fa fa-lg fa-crosshairs" aria-hidden="true"></i> <span>Näytä kuvat</span></a>
+            </div>
+        </div>
+    </div>
+</div>

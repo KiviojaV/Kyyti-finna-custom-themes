@@ -1,0 +1,31 @@
+<div class="row">
+    <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/664d93ae8fe43a042bd26f38'></script>
+    <div id='EVENTZWIDGET-664d93ae8fe43a042bd26f38' class='EVENTZWIDGET'></div>
+    
+    <?php
+    $script = <<<JS
+    const searchTerms = new Map([
+                ['Valitse aihe',''],
+                ['Digiopastukset','Digiopastus'],
+                ['Elokuvat','Elokuvat'],
+                ['Kirjailijavieraat','kirjailija'],
+                ['Kirjallisuus','Kirjallisuus'],
+                ['Lukukoirat','lukukoiratt'],
+                ['Lukupiirit','lukupiiiri'],
+                ['Musiikki','Musiikki'],
+                ['Näyttelyt','Näyttelyt'],
+                ['Satutuokiot','satutuokio']
+    ]);
+                
+    waitForWidgets(searchTerms);
+    JS;
+    echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+    ?>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('e-aineistojen_nosto'); ?>
+    </div>
+</div>
+</br>
+</br>

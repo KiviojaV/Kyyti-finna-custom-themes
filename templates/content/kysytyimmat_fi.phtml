@@ -1,0 +1,19 @@
+<!-- START of: Content/kysytyimmat.phtml -->
+
+<? $this->headTitle('Kysytyimmät kirjat'); $this->content()->setHeading('Kysytyimmät kirjat'); ?>
+
+<div class="row">
+    <div class="col-sm-12">
+        <?= $this->feed('kysytyimmat_lainatuimmat'); ?> 
+        <?= $this->feed('kysytyimmat_nousussa'); ?>
+        <?= $this->feed('kysytyimmat_kaunouutuudet'); ?>
+        <?= $this->feed('kysytyimmat_tietouutuudet'); ?>
+        <?= $this->feed('kysytyimmat_elamakerrat'); ?>
+        <?= $this->feed('kysytyimmat_jannarit'); ?> 
+        <?= $this->feed('kysytyimmat_romantiikka'); ?> 
+        <?= $this->feed('kysytyimmat_englanninkieliset'); ?>
+        <?= $this->feed('kysytyimmat_lapset'); ?> 
+    </div>
+</div>
+   
+<!-- END of: Content/kysytyimmat.tpl -->

@@ -1,0 +1,47 @@
+<!-- START of: Content/satudiplomisivu.phtml -->
+<? $this->headTitle('satudiplomi'); $this->content()->setHeading('Satudiplomi'); ?>
+
+<div class="row">
+    <div class="haasteluokka">
+    <div class="col-sm-12">
+        <h2>Kirjastot kutsuvat perheet ja lapsiryhmät satujen äärelle.</h2>
+        <p>Kyyti-kirjastojen satudiplomia voi alkaa suorittaa satuviikolla eli 16.10. alkaen ja viimeinen diplomin palautuspäivä on 30.4.2025.
+        Palauttamalla listan kahdestatoista luetusta kirjasta lapsi tai lapsiryhmä saa oman satudiplomin kirjastosta. 
+        Samalla voi osallistua oman kirjaston yllätyspalkintojen arvontaan antamalla yhteystiedot. 
+        Esimerkiksi Kouvolassa lapsiryhmät voivat saada satuja lukevan kirjastokissa Villi-Rillin luokseen ja Kotkassa arvotaan käsinukkeja.
+        Osallistumislomakkeen ja vinkkilistan saa kirjastosta tai kirjastoautosta. Ne löytyvät myös tämän sivun lopusta. 
+        Satudiplomista löytyy monipuolisia lukuvinkkejä, mutta yhtä hyvin mikä tahansa muukin kuva- tai satukirja sopii diplomikirjaksi.</p>
+ 
+        <p>Lapselle ääneen lukeminen on paitsi hyödyllinen niin myös hauska tapa viettää aikaa yhdessä. </p>
+
+
+
+    <h3>Satulistat</h3>
+<?= $this->feed('satudiplomi'); ?>  
+
+    
+
+</div>
+</div>
+   
+    
+<div class="col-sm-12">
+    
+    
+
+    <h2>Tulostettavat</h2>
+
+    <ul class="list-bullets">
+        
+    <li><a href="<?=$this->fileSrc('satudiplomi_kirjalista.pdf')?>" target="_blank">Kirjasuosituslista (pdf)</a></li>
+    <li><a href="<?=$this->fileSrc('satudiplomilomake.pdf')?>" target="_blank">Satudiplomilomake (pdf)</a></li>     
+    <li><a href="<?=$this->fileSrc('satudiplomitodistus_tyhjä.pdf')?>" target="_blank">Satudiplomitodistus, tyhjä (pdf)</a></li> 
+    <li><a href="<?=$this->fileSrc('satudiplomitodistus_villirilli.pdf')?>" target="_blank">Satudiplomitodistus, Kouvola (pdf)</a></li> 
+    <li><a href="<?=$this->fileSrc('satudiplomitodistus_hamina.pdf')?>" target="_blank">Satudiplomitodistus, Hamina (pdf)</a></li> 
+    
+    </ul>  	
+        	
+</div>
+</div>
+
+<!-- END of: Content/satudiplomi.phtml -->

@@ -1,0 +1,244 @@
+/* kirhakemiston sulkuteksti ja osoiteteksti */
+.organisation-info .closed {
+  color: #d50000;
+}
+.details {
+  color: #007091;
+}
+/* kansikuvat */
+.myresearch-grid-list .cover-image {
+  max-width: 75px;
+  max-height: 175px;
+}
+/*Nidenäytön Aineiston tarjoamiskohdan piilotus */
+.organisation-menu .recordProvidedBy,
+.image-rights .recordProvidedBy {
+  display: none;
+}
+/* Kirjallisuus-karusellit */
+.kirjallisuus {
+  font-size: 125%;
+}
+/* Tarkan haun kartan piilotus */
+.search-map-container {
+  display: none;
+}
+/* Karusellin selausnuolet */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 25px;
+}
+/* Tervetuloa */
+.infoboksi-header {
+  display: inline-block;
+  color: #000;
+  padding: 10px;
+  background: #fff;
+}
+/* Tarkennetun haun painike etusivulla */
+.nav.searchbox .searchbox-home .btn.btn-link {
+  background: #8c0052;
+}
+.searchbox .searchbox-home .btn.btn-link {
+  background: #fff;
+  color: #000;
+}
+/* Alasivujen otsikkokehysten asemointi */
+.main.template-dir-content.template-name-content h2 {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+/* Eaineistot-sivun siniset painikkeet  */
+.elinkit a {
+  background-color: #8c0052;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.w2-small h2 {
+  font-size: 1.6em !important;
+}
+/* Listapallukoiden väri ja muut määritykset */
+.list-bullets-blue {
+  color: #007091;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 1.2em;
+  padding-bottom: 0.9em;
+}
+.list-bullets-blue > li {
+  list-style-type: disc;
+}
+.list-bullets {
+  margin-top: -3px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 3.2em;
+  padding-bottom: 0.9em;
+}
+@media screen and (max-width: 480px) {
+  .list-bullets {
+    padding-left: 10%;
+  }
+}
+.list-bullets > li {
+  list-style-type: disc;
+  padding-left: 0.9em;
+}
+.list-numbers > li {
+  list-style-type: decimal;
+  padding-left: 0.9em;
+}
+.list-numbers {
+  margin-top: -10px;
+}
+/* Lomakkeet */
+.form-info {
+  font-weight: normal !important;
+}
+/* tilat
+.verticalcenter {
+  display: table-cell;
+  height: 320px;
+  vertical-align: middle;
+}*/
+.marginauto {
+  margin: 15px auto 10px;
+  display: block;
+}
+.icon-black {
+  color: #000000;
+}
+/* Kirjastokortin viivakoodin piilotus asiakastietojen kirjastokortit-välilehdeltä */
+.librarycard-barcode {
+  display: none;
+}
+/* Ennakkoilmoitus ei lähde, jos viive asetetaan nollaksi */
+/* .form-control option[value="0"] {
+  display: none;
+}
+*/
+/* Piilotettu otsake */
+.b {
+  visibility: hidden;
+}
+/* Vinkkien painike */
+.fasc-button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 0;
+  padding: 6px 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+}
+/* E-aineistot */
+.infobox_b a {
+  color: #007091;
+}
+/* Etusivun lohko */
+.feed-container .list-feed.with-image .title,
+.feed-container .list-feed.with-image .text {
+  width: 55%;
+  white-space: normal;
+}
+/* Nosto-header */
+.nosto-header {
+  background: #ffffff;
+  display: inline-block;
+  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #000;
+}
+/* Maksut-sivut */
+.maksutaulukko td {
+  padding: 0.7em 1em 0.7em 0.2em;
+  vertical-align: text-top;
+}
+.maksutaulukko tr {
+  border-bottom: 1px solid black;
+  font-size: 1.1em;
+}
+.maksutaulukko .vikarivi {
+  border-bottom: none;
+}
+.maksutaulukko td:nth-child(1) {
+  width: 17em;
+}
+.maksutaulukko td:nth-child(2) {
+  width: 7em;
+  text-align: center;
+}
+.eka_sarake_levea {
+  width: 30em !important;
+}
+/* Lehtilista */
+.lehtitaulukko {
+  table-layout: auto;
+  width: 100%;
+}
+.lehtitaulukko td {
+  padding: 0.7em 1em 0.7em 0.2em;
+  vertical-align: text-top;
+}
+.lehtitaulukko tr {
+  border-bottom: 1px solid lightgray;
+  font-size: 1.1em;
+}
+.lehtitaulukko .vikarivi {
+  border-bottom: none;
+}
+.lehtitaulukko td:nth-child(1) {
+  width: 30%;
+}
+.lehtitaulukko td:nth-child(2) {
+  width: 45%;
+}
+.lehtitaulukko td:nth-child(3) {
+  width: 25%;
+}
+.hakemisto a {
+  font-size: 2em;
+  padding-right: 0.7em;
+}
+.lukudiplomilista > .feed-container .list-feed li {
+  list-style-type: disc;
+  font-size: 16px;
+  padding-left: 1em;
+  margin-top: -0.3em;
+  margin-left: 1em;
+}
+/* Piilota varauksen noutomuistutus omat tiedot sivulta */
+#messaging-form div:nth-child(6) {
+  display: none;
+}
+#messaging-form div:nth-child(7) {
+  display: none;
+}
+/* Peru kaikki varaukset -painikkeen piilotus */
+#cancelAll {
+  display: none;
+}
+/* määrittää mobiilivälilehtien otsikoiden tyylin */
+.mobiilivalilehdet .nav {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.4em;
+}

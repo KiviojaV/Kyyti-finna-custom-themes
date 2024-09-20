@@ -1,0 +1,46 @@
+<!-- START of: finna - search/home/home-1.phtml -->
+
+<!--mobiilinäkymä-->
+<div class="hidden-lg hidden-md">
+    <!-- Välilehdet -->
+    <div class="mobiilivalilehdet">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#news" aria-controls="Ajankohtaista" role="tab" data-toggle="tab">Ajankohtaista</a></li>
+            <li role="presentation"><a href="#opening_hours" aria-controls="Aukioloajat" role="tab" data-toggle="tab">Aukioloajat</a></li>
+        </ul>
+    </div>
+    
+    <!-- Välilehtien sisältö -->
+    <div class="tab-content">
+        
+        <!--aukioloajat-->
+        <div role="tabpanel" class="tab-pane" id="opening_hours">
+            <?=$this->organisationInfo()?>
+        </div>
+        
+        <!--Tiedotteet-->
+        <div role="tabpanel" class="tab-pane active" id="news">        
+            <div class="row">
+                <div class="col-md-12"> 
+                    <h2>Ajankohtaista</h2>
+                    <?= $this->feed("carousel_mainos"); ?>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+
+<!--Työpöytänäkymä-->
+<div class="hidden-sm hidden-xs">
+    <?php if ($template = $this->content()->findTemplateForLng('search/home/home-left')): ?>
+      <div class="left-column-content">
+        <?=$this->render($template)?>
+      </div>
+    <?php endif; ?>
+    <?php if ($template = $this->content()->findTemplateForLng('search/home/home-right')): ?>
+      <div class="right-column-content">
+        <?=$this->render($template)?>
+      </div>
+    <?php endif; ?>
+</div>
+<!-- END of: finna - search/home/home-1.phtml -->

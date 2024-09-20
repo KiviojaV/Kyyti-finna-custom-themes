@@ -1,0 +1,356 @@
+<!-- START of: Content/lehdet.fi.phtml -->
+<? $this->headTitle('Lehdet'); $this->content()->setHeading('Kyyti-kirjastoihin tilatut lehdet'); ?>
+
+<div class="row">
+    <div class="col-sm-3 sidebar">
+        <div class="content-navigation-menu"></div>
+    </div>
+  
+    <div class="col-sm-9">
+        <div id="periodicals" class="content-section">
+            <p><img src="<?=$this->imageSrc('palvelut/lehdet_banneri.jpg')?>" alt="Lehtisali, jossa lukijoita ja koristevalaisin"></p>
+            <h2>Aikakauslehdet</h2>
+            <ul class="list-bullets">
+                <li><a href="<?=$this->url('content-page',  ['page' => 'lehdet_aikakauslehdet-hamina'])?>"> Hamina</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('aikakauslehdet_iitti.pdf')?>"> Iitti (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('aikakauslehdet_iitti_kirjastoauto.pdf')?>"> Iitin kirjastoauto (PDF)</a></li>
+                <li><a href="<?=$this->url('content-page',  ['page' => 'lehdet_aikakauslehdet-kotka'])?>"> Kotka</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('aikakauslehdet_kouvola.pdf')?>"> Kouvola (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('Kouvolan_maakuntakokoelman_aikakauslehdet.pdf')?>"> Kouvolan kotiseutukokoelma (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('aikakauslehdet_miehikkala.pdf')?>"> Miehikkälä (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('lehdet_pyhtää.pdf')?>"> Pyhtää (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('aikakauslehdet_virolahti.pdf')?>"> Virolahti (PDF)</a></li>
+            </ul>
+        </div>
+    
+        <div id="newspapers" class="content-section">
+            <h2>Sanomalehdet</h2>
+            <ul class="list-bullets">   
+                <li><a target="_blank" href="<?=$this->fileSrc('sanomalehdet_hamina.pdf')?>"> Hamina (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('sanomalehdet_iitti.pdf')?>"> Iitti (PDF)</a></li>
+                <li><a href="<?=$this->url('content-page',  ['page' => 'lehdet_sanomalehdet-kotka'])?>"> Kotka</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('sanomalehdet_kouvola.pdf')?>"> Kouvola (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('sanomalehdet_miehikkala2.pdf')?>"> Miehikkälä (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('lehdet_pyhtää.pdf')?>"> Pyhtää (PDF)</a></li>
+                <li><a target="_blank" href="<?=$this->fileSrc('sanomalehdet_virolahti.pdf')?>"> Virolahti (PDF)</a></li>
+            </ul>
+        
+            <p>PDF-tiedostojen lukemiseen tarvitset lukuohjelman. Voit ladata esimerkiksi Adoben Acrobat Reader -lukuohjelman tietokoneelle <a href="https://get.adobe.com/fi/reader/">Adoben nettisivulta</a> tai mobiililaitteille laitteen sovelluskaupasta.</p>
+        </div>
+        
+        <div id="e-magazines" class="content-section">        
+            <h2>Sähköiset aikakauslehdet</h2>
+            <h3>Kotimaisten aikakauslehtien lukeminen</h3>
+            <p>Kyyti-kirjastojen kokoelmassa on noin 80 etäkäyttöistä kotimaista aikakauslehteä, joita voit lukea missä tahansa omalla laitteella. 
+            Lisäksi voit lukea noin 20 aikauslehteä kirjaston tietokoneilla tai kirjautumalla laitteellasi kirjaston langattomaan verkkoon.</p>
+            
+            <h3>Etäkäyttöiset kotimaiset aikakauslehdet</h3>
+            <p class="kyyti-badge-container">
+                Etäkäyttöisiä lehtiä voit lukea Kansalliskirjaston E-kirjasto-sovelluksella, jonka voit mobiililaitteellesi Googlen tai Applen sovelluskaupasta:
+                <br>
+                <a href="https://play.google.com/store/apps/details?id=fi.kansalliskirjasto.ekirjasto">
+                <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Lataa Googlen Play-kaupasta"></a>
+                <a href="https://apps.apple.com/fi/app/e-kirjasto/id6471490203?l=fi">
+                <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Lataa Applen App Storesta"></a>
+            </p>
+            <br>
+            <h3>Kirjastossa luettavat kotimaiset aikakauslehdet</h3>
+            <p>Voit lukea paikalliskäyttöisiä aikakauslehtiä <a href="https://kyyti.emagz.fi">eMagz-lehtipalvelussa</a> joko kirjaston tietokoneilla tai 
+            kirjautumalla kirjaston langattomaan verkkoon. Kokoelmassa on seuraavat lehdet:</p>
+            <ul class="list-bullets">
+                <li>Antiikki & Design</li>
+                <li>Arvopaperi</li>
+                <li>Auto Bild Suomi</li>
+                <li>Avotakka</li>
+                <li>ET-lehti</li>
+                <li>ET Terveys</li>
+                <li>Hyvä Terveys</li>
+                <li>Ilta-Sanomat</li>
+                <li>Iltalehti</li>
+                <li>Kauppalehti</li>
+                <li>Kodin Kuvalehti</li>
+                <li>KotiOpas</li>
+                <li>Luontaisterveys</li>
+                <li>Matka</li>
+                <li>Me Naiset</li>
+                <li>Seiska</li>
+                <li>Suuri Käsityölehti</li>
+                <li>Talouselämä</li>
+                <li>Tiede</li>
+                <li>Urheilulehti</li>
+                <li>Voima </li>
+            </ul>
+            
+            <h3>Ulkomaiset aikakauslehdet</h3>
+            <p>Voit lukea ulkomaisia aikakauslehtiä <a href="https://pressreader.com">Pressreader-lehtipalvelussa</a>.</p>
+            <p>Kokoelmassa on 7 000 sanoma- ja aikakauslehteä 120 maasta 60 kielellä. Voit lukea lehtiä joko etänä tai kirjastossa. Etäkäyttöön tarvitset kirjastokortin numeron ja tunnusluvun.</p>
+        </div>
+        
+        <div id="e-newspapers" class="content-section"> 
+            <h2>Sähköiset sanomalehdet</h2>
+            <h3>Kotimaisten sanomalehtien lukeminen</h3>
+            <p>Voit lukea kotimaisia sanomalehtiä <a href="https://epress.fi">ePress-lehtipalvelussa</a>.</p> 
+            <p>Palvelu toimii kirjaston tietokoneilla tai kirjautumalla kirjaston langattomaan verkkoon.</p>
+            
+            <p>Sanomalehdet</p>
+            <ul class="list-bullets">
+                <li>Aamulehti</li>
+                <li>Aamuposti</li>
+                <li>Aamuset</li>
+                <li>Aftonbladet</li>
+                <li>Akaan Seutu</li>
+                <li>Alueviesti</li>
+                <li>Annosnytt</li>
+                <li>Auranmaan Viikkolehti</li>
+                <li>Demokraatti</li>
+                <li>Enontekiön Sanomat</li>
+                <li>Espoon keskus -lehti</li>
+                <li>Espoonlahti-lehti</li>
+                <li>Etelä-Saimaa</li>
+                <li>Etelä-Suomen Sanomat</li>
+                <li>Etelä-Uusimaa</li>
+                <li>Forssan Lehti</li>
+                <li>Forum24</li>
+                <li>Haapavesi-lehti</li>
+                <li>Hakunila-lehti</li>
+                <li>Hankasalmen Sanomat</li>
+                <li>Haukivuoren Seutu</li>
+                <li>Heinäveden lehti</li>
+                <li>Hellas-lehti</li>
+                <li>Helsingin Sanomat</li>
+                <li>Helsingin Uutiset</li>
+                <li>Hirvensalmelainen</li>
+                <li>Hollolan Sanomat</li>
+                <li>Hufvudstadsbladet</li>
+                <li>Hämeen Sanomat</li>
+                <li>Hämeenlinnan kaupunkiuutiset</li>
+                <li>Iijokiseutu</li>
+                <li>Iisalmen sanomat</li>
+                <li>Iitinseutu</li>
+                <li>Ilkka-Pohjalainen</li>
+                <li>Inarilainen</li>
+                <li>Itis-lehti</li>
+                <li>Itä-Häme</li>
+                <li>Itä-Savo</li>
+                <li>Itäväylä</li>
+                <li>Janakkalan Sanomat</li>
+                <li>Joroisten lehti</li>
+                <li>Joutsan seutu</li>
+                <li>Jurvan Sanomat</li>
+                <li>Juvan lehti</li>
+                <li>Jämsän Seutu ja Vekkari</li>
+                <li>Järvenpää-lehti</li>
+                <li>Järviseudun sanomat</li>
+                <li>Järviseutu</li>
+                <li>KD-lehti</li>
+                <li>KMV-lehti</li>
+                <li>Kaakonkulma</li>
+                <li>Kaarina-lehti</li>
+                <li>Kainuun Sanomat</li>
+                <li>Kaivopuisto-Ullanlinna</li>
+                <li>Kalajokilaakso ja Kalajaska</li>
+                <li>Kalajokiseutu</li>
+                <li>Kaleva</li>
+                <li>Kangasalan Sanomat</li>
+                <li>Kangasniemen kunnallislehti</li>
+                <li>Kankaanpään Seutu</li>
+                <li>Kannelmäki-lehti</li>
+                <li>Kansan Uutiset</li>
+                <li>Kansan ääni</li>
+                <li>Karjalainen</li>
+                <li>Karkkilalainen</li>
+                <li>Karkkilan Tienoo</li>
+                <li>Kaupunkilehti Ankkuri</li>
+                <li>Kaupunkilehti Pohjois-Kymenlaakso</li>
+                <li>Kaupunkisanomat</li>
+                <li>KD-lehti</li>
+                <li>Kerava-lehti</li>
+                <li>Keski-Häme</li>
+                <li>Keski-Pohjanmaan yrittäjät</li>
+                <li>Keski-Uusimaa</li>
+                <li>Keskilaakso</li>
+                <li>Keskipohjanmaa</li>
+                <li>Keskisuomalainen</li>
+                <li>Kittilälehti</li>
+                <li>Kiuruvesi-lehti</li>
+                <li>KMV-lehti</li>
+                <li>Koillis-Savo</li>
+                <li>Koillissanomat</li>
+                <li>Kokkola-lehti</li>
+                <li>Komiat</li>
+                <li>Kontula-Vesala -lehti</li>
+                <li>Korpilahti-lehti</li>
+                <li>Korso-lehti</li>
+                <li>Koti-Kajaani</li>
+                <li>Koti-Lappi</li>
+                <li>Kotikulmilta</li>
+                <li>Kotimaa</li>
+                <li>Kotiseudun Sanomat</li>
+                <li>Kotiseutu-uutiset</li>
+                <li>Kouvolan Sanomat</li>
+                <li>Kuhmolainen</li>
+                <li>Kunnallislehti Paimio-Sauvo-Kaarina</li>
+                <li>Kuriiri</li>
+                <li>Kurikka-lehti</li>
+                <li>Kurun lehti</li>
+                <li>Kuusamon Seutu</li>
+                <li>Kymen Sanomat</li>
+                <li>Kyrönmaa-lehti</li>
+                <li>Laitilan Sanomat</li>
+                <li>Lakeuden aviisi</li>
+                <li>Landsbygdens Folk</li>
+                <li>Lapin Kansa</li>
+                <li>Lapuan Sanomat</li>
+                <li>Laukaa-Konnevesi</li>
+                <li>Lauttakylä-lehti</li>
+                <li>Lempäälän-Vesi-lahden Sanomat</li>
+                <li>Leppävaara-lehti</li>
+                <li>Lestijoki-lehti</li>
+                <li>LEVI Nyt</li>
+                <li>Lieksan lehti</li>
+                <li>Lippajärvi-Kauniainen-lehti</li>
+                <li>Loimaan Lehti</li>
+                <li>Lopen Lehti</li>
+                <li>Lounais-Lappi</li>
+                <li>Loviisan Sanomat</li>
+                <li>Luoteis-Lappi</li>
+                <li>Luoteis-Uusimaa</li>
+                <li>Luumäen Lehti</li>
+                <li>Lähilehti</li>
+                <li>Länsi-Saimaan Sanomat</li>
+                <li>Länsi-Savo</li>
+                <li>Länsi-Suomi</li>
+                <li>Länsi-Uusimaa</li>
+                <li>Länsiväylä</li>
+                <li>Maaseudun Tulevaisuus</li>
+                <li>Malmi-lehti</li>
+                <li>Mansku-lehti</li>
+                <li>Matinkylä-Olari-lehti</li>
+                <li>Matti ja Liisa</li>
+                <li>Merikarvia-lehti</li>
+                <li>Meän Torniolaakso</li>
+                <li>Miilu</li>
+                <li>Mikkelin erikoissanomat</li>
+                <li>Mikkelin kaupunkilehti</li>
+                <li>Munkki-lehti</li>
+                <li>Myyrmäki-lehti</li>
+                <li>Mäntsälän Uutiset</li>
+                <li>Nastola lehti</li>
+                <li>Nivala-lehti</li>
+                <li>Nokian Uutiset</li>
+                <li>Nurmijärven Uutiset</li>
+                <li>Nurmijärvi-lehti</li>
+                <li>Nya Åland</li>
+                <li>Nykypäivä</li>
+                <li>Orimattilan aluelehti</li>
+                <li>Orimattilan Sanomat</li>
+                <li>Oriveden Sanomat</li>
+                <li>Outokummun seutu</li>
+                <li>Paikallislehti Joutseno</li>
+                <li>Paikallislehti Sisä-Savo</li>
+                <li>Paikallislehti Somero</li>
+                <li>Paraisten kuulutukset</li>
+                <li>Parikkalan-Rautjärven Sanomat</li>
+                <li>Perhonjokilaakso</li>
+                <li>Perniönseudun Lehti</li>
+                <li>Perussuomalainen</li>
+                <li>Petäjävesi</li>
+                <li>Pieksämäen lehti</li>
+                <li>Pielavesi-Keitele</li>
+                <li>Pielisjokiseutu</li>
+                <li>Pietarsaaren Sanomat</li>
+                <li>Pikkukaupunkilainen</li>
+                <li>Pitäjäläinen</li>
+                <li>Pitäjänuutiset</li>
+                <li>Pogostan Sanomat</li>
+                <li>Pohjankyrö-lehti</li>
+                <li>Porilaine</li>
+                <li>Punkalaitumen Sanomat</li>
+                <li>Puolanka-lehti</li>
+                <li>Puruvesi-lehti</li>
+                <li>Pyhtään lehti</li>
+                <li>Pyhäjoen kuulumiset</li>
+                <li>Pyhäjokiseutu</li>
+                <li>Pyhäjärven Sanomat</li>
+                <li>Päijät-Häme</li>
+                <li>Raahelainen</li>
+                <li>Raahen seutu</li>
+                <li>Rannikkoseutu</li>
+                <li>Rantalakeus</li>
+                <li>Rantapohja</li>
+                <li>Raumalainen</li>
+                <li>Ruovesi-lehti</li>
+                <li>Saarijärveläinen</li>
+                <li>Saariselän sanomat</li>
+                <li>Salon Seudun Sanomat</li>
+                <li>Sampo-lehti</li>
+                <li>Satakunnan Kansa</li>
+                <li>Satakunnan Viikko</li>
+                <li>Savon Sanomat</li>
+                <li>Seinäjoen Sanomat</li>
+                <li>Selänne-lehti</li>
+                <li>Seutulehti UutisOiva</li>
+                <li>Sieviläinen</li>
+                <li>Siikajokilaakso</li>
+                <li>Sipoon Sanomat</li>
+                <li>Sisä-Suomen Lehti</li>
+                <li>Soisalon Seutu</li>
+                <li>Sompio</li>
+                <li>Sotkamo-lehti</li>
+                <li>Suomenmaa</li>
+                <li>Suomenselän sanomat</li>
+                <li>Suupohjan Sanomat</li>
+                <li>Suur-Jyväskylän Lehti</li>
+                <li>Suur-Keuruu</li>
+                <li>Syd-Österbotten</li>
+                <li>Sydän-Hämeen Lehti</li>
+                <li>Sydän-Satakunta ja Jokilaakso</li>
+                <li>Tammisto-lehti</li>
+                <li>Tamperelainen</li>
+                <li>Teisko-Aitolahti</li>
+                <li>Tejuka</li>
+                <li>Tervareitti</li>
+                <li>Tikkurila-lehti</li>
+                <li>Turun Sanomat</li>
+                <li>Turun Tienoo</li>
+                <li>Tuusula-lehti</li>
+                <li>Tyrvään Sanomat</li>
+                <li>Töllötin</li>
+                <li>Urjalan Sanomat</li>
+                <li>Uudenkaupungin Sanomat</li>
+                <li>Uusi Lahti</li>
+                <li>Uusi Rovaniemi</li>
+                <li>Uusimaa</li>
+                <li>Uutis-Jousi</li>
+                <li>Uutisvuoksi</li>
+                <li>Vakka-Suomen sanomat</li>
+                <li>Valkeakosken Sanomat</li>
+                <li>Vantaan Sanomat</li>
+                <li>Vasabladet</li>
+                <li>Vihdin uutiset</li>
+                <li>Viikkosavo</li>
+                <li>Viiskunta</li>
+                <li>Viispiikkinen</li>
+                <li>Viitasaaren Seutu</li>
+                <li>Vuokatti News</li>
+                <li>Västra Nyland</li>
+                <li>Warkauden Lehti</li>
+                <li>Wiita-sanomat</li>
+                <li>Ylä-Kainuu</li>
+                <li>Ylä-Karjala</li>
+                <li>Ylä-Satakunta</li>
+                <li>Ylöjärven Uutiset</li>
+                <li>Ähtärinjärven uutisnuotta</li>
+                <li>Åbo Underrättelser</li>
+                <li>Åland just nu</li>
+                <li>Ålandstidningen</li>
+                <li>Österbottens Tidning</li>
+                <li>Östnyland</li>
+            </ul>
+            <h3>Ulkomaiset sanomalehdet</h3>
+            <p>Voit lukea ulkomaisia sanomalehtiä <a href="https://pressreader.com">Pressreader-lehtipalvelussa</a>.</p>
+            <p>Pressreaderissä on 7 000 sanoma- ja aikakauslehteä 120 maasta 60 kielellä. Voit lukea lehtiä joko etänä tai kirjastossa. Etäkäyttöön tarvitset kirjastokortin numeron ja tunnusluvun.</p>            
+        </div>
+    </div>
+</div>
+<!-- END of: Content/lehdet.fi.phtml -->

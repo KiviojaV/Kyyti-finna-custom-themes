@@ -1,0 +1,575 @@
+/* All custom less-code here */
+
+/*Haetaan organisation-infon oletustyylit yliajava less-tiedosto */
+@import "custom-organisation-info.less";
+
+/* Tyylimääritykset Lukemalla jaksaa-hankesivulle */
+@import "lukemalla_jaksaa.less";
+
+// Tapahtumapalikan tyylimääritykset
+@import "eventWidgets.less";
+
+//== List feed styles
+//@list-feed-background: #abc;
+//@list-feed-padding: 10px;
+
+/* Hakulaatikon taustakuvan  kohdistus */
+ .template-dir-search.template-name-home .search-form-container {
+    padding-top: 10em;
+    padding-bottom: 7em;
+} 
+/* Vasen ja oikea ylälohko */    
+     .left-column-content {
+        & .list-feed {
+            & .feed-header {
+               width: 100%; 
+            }
+            & li .title {
+                display: block;
+                line-height: 1.2em;
+                margin-bottom: 15px;
+           }
+        }
+    }
+    & .right-column-content {
+        padding-bottom: 15px;
+        background: none;
+        & h2 {
+            .feed-container .list-feed .feed-header();
+            width: 100%;
+        }
+    }
+
+
+/* Kysymysmerkkipallukan taustaväri */
+ i.fa.fa-question-circle-big {
+    background-color: #fff;
+} 
+
+/* Kirhakemiston pallukka */
+i.fa.fa-map-marker {color: #007091;}
+
+/* Hävitä palautekupla etusivulta */
+.floating-feedback-btn {
+   display: none;
+}
+
+/* Piilota palaute-linkki navbarista 
+.nav a[id=feedback-link] {
+  display: none;
+}
+*/
+
+/* Kirjastohakemiston buttonit */
+.contact-links {
+  .btn {
+      background: #0272ba;
+  }
+  /* Piilotetaan wifi-iconi */
+  .btn-round {
+      display:none;
+  }
+}
+
+/* karusellin ohjausnuolet */
+.carousel .slick-initialized.slick-slider:not(.slick-vertical) {
+    & .slick-prev, .slick-next {
+        background: none;
+        &:before {
+            color: @gray;
+        }
+    }
+    //remove carousel black background color
+    & .slick-slide.adjusted-height .wrapper {
+        background: transparent;
+    }
+}
+
+/* Karusellien otsikot ja asemointi */
+
+.carousel .carousel-header {
+    
+    display: inline-block;
+    padding: 15px;
+    color: #000;
+}
+
+.slick-list > .slick-track { 
+margin-left:0; 
+}
+
+/* Etusivun määrityksiä */
+
+.tiedotebox {
+a:link { color: #007091; }
+} 
+
+/* h1.introductionText
+{
+    font-size: 1.3em;
+    padding: 5px 3px 3px 3px;
+    color: #fff;
+    font-weight: 600;
+    background: none;
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 1px;
+} */
+
+/* Tämä muokkaisi lisäotsikkoa, jos sellainen olisi
+h3.introductionText {
+    color:@brand-secondary;
+} */
+
+
+
+//hakuboksi, tuo alun litania varmistaa, että koskee vain etusivua
+.template-name-home.searchbox {
+    margin-top: 2em;
+}
+
+/* Syöte */
+.ajankohtaista {
+font-size: medium;
+a:link { color: #007091; }
+.feed-container .list-feed li .title {
+    display: block;
+    line-height: 1.2em;
+    margin-bottom: 15px;
+}
+}
+
+/* Infoboksi */
+.infoboksi {
+font-size: medium;
+p {
+    color: #000000;
+}
+a:link {
+    color: #007091;
+}
+a:visited {
+    color: #007091;
+}
+
+.carousel-header {
+               width: 100%; 
+               padding: 10px;
+            }
+}
+
+/*infoboksit englanninkielisille sivuille*/
+.englishInfobox {
+    margin-top:30px;
+    
+    /* nappi */
+    .btn-primary {
+        margin-left:11px;
+        font-size:1.1em;
+        //padding:10px;
+    }
+    /*valkoinen laatikko*/
+    .white-box {
+        margin: 20px 0px;
+        padding: 10px 20px;
+        color: #2b2b2b;
+        background: #ffffff;
+        border: none;
+        font-size: 1.3em;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    /*valkoinen ilman varjoa*/
+    .no-shadow-white-box {
+        margin: 20px 0px;
+        padding: 10px 20px;
+        color: #2b2b2b;
+        background: #ffffff;
+        border: none;
+        font-size: 1.3em;
+    }
+    
+    /*harmaa laatikko*/
+    .gray-box {
+        margin: 20px 0px;
+        padding: 10px 20px;
+        color: #2b2b2b;
+        background: #f5f5f5;
+        border: none;
+        font-size: 1.3em;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+    /*kustomoidut pallukat*/
+    .list-bullets-english-home > li {
+        list-style-type: disc;
+        list-style-position: inside;
+        margin-top: -3px;
+        font-size: 1.2em;
+        line-height: 1.5;
+        padding-left: 0.5em;
+        padding-bottom: 0.9em;
+        font-size:1em;
+    }
+}
+
+/* Selaa-palkin marginaali */
+.browsebar nav.navbar .nav-wrapper {
+    margin-left: 0px;
+}
+
+/* Selaa-palkin Kyyti-kirjastot -painikkeen taustaväri ja määritykset */
+.browsebar .browse-link {
+    background-color: rgba(140, 0, 82, 0.17); 
+}
+
+@media (max-width: @screen-xs-max) {
+   .browsebar nav.navbar { 
+      width: 55%;
+   }
+ }
+ 
+ /* Selaa palkin some */
+.browsebar .fa-facebook {
+    padding: 20px;
+    font-size: 50px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.browsebar .fa-instagram {
+    padding: 20px;
+    font-size: 50px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Don't print link hrefs */
+@media print {
+  a[href]:after {
+    content: none
+  }
+}
+
+/* Vie viite-painikkeen piilottaminen saatavuustiedoista */
+.record .nav-pills li.dropdown {
+    display: none;
+}
+
+/* Tiedonhakusivun koodi */
+.embed-16-9 {
+    clear: both;
+    height: 0;
+    padding-bottom: 53.25%;
+    padding-top: 25px;
+    position: relative;
+    margin-bottom: 10px;
+    iframe {
+        position: absolute;
+        width: 100% !important;
+        height: 100% !important;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* Mediamajan 3D-tulostimen esittelyvideo */
+.ultimaker_iframe {
+    max-width: 100%;
+}
+
+.kysy-kirjastonhoitajalta > p {
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding-right: 60px;
+    min-height: 85px;
+    &:lang(fi) {
+      background-image: url(../images/kysy-kirjastonhoitajalta.svg);
+    }
+    &:lang(sv) {
+      background-image: url(../images/kysy-kirjastonhoitajalta-sv.svg);
+    }
+}
+
+.feed-no-m-p {
+    .feed-container {
+        .list-feed {
+            padding: 0;
+            margin-bottom: 0;
+            li {
+                line-height: 1.5;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+/* Finna Street Ad */
+.finna-campaign-item {
+    background-image:url(../images/street-kuva.jpg);
+    background-position:center bottom;
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:100%;
+    height:325px;
+    position:relative;
+    border-right:12px solid #fff;
+    p {
+        color:#fff;
+        font-size:1em;
+       font-weight:600;
+        text-align:center;
+        width:100%;
+        text-shadow:1px 1px 2px #000000;
+        font-size:1.2em;
+    }
+    .finna-campaign-title {
+        padding-top:1em !important;
+        font-size:3.5em !important;
+        font-weight:700;
+        text-align:center;
+        color:#fff;
+        text-shadow:2px 2px 4px #000000
+    }
+    .finna-campaign-content {
+        background:rgba(1,1,1,0.6);
+        position:absolute;
+        bottom:0;
+        left:0;
+        padding:20px;
+        height:33%;
+        width:100%;
+        text-align:center;
+        margin-top:1em;
+        .btn-primary {
+            padding-top:.5em;
+            padding-bottom:.5em
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .finna-campaign-item .finna-campaign-title {
+        padding-top:0;
+    }
+}
+/* Finna Street Ad ends */
+
+/* Täytetty e-kirja painike */
+.template-dir-search.template-name-results .available-online-links a, .template-dir-record .available-online-links a, .template-dir-search.template-name-results .fulltextField a, .template-dir-record .fulltextField a {
+    margin-bottom: 3px;
+}
+
+.template-dir-search.template-name-results, .template-dir-record {
+    & .available-online-header {
+       display: none; 
+    }
+    
+    & .available-online-links a, .fulltextField a {
+        word-break: break-all;
+        color: @body-bg;
+        background: #ffffff;
+        padding: 4px 8px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+}
+
+/* Footteri */
+.footer {
+a:link { color: #007091;}
+a:visited { color: #007091;}
+}
+.footer p {
+color: #000000
+}
+
+/* Tarkennettu haku - painikelinkit */
+.btn-link {
+color: #007091;
+}
+.tooltip-local-advanced, .tooltip-pci-advanced, .tooltip-eds-advanced, .tooltip-summon-advanced {
+    color: #007091;
+}    
+
+.searchbox-columns a {
+    color: #007091;
+}
+
+/* Karttanäkymä */
+.show-map a { color: #007091;
+}
+.leaflet-container .leaflet-control-attribution
+{
+color: #000;
+}
+.leaflet-container .leaflet-control-attribution {
+    background: #fff;
+}   
+
+/* Lainat */
+.status .badge.ok {
+    color: #8c0052;
+}
+.status .badge.ok::before {
+    color: #8c0052;
+}
+/* Modaalien musta sulkuruksi */
+.modal-content .close {
+color: #000;
+}
+/* Aukiolojen kirjastovalinta */
+.organisation-dropdown-holder .organisation.dropdown > a {
+    color: #000;
+}
+/* Palvelu */
+.tooltip {
+color: #007091;
+}
+
+/* Supernostot etusivulla */
+
+.nosto-1 {
+    background-image: url(../images/lanu/pitsahaaste5.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-right: 2px solid #fff;
+}
+
+.nosto-1 .nosto-1-content {
+    background: rgba(1,1,1,0.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.nosto-1 .nosto-1-title {
+    padding-top: 1em;
+    font-size: 3.5em;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-shadow: 6px 6px 10px #000000;
+}
+
+.nosto-1 p {
+    color: #000000;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+}
+
+.nosto-hover-title {
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+}   
+
+
+/*************************************************
+**Lukuhaaste
+*************************************************/
+/*Lukuhaaste-karusellien säädöt*/
+
+
+  .haasteluokka {
+        & .carousel {
+            &  .slick-initialized {
+                /*poistaa sivumäärä-pisteet karusellin alla*/
+                & .slick-dots {
+                    display: none !important;
+                }
+            }
+        }
+    }
+.haasteluokka {
+    & .carousel-text {
+background: none;
+    }
+}
+
+/* Browsebar läpinäkyvyys, tummensin yhden kymmenyksen nykyiselle taustakuvalle (19.3.2024) */
+.browsebar {
+    background-color: rgba(140, 0, 82, 0.8);
+}
+
+/* Poistetaan ylimääräinen väli ajankohtaistiedotteista ottamalla otsikon alamarginaali ja padding pois listatyyppiseltä syötteeltä */
+.feed-container .list-feed .feed-header {
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+}
+
+/* Modaali-ikkunoiden sulkupainike valkoiseksi, että erottuu uudesta tummasta pohjasta */
+.modal-content .close {
+    color: #f9f2f6;
+}
+
+/* Ajankohtaista-karusellin alatekstien muotoilu */
+finna-feed.carousel.splide--ltr .feed-item-holder .carousel-slide-header p.title-bottom {
+    font-size: 1.2em;
+    font-weight: 600;
+    background: 0 0;
+    text-shadow: none;
+    color: #121212;
+}
+
+/* määrittää mobiilivälilehtien otsikoiden tyylin */
+.mobiilivalilehdet {
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1.4em;
+    }
+    
+    .nav-tabs>li.active>a {
+        color:#007c90;
+    }
+}
+
+/* Pill-tyylimääritykset tapahtuma-upokkeen välilehtiä varten */
+.tapahtumapallukat {
+    h2 {
+        padding-left:15px;
+    }
+    .nav-pills {
+        a {
+            color:black;
+        }
+        li:not(.share-buttons):not(.whatsapp) {
+            a {
+              border-radius: 10px;
+              padding: 0.57em;
+              border: 1px solid rgba(140, 0, 82, 0.7);
+              .active {
+                  color:white;
+                  font-weight: bold;
+              }
+            }
+        }
+    }
+}
+
+/* Sovelluskauppojen linkkien muotoilu */
+    .kyyti-badge {
+        display: inline-block;
+        overflow: hidden;
+        height: 56px;
+        width: auto;
+        padding: 16px 16px 0px 0px;
+    }
+    .kyyti-badge-container a:hover {
+        border-bottom: 0px;
+    }
+    
+
+

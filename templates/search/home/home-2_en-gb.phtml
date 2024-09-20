@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="englishInfobox">
+        <div class="col-md-6">
+            <div class="white-box">
+                <h2>Renewals and reservations</h2>
+                <ul class="list-bullets-english-home">
+                    <li>Log in to access your account if you want to renew your loans or make a reservation</li>
+                    <li>You can find the login in the right upper corner in the web library, in mobile view also in the navigation menu</li> 
+                    <li>If you are not automatically transferred to loans or reservations, open the menu by clicking the person icon and select "Your account"</li>
+                </ul>   
+                <p><a class="btn btn-primary" role="button" href="<?=$this->url('myresearch-userlogin')?>" data-lightbox title="Login"><i class="fa fa-sign-in"></i><b>Login</b></a></p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="white-box">
+                <h2>Interlibrary loans </h2>
+                <p>Interlibrary service is a process of sharing resources between libraries. If the material you need is not 
+                    acquired in Kyyti libraries you can request it as an interlibrary loan.  We recommend you to check the availability 
+                    of the required item in Kyyti libraries before leaving an interlibrary loan request. You can request books, sound recordings, 
+                    movies, sheet music and microfilms as interlibrary loans.<p><a href="<?=$this->url('content-page', ['page' => 'kaukolainat'])?>">Read more</a></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      <?= $this->feed('kysytyimmat_englanninkieliset'); ?>
+    </div> 
+</div>

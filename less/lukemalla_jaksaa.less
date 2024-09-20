@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gravitas+One&family=Homemade+Apple&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.lukemallajaksaa {
+    box-shadow:1px 0px 20px 12px rgba(173, 216, 230, 0.10);
+    padding:0;
+    overflow:clip;
+    overflow-clip-margin:0px;
+    
+    h2 {
+        margin-bottom:0;
+        padding-bottom:0;
+    }
+    
+    .col-sm-2 {
+        padding:0px;
+
+    }
+    
+    .gravitas-one-regular {
+      font-family: "Gravitas One", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .homemade-apple-regular {
+      font-family: "Homemade Apple", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .abril-fatface-regular {
+      font-family: "Abril Fatface", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .montserrat-regular {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+    
+    .paaotsikko {
+      font-family: "Abril Fatface", serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align:center;
+      font-size:1.5em;
+      color: rgb(255,188,144);
+      padding-bottom:0em;
+      padding-right:0.7em;
+      padding-left:0.7em;
+    }
+    
+    .alaotsikko {
+        font-size:0.7em;
+        text-align:center;
+        font-family: "Homemade Apple", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(94,175,180);
+        padding-right:2em;
+        padding-left:2em;
+        padding-bottom:2em;
+    }
+    
+    .teksti-sisalto {
+        padding-top:1em;
+        padding-left:1.2em;
+        padding-right:1.2em;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        
+        .yhteystiedot {
+            padding-top:1.5em;
+            padding-bottom:1.5em;
+            padding-left:1em;
+        }
+    }
+    
+    
+    .otsikko-logo {
+        padding-top:3em;
+    }
+    
+
+    ol > li {
+        list-style-type:decimal;
+        margin-left:2em;
+    }
+    
+    p {
+        font-family: "Montserrat", sans-serif;
+        text-align:left;
+    }
+    
+    .image-stack {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: relative;
+        padding-right:1.2em;
+        padding-left:1.2em;
+        padding-bottom:2em;
+        
+        .image-stack__item--top {
+          grid-column: 1 / span 3;
+          grid-row: 1 / span 2; 
+          z-index: 1;
+          
+            .speech-bubble {
+                position: relative;
+                display: inline-block;
+        
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+    
+            .overlay-text {
+                position: absolute;
+                top: 50%; 
+                left: 50%; 
+                transform: translate(-50%, -50%); 
+                padding: 10px 20px; 
+                font-family: "Montserrat", sans-serif;
+                text-align: center;
+            }
+            
+
+        }
+        .image-stack__item--bottom {
+            grid-column: 3 / span 3;
+            grid-row: 2 / span 2;
+            
+        }
+    }
+    
+    .enemman-lukemisesta-linkit {
+        ol>li {
+            list-style-type: disc !important;
+            font-size:14px;
+        }
+        
+        ul>li {
+            list-style-type: disc !important;
+            font-size:14px;
+        }
+    }
+    
+    .logo-section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: relative;
+        padding-left:1.5em;
+        padding-top: 3em;
+            
+        .leimasin-logo {
+            width:75%;
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            padding-bottom:1.5em;
+        }
+        
+        .kouvola-logo  {
+            grid-column:3 / span 2;
+            grid-row: 2 / span 1;
+        }
+        
+        .oikea-kulma-koristeviivat {
+            grid-column:5 / span 1;
+            grid-row: 2 / span 1;
+        }
+        
+    }
+    
+    @media screen and (min-width: 1001px) {
+      .overlay-text {
+        font-size: 1em;
+      }
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1000px){
+      .overlay-text {
+        font-size: 0.79em;
+      }
+    }
+    
+    @media screen and (min-width: 421px) and (max-width: 767px){
+      .overlay-text {
+        font-size: 1.1em;
+      }
+    }
+    
+    @media screen and (max-width: 420px) {
+      .overlay-text {
+        font-size: 0.7em;
+      }
+    }
+    
+    @media screen and (max-width: 450px){
+      .otsikko-logo {
+        padding-top: 0.5em;
+        padding-bottom: 2em;
+      }
+      
+      .alaotsikko {
+        padding-bottom: 1em;
+      }
+    }
+    
+    @media screen and (min-width: 450px){
+      .teksti-sisalto {
+        padding-left:2em;
+      }
+    }
+}

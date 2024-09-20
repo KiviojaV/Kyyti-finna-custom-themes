@@ -1,0 +1,146 @@
+<!-- START of: Content/asiakkaana.fi.phtml -->
+
+<? $this->headTitle('Asiakkaalle'); $this->content()->setHeading('Asiakkaalle'); ?>
+
+<div class="row">
+  <div class="col-sm-3 sidebar">
+    <div class="content-navigation-menu">
+    </div>
+  </div>
+  
+  <div class="col-sm-9">
+    <div id="libcard" class="content-section">
+        
+      <br>
+      <img src="<?=$this->imageSrc('asiakkaana.jpg')?>" alt="Nuori nainen lukee kirjaa kirjastossa" />
+        
+      <h2>Kirjaston asiakkaaksi</h2>
+      <h3>Näin saat kirjastokortin</h3>
+      <p>Saat kirjastokortin kaikista Kyyti-kirjastoista esittämällä kuvallisen henkilöllisyystodistuksen. 
+      Jos olet alle 15-vuotias, saat kirjastokortin huoltajan tai muun täysi-ikäisen vastuuhenkilön kirjallisella suostumuksella.</p>
+      <p>Voit tulostaa <a href="<?= $this->fileSrc('ilmoittautumislomake_fin_2024.pdf')?>" target="blank">ilmoittautumislomakkeen (pdf)</a> ja täyttää sen valmiiksi ennen asiointia.
+      Lomakkeita saat myös kirjastosta.</p>
+      <p>Voit asioida kirjastokortillasi kaikissa Kyyti-kirjastoissa. Kyyti-kirjastoihin kuuluvat kaikki Kymenlaakson kirjastot ja Iitin kirjasto.</p>
+      
+      <p>Kirjastokortti on ilmainen, mutta kadonneen kortin uusimisesta perimme maksun. Jos kirjastokorttisi katoaa, ilmoita siitä välittömästi kirjastoon.
+      Vastaat kaikesta kortillasi lainatusta aineistosta, kunnes teet katoamisilmoituksen.</p>
+
+	  <h3>Yhteisökortti yhteisöille</h3>
+      <p>Koulut, päiväkodit, palvelukeskukset ja muut yhteisöt voivat saada käyttöönsä yhteisökortin. Yhteisökortille nimetään yhteyshenkilö.</p>
+      <p><a href="<?= $this->fileSrc('yhteiso_ilmoittautumislomake_2024.pdf')?>" target="blank">Yhteisöasiakkaan ilmoittautumislomake (pdf)</a></p>
+
+      <h3 id="pin">Tunnusluku sähköiseen asiointiin ja itsepalveluun</h3>
+      <p>Kirjastokorttiin voi liittää nelinumeroisen tunnusluvun, jolla voit
+      <ul class="list-bullets">
+        <li>kirjautua verkkokirjastoon (lainojen uusiminen, varaaminen, yhteystietojen päivittäminen),</li>
+        <li>käyttää e-aineistoja, </li>        
+        <li>asioida omatoimikirjastossa ja</li>
+        <li>käyttää lainausautomaatteja.</li>
+      </ul>
+	  <p>Saat tunnusluvun kaikista Kyyti-kirjastoista. Ota mukaan kirjastokorttisi ja kuvallinen henkilöllisyystodistus. Tunnuslukua ei anneta puhelimessa tai sähköpostilla</p>
+
+	  <h3>Pidä yhteystietosi ajan tasalla</h3>
+      <p>Jos nimesi, osoitteesi tai muut yhteystietosi muuttuvat, ilmoita muutoksista kirjastoon. 
+      Voit muuttaa tietoja myös verkkokirjaston <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">omat tiedot -osiossa</a>.</p> 
+      <p><a href="https://kyyti.finna.fi/Content/ohje#tietojen_muokkaaminen" target="blank">Ohje: omien tietojen muokkaaminen verkkokirjastossa</a></p>
+    </div>
+ 
+    <div id="loans-renewals" class="content-section">
+      <h2>Lainat, uusiminen ja palauttaminen</h2>
+   	  <h3>Laina-ajat vaihtelevat aineistoittain</h3>    
+      <p>Tyypilliset laina-ajat Kyyti-kirjastoissa:</p>
+      <ul class="list-bullets">
+	    <li>kirjat, cd-levyt, nuotit ja äänikirjat: 28 vuorokautta</li>
+	    <li>lehdet, konsolipelit ja DVD-/Blu-ray-levyt: 14 vuorokautta</li>
+	  </ul>
+	  <p>Voit tarkastaa lainojesi eräpäivän verkkokirjaston <a href="https://kyyti.finna.fi/MyResearch/CheckedOut" target="blank">lainat-osiosta</a> tai lainakuitista.</p>
+   	  <h3>Tilaa muistutus eräpäivästä</h3>
+   	  <p>Voit tilata muistutuksen lähestyvistä eräpäivistä sähköpostiin tai tekstiviestillä verkkokirjaston <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">omat tiedot -osiosta</a> 
+   	   tai ottamalla yhteyttä kirjastoon. Palvelu on maksuton.</p>
+      <p>Muista kuitenkin, että olet vastuussa myöhästymismaksuista, vaikka muistutukset eivät tulisi perille.</p>
+      
+  	  <h3>Uusi lainat verkkokirjastossa</h3>
+      <p>Voit uusia lainat verkkokirjaston <a href="https://kyyti.finna.fi/MyResearch/CheckedOut" target="blank">lainat-osiossa</a>, puhelimella tai kirjastossa.</p>
+      <p><a href="https://kyyti.finna.fi/Content/ohje#lainat" target="blank">Ohje: lainojen uusiminen verkkokirjastossa</a></p>
+
+	  <h3>Voit palauttaa lainasi kaikkiin Kyyti-kirjastoihin</h3>
+	  <p>Voit palauttaa Kyyti-kirjastojen aineiston mihin tahansa Kyyti-kirjastoon.</p>
+	  <p>Kun kirjasto on kiinni, voit palauttaa lainat palautusluukkuun.
+	  Palautamme palautusluukkuun jätetyt lainat kirjaston seuraavana aukiolopäivänä. Odotusajalta voi kertyä myöhästymismaksuja. Palautusluukku on vain osassa kirjastoista.</p>
+    </div>
+
+    <div id="holds" class="content-section">
+      <h2>Varaukset</h2>
+	  <h3>Aineiston varaaminen</h3>
+
+	  <p>Näin varaat aineistoa verkkokirjastossa</p>
+	  <ol class="list-numbers">
+	  <li>Etsi varattava teos.</li>
+	  <li>Napauta "Varaa"-painiketta hakutuloslistassa tai teoksen tiedoissa.</li>
+	  <li>Valitse mistä kirjastosta haluat noutaa varauksen ja paina "Lähetä varauspyyntö" -painiketta.</li>
+	  </ol>
+      
+	  <p>Voit tehdä varauksen myös kirjastossa tai puhelimitse.</p>
+ 
+      <h3>Varauksen noutaminen ja peruminen</h3>
+	  <p>Saat ilmoituksen varatun aineiston saapumisesta sähköpostilla, tekstiviestillä tai paperikirjeellä.
+	  Voit muuttaa ilmoituksen lähetystapaa verkkokirjaston <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">omat tiedot -osiossa</a>.</p>
+	  <p>Varaaminen on maksutonta, mutta noutamattomasta aikuisten aineistosta peritään maksu. 
+	  Voit perua varauksen verkkokirjastossa <a href="https://kyyti.finna.fi/MyResearch/Holds" target="blank">varaukset-osiossa</a>, jos varausta ei ole vielä käsitelty. 
+	  Jos varaus on jo käsitelty, ota yhteyttä noutopaikaksi valittuun kirjastoon.</p>
+	  
+	  <p>Varattua aineistoa säilytetään seitsemän vuorokautta saapumisilmoituksen lähettämisestä.</p>
+    </div>
+    
+    <div id="payments" class="content-section">
+      <h2>Maksut</h2>
+      <h3>Maksut kunnittain</h3>
+      <ul class="list-bullets">
+        <li><a href="<?=$this->url('content-page',  ['page' => 'maksut-hamina'])?>">Hamina</a></li>
+        <li><a href="<?=$this->url('content-page',  ['page' => 'maksut-iitti'])?>">Iitti</a></li>
+        <li><a href="<?=$this->url('content-page',  ['page' => 'maksut-kotka'])?>">Kotka</a></li>
+        <li><a href="<?=$this->url('content-page',  ['page' => 'maksut-kouvola'])?>">Kouvola</a></li>
+        <li><a href="<?=$this->url('content-page',  ['page' => 'maksut-miehikkala'])?>">Miehikkälä</a></li>
+        <li><a href="<?=$this->url('content-page',  ['page' => 'maksut-pyhtaa'])?>">Pyhtää</a></li>
+        <li><a href="<?=$this->url('content-page',  ['page' => 'maksut-virolahti'])?>">Virolahti</a></li>
+      </ul>
+      <h3>Maksa myöhästymismaksut verkossa</h3>
+      <p>Voit maksaa myöhästymismaksusi verkkokirjaston <a href="https://kyyti.finna.fi/MyResearch/Fines" target="blank">maksut-sivulla</a>.</p> 
+    </div>
+
+    <div id="hankintaehdotus" class="content-section">
+      <h2>Lähetä hankintaehdotus</h2>
+      <p>Voit ehdottaa kirjastolle kokoelmasta puuttuvan teoksen hankkimista. Hankintaehdotuksilla autat meitä kehittämään kirjaston kokoelmasta mahdollisimman kattavan. 
+      Käsittelemme jokaisen ehdotuksen, mutta kaikkia emme voi toteuttaa.</p>
+      <p><a href="https://kyyti.finna.fi/Feedback/Form/Hankintaehdotus" target="_blank">Tee hankintaehdotus</a></p>
+      <p>Ennen hankintaehdotuksen tekemistä tarkista vielä verkkokirjaston haulla, ettei ehdottamaasi teosta löydy jo Kyyti-kirjastojen kokoelmista.</p>
+    </div>    
+    
+    <div id="userrights" class="content-section">
+      <h2>Käyttösäännöt</h2>
+      <p>Kun otat vastaan kirjastokortin, sitoudut noudattamaan 
+      <a href="<?=$this->url('content-page',  ['page' => 'kayttosaannot'])?>">Kyyti-kirjastojen käyttösääntöjä</a>.</p>
+    </div>
+    
+    <div id="kyytikimppa" class="content-section">
+      <h2>Kyyti-kirjastot</h2>
+      <p>Kymenlaakson kirjastot ja Iitin kirjasto muodostavat yhdessä Kyyti-kirjastokimpan. Kimpan kirjastoilla on yhteinen kokoelma, varausjono ja e-aineistot.</p>
+
+      <p>Voit lainata oman kuntasi kirjastokortilla aineistoa kaikista kimpan kirjastoista ja palauttaa lainat mihin tahansa Kyyti-kirjastoon.
+      Jos etsimäsi aineisto on toisen Kyyti-kirjaston kokoelmassa, voit tilata sen maksutta lähikirjastoosi.</p>
+      <p>Kyyti-kimppaan kuuluvat</p>
+      <ul class="list-bullets">
+          <li>Haminan kaupunginkirjasto</li>
+          <li>Iitin kunnankirjasto</li>          
+          <li>Kotkan kaupunginkirjasto</li>
+          <li>Kouvolan kaupunginkirjasto</li>
+          <li>Miehikkälän kunnankirjasto</li>
+          <li>Pyhtään kunnankirjasto</li>
+          <li>Virolahden kunnankirjasto</li>
+      </ul>
+      <p>Kirjastoautot liikennöivät Haminassa, Iitissä, Kotkassa, Kouvolassa ja Pyhtäällä.</p>
+    </div>
+  </div>
+</div>
+
+<!-- END of: Content/asiakkaana.fi.tpl -->

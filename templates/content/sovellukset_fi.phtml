@@ -1,0 +1,227 @@
+<!-- START of: finna - content/sovellukset_fi.phtml -->
+<? $this->headTitle('Sovellukset'); $this->content()->setHeading('Sovellukset'); ?>
+
+<style>
+    .row {
+        padding: 24px 0px 20px 0px;
+    }
+    @media (min-width: 1024px) {
+        .row.vertical-align {
+            display: flex;
+            align-items: center;
+        }
+        .sovelluskuva {
+            width: 30%; 
+        }
+    }
+    @media (max-width: 1024px) {
+        .sovelluskuva {
+            width: 60%; 
+        }
+    }
+    .kyyti-container-fluid-1 {
+        background-color: #eee;
+    }
+    .kyyti-container-fluid-2 {
+        background-color: #fff;
+    }
+    .fa-barcode:after {
+        content: "\f08e";
+    }
+</style>
+
+<div class="page-content">
+    <p>Voit käyttää monia Kyyti-kirjastojen palveluita ja aineistoja myös mobiilisovelluksilla.
+    Sovelluksiin kirjaudutaan Kyyti-kirjastokortilla ja korttiin liitetyllä nelinumeroisella tunnusluvulla.
+    </p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="container-fluid kyyti-container-fluid-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-push-6 col-sm-12">
+                <img alt="" class="sovelluskuva img-responsive center-block" src="<?=$this->imageSrc('sovellukset/hamina.png')?>">
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+                <div>
+                    <h2>Hamina-sovellus</h2>
+                    <p>Haminan kaupunkisovelluksella voit selata näppärästi kirjaston aineistoja, käyttää puhelinta kirjastokorttina, 
+                    uusia lainasi ja tehdä varauksia. Sovelluksen kirjastotoimintoja voivat käyttää kaikki Kyyti-kirjastojen asiakkaat kotikunnasta riippumatta.</p>
+                    <p>Sovelluksessa on myös Haminan palvelu- ja tapahtumatiedotteita, palautekanava, kyselyitä sekä haminalaisten yritysten tarjouksia.</p>
+                    <p class="kyyti-badge-container">
+                    <a href="https://play.google.com/store/apps/details?id=fi.hamina.hamina">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Get it on Google Play"></a>
+                    <a href="https://apps.apple.com/us/app/hamina/id1600544395">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Download on the App Store"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="container-fluid kyyti-container-fluid-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img alt="" class="sovelluskuva center-block" src="<?=$this->imageSrc('sovellukset/kouvola.png')?>">
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2>Kouvola mobiilissa</h2>
+                    <p>Kouvola mobiilissa -sovelluksessa voit käyttää sähköistä kirjastokorttia, joka toimii aivan kuin tavallinen kirjastokortti. 
+                    Kortilla voit esimerkiksi lainata ja kirjautua omatoimikirjastoihin.</p>
+                    <p>Sovelluksen sähköistä kirjastokorttia voivat käyttää kaikki Kyyti-kirjastojen asiakkaat kotikunnasta riippumatta.</p>
+                    <p>Sovelluksessa Kouvolan asukkaat voivat myös antaa palautetta palautepalvelun kautta, 
+                    vastata kaupungin kyselyihin ja etsiä vaikkapa linja-auton reitin reittioppaan kautta.</p>
+                    <p><a href="<?=$this->url('content-page',  ['page' => 'sovellukset_ohje_kouvola'])?>">Näin lataat sovelluksen ja käytät sähköistä kirjastokorttia</a></p>
+                    <p class="kyyti-badge-container">
+                    <a href="https://play.google.com/store/apps/details?id=com.kouvolacityapp&hl=fi&gl=US">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Get it on Google Play"></a>
+                    <a href="https://apps.apple.com/fi/app/kouvola-mobiilissa/id1518560680?l=fi">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Download on the App Store"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid kyyti-container-fluid-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-push-6 col-sm-12">
+                <img alt="" class="sovelluskuva center-block" src="<?=$this->imageSrc('sovellukset/e-kirjasto.png')?>">
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+                <div>
+                    <h2>E-kirjasto</h2>
+                    <p>E-kirjasto-sovelluksella voit lukea Kyyti-kirjastojen e-kirjoja ja aikakauslehtiä sekä kuunnella e-äänikirjoja.
+                    Sovelluksesta saat myös lukusuosituksia</p>
+                    <p class="kyyti-badge-container">
+                    <a href="https://play.google.com/store/apps/details?id=fi.kansalliskirjasto.ekirjasto">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Lataa Googlen Play-kaupasta"></a>
+                    <a href="https://apps.apple.com/fi/app/e-kirjasto/id6471490203?l=fi">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Lataa Applen App Storesta"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="container-fluid kyyti-container-fluid-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img alt="" class="sovelluskuva center-block" src="<?=$this->imageSrc('sovellukset/pressreader.png')?>">
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2>Pressreader</h2>
+                    <p>Pressreader-sovelluksella voit lukea tuhansia ulkomaisia sanoma- ja aikakauslehtiä.
+                    Lehtiä voi myös ladata laitteelle ja lukea niitä myöhemmin ilman verkkoyhteyttä.
+                    Sovellus on englanninkielinen.</p>
+                    <p><a target="_blank" href="https://kyyti.finna.fi/Content/e-lehdet_ohje#mobiilissa">Ohjeet sovelluksen käyttöön</a></p>
+                    <p class="kyyti-badge-container">
+                    <a href="https://play.google.com/store/apps/details?id=com.newspaperdirect.pressreader.android&hl=en_US">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Get it on Google Play"></a>
+                    <a href="https://apps.apple.com/us/app/pressreader-news-magazines/id313904711">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Download on the App Store"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="container-fluid kyyti-container-fluid-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-push-6 col-sm-12">
+                <img alt="" class="sovelluskuva img-responsive center-block" src="<?=$this->imageSrc('sovellukset/cineast.png')?>">
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+                <div>
+                    <h2>Cineast</h2>
+                    <p>Cineast-sovelluksella voit katsoa suoratoistona ilmaiseksi kuusi elokuvaa kuukaudessa.</p>
+                    <p class="kyyti-badge-container">
+                    <a href="https://play.google.com/store/apps/details?id=com.cineasterna&hl=fi&gl=SE">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Get it on Google Play"></a>
+                    <a href="https://itunes.apple.com/se/app/cineasterna-chromecast-app/id1446065399">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Download on the App Store"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid kyyti-container-fluid-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img alt="" class="sovelluskuva center-block" src="<?=$this->imageSrc('sovellukset/naxos.png')?>">
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h2>Naxos</h2>
+                    <p>Naxoksen kolmella sovelluksella voit kuunnella vastaavien verkkopalveluiden musiikkia:</p>
+                    <ul class="list-bullets">
+                        <li><b>NML</b> yhdistyy <a target="_blank" href="https://kouvola.nml3.naxosmusiclibrary.com/">Naxos Music Library</a> -verkkopalveluun</li>
+                        <li><b>NML Jazz</b> yhdistyy <a target="_blank" href="https://kouvola.nml3.naxosmusiclibrary.com/jazz/">Naxos Music Library Jazz</a> -verkkopalveluun</li>
+                        <li><b>NML World</b> yhdistyy <a target="_blank" href="https://kouvola.nml3.naxosmusiclibrary.com/world/">Naxos Music Library World</a> -verkkopalveluun</li>
+                    </ul>   
+                    <p>Sovelluksilla voit kuunnella musiikkia suoratoistona tai ladata kappaleet laitteelle myöhemmin
+                    kuunneltavaksi. Sovellusten käyttö edellyttää käyttäjätunnuksen tekemistä 
+                    vastaavan verkkopalvelun puolella. Sovellukset ovat englanninkielisiä.</p>        
+                    <p class="kyyti-badge-container">
+                    <a href="https://play.google.com/store/search?q=naxos&c=apps">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Get it on Google Play"></a>
+                    <a href="https://www.apple.com/fi/search/naxos?src=globalnav">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Download on the App Store"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid kyyti-container-fluid-1">
+    <div class="container">
+        <div class="row vertical-align">
+            <div class="col-md-6 col-md-push-6 col-sm-12">
+                <img alt="" class="sovelluskuva center-block" src="<?=$this->imageSrc('sovellukset/pratsam.png')?>">
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+                <div>
+                    <h2>Pratsam Reader</h2>
+                    <p>Pratsam Reader -sovelluksella voit kuunnella Celian äänikirjoja 
+                    suoratoistona tai ladata äänikirjat laitteen muistiin, jolloin voit toistaa niitä ilman verkkoyhteyttä.</p>
+    
+                    <p>Celian äänikirjoja voivat käyttää ne, joille tavallisen kirjan lukeminen on lukivaikeuden, 
+                    sairauden, vamman tai vastaavan syyn vuoksi vaikeaa. Celian maksuttoman äänikirjapalvelun 
+                    käyttäjäksi voit liittyä kirjastossa.</p>
+                    
+                    <ul class="list-bullets">
+                    <li><a target="_blank" href="https://www.celia.fi/palvelut/aanikirjat-yksityishenkiloille/">Lue lisää Celia-äänikirjapalvelusta ja siihen liittymisestä</a> (celia.fi)</li>
+                    <li><a target="_blank" href="https://www.celianet.fi/ohjeet/kuuntelu-sovelluksessa/">Ohjeet sovelluksen käyttöön</a> (celianet.fi)</li>
+                    </ul>
+                
+                    <p class="kyyti-badge-container">
+                    <a href="https://play.google.com/store/apps/details?id=com.onlinedaisy.android.pratsam&hl=fi&gl=US">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_fi.png')?>" alt="Get it on Google Play"></a>
+                    <a href="https://apps.apple.com/fi/app/pratsam-reader/id1010647327?l=fi">
+                    <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_fi.svg')?>" alt="Download on the App Store"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END of: finna - content/sovellukset_fi.phtml -->

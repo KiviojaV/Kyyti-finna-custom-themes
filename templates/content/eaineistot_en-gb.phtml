@@ -1,0 +1,146 @@
+<? $this->headTitle('E-resources'); $this->content()->setHeading('E-resources'); ?>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="infobox">
+           <p><img src="<?=$this->imageLink('/eaineistot/ekirjat2.jpg')?>" alt="Ekirjan lukeminen tabletilla"></p> 
+           <div class="w2-small">
+                <h2>E-books and e-audiobooks</h2>
+            </div>
+
+            <p>The library e-book collection includes a varied selection of e-books and e-audiobooks for all ages.</p>
+
+            <p class="kyyti-badge-container">
+                <p style="margin-bottom: 0;">You can read e-books or listen to e-audiobooks by downloading the E-kirjasto (E-library) app. Choose from the links below according to your device (Android or Apple):</p>
+                <a href="https://play.google.com/store/apps/details?id=fi.kansalliskirjasto.ekirjasto">
+                <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_en.png')?>" alt="Get it on Google Play"></a>
+                <a href="https://apps.apple.com/fi/app/e-kirjasto/id6471490203?l=en">
+                <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_en.svg')?>" alt="Download on the App Store"></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="infobox">
+            <p><img src="<?=$this->imageLink('/eaineistot/kotimaiset_aikakauslehdet3.jpg')?>" alt=""></p>
+            <div class="w2-small">
+                <h2>Finnish magazines digital archive: online access</h2>
+            </div>
+            <p>Access the digital archives of 80 Finnish magazines from any personal mobile device. Archives include one year's previous issues.</p>
+            <p class="kyyti-badge-container">
+                <p style="margin-bottom: 0;">Choose from the links below according to your device (Android or Apple) and download the E-kirjasto (E-library) app to access the archive:</p>
+                <a href="https://play.google.com/store/apps/details?id=fi.ellibs.ellibs&hl=fi&gl=US">
+                <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/google-play-badge_en.png')?>" alt="Get it on Google Play"></a>
+                <a href="https://apps.apple.com/fi/app/e-kirjasto/id6471490203?l=en">
+                <img class="kyyti-badge" src="<?=$this->imageSrc('sovellukset/app-store-badge-black_en.svg')?>" alt="Download on the App Store"></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="infobox">
+            <p><img src="<?=$this->imageLink('/eaineistot/kotimaiset_aikakauslehdet_lahi.jpg')?>" alt=""></p>
+            <div class="w2-small">
+                <h2>Finnish magazines digital archive: on-site access</h2>
+            </div>
+            <p>Every issue of over 20 Finnish magazines from the last year.</p>
+            <p>You can read magazines on library computers or by using the library wireless network.</p>
+            <br>
+            <div class="elinkit">
+                <a class="btn-primary" href="https://kyyti.emagz.fi"><i aria-hidden="true" class="fa fa-arrow-circle-right" style="padding-right: 10px;"></i><span>EMAGZ MAGAZINE SERVICE</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="infobox">
+            <p><img src="<?=$this->imageLink('/eaineistot/kotimaiset_sanomalehdet3.jpg')?>" alt=""></p>
+         
+            <div class="w2-small">        
+                <h2>Finnish newspapers</h2>
+            </div>
+            <p>Every issue of over 200 Finnish newspapers from the last year.</p>
+            <p>You can read newspapers on library computers or by using the library wireless network.</p>
+            <br>
+            <div class="elinkit">
+                <a class="btn-primary" href="https://www.epress.fi/?language=en"><i aria-hidden="true" class="fa fa-arrow-circle-right" style="padding-right: 10px;"></i><span>EPRESS NEWSPAPER SERVICE</span></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-4">
+        <div class="infobox">
+            <p><img src="<?=$this->imageLink('/eaineistot/ulkomaiset_sanomalehdet2.jpg')?>" alt=""></p>   
+            <div class="w2-small">
+                <h2>Foreign newspapers and magazines</h2>  
+            </div>
+            <p>Includes over 7 000 newspapers and magazines from 120 countries in more than 60 languages.</p>
+            <p>You need your library card number and PIN code to read newspapers and magazines.</p>
+            <a href="<?=$this->url('content-page',  ['page' => 'e-lehdet_ohje'])?>"><b style="color: #007091;">Instructions</b></a>
+            <br>
+            <br>
+            <div class="elinkit">
+                <a class="btn-primary" href="https://www.pressreader.com"><i aria-hidden="true" class="fa fa-arrow-circle-right" style="padding-right: 10px;"></i><span>PRESSREADER MAGAZINE SERVICE</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="infobox">
+            <p><img src="<?=$this->imageLink('/eaineistot/cineast.jpg')?>" alt=""></p>   
+            <div class="w2-small">
+                <h2>Streaming films</h2>  
+            </div>
+           
+            <p>You can watch six films per month for free on Cineast.</p>
+            
+            <p>The film collection is updated regularly.</p>
+    
+            <p>You need your library card number and PIN code to watch the films.</p>
+    
+            <br>
+            <div class="elinkit">
+                <a class="btn-primary" href="https://www.cineast.fi/en/"><i aria-hidden="true" class="fa fa-arrow-circle-right" style="padding-right: 10px;"></i><span>CINEAST VIDEO SERVICE</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="infobox">
+            <p><img src="<?=$this->imageLink('/eaineistot/musiikin_suoratoisto4.jpg')?>" alt=""></p>   
+            
+            <div class="w2-small">
+                <h2>Streaming music</h2>
+            </div>
+            <p>Classical, jazz and world music.</p> 
+            <p>You need your library card number and PIN code to listen to the music.</p>
+            <br>
+            <div class="elinkit">
+                <a class="btn-primary" href="https://kouvola.naxosmusiclibrary.com"><i aria-hidden="true" class="fa fa-arrow-circle-right" style="padding-right: 10px;"></i><span>NAXOS (CLASSICAL)</span></a>
+                <br>
+                <a class="btn-primary" href="https://kouvola.naxosmusiclibrary.com/jazz"><i aria-hidden="true" class="fa fa-arrow-circle-right" style="padding-right: 10px;"></i><span>NAXOS (JAZZ)</span></a>
+                <br>
+                <a class="btn-primary" href="https://kouvola.naxosmusiclibrary.com/world"><i aria-hidden="true" class="fa fa-arrow-circle-right" style="padding-right: 10px;"></i><span>NAXOS (WORLD)</span></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-sm-4">
+        <div class="infobox">
+            <p><img src="<?=$this->imageLink('/eaineistot/celia.jpg')?>" alt=""></p>   
+            <div class="w2-small">
+                <h2>Audiobooks for people with reading impairments</h2>
+            </div>
+            <p>Celia audiobooks can be used by people who have difficulty reading printed text due to reading disabilities, health conditions, or any other reasons.</p> 
+            
+            <p>You can join Celia at the library.</p> 
+            <br>
+            <strong><a href="https://www.celia.fi/eng/" target="_blank" style="color: #007091;">More information about audiobooks on the Celia website</a></strong>
+        </div>
+    </div>
+</div>
+

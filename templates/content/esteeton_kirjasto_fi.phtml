@@ -1,0 +1,293 @@
+<!-- START of: Content/esteeton_kirjasto_fi.phtml -->
+<? $this->headTitle('Esteetön kirjasto'); $this->content()->setHeading('Esteetön kirjasto'); ?>
+
+<div class="row">
+    <div class="col-sm-3 sidebar">
+        <div class="content-navigation-menu"></div>
+    </div>
+
+    <div class="col-sm-9">
+        <img src="<?=$this->imageSrc('palvelut/esteeton_kirjasto_banneri.jpg')?>" alt="ihmiset lukevat kirjoja ja keskustelevat pöydän ääressä" />
+        <div id="vieraskieliset" class="content-section">
+            <h2>Kirjasto palvelee monella kielellä</h2>
+            <h3>Kirjoja eri kielillä</h3>
+            <p>Suomenkielisten kirjojen lisäksi kirjastossa on kirjoja esimerkiksi englanniksi, espanjaksi, ranskaksi, ruotsiksi, saksaksi, venäjäksi ja viroksi. 
+            Voit myös lainata kuunneltavia äänikirjoja.</p>
+            <p>Voit kysyä muunkielisiä kirjoja lähikirjastostasi. Useat kirjastot tilaavat myös pyynnöstä harvinaisempien kielten kirjoja lainattavaksi Helsingin monikielisestä kirjastosta.</p>
+            
+            <h3>Venäjänkielinen kirjasto</h3>
+            <p>Voit tilata lähikirjastosi kautta venäjänkielisiä kirjoja Espoon venäjänkielisestä kirjastosta.</p>
+            <p><a href="https://helmet.finna.fi/OrganisationInfo/Home#86000" target="_blank">Ohjeet venäjänkielisen kirjaston asiakkaaksi liittymisestä ja kirjojen tilaamisesta (helmet.finna.fi)</a></p>
+            <p>Venäjänkielisen kirjaston asiakkaaksi voi ilmoittautua kaikissa 
+            Kotkan ja Kouvolan kirjastoissa, Haminan pääkirjastossa sekä Miehikkälän ja Virolahden
+            kirjastoissa.</p>
+
+            <h3>Lukuvinkkejä suomi toisena kielenä (S2) -opiskelijalle</h3>
+            <p><a href="<?= $this->fileSrc('lukuvinkkeja_S2.pdf')?>" target="blank">Lukuvinkkejä suomi toisena kielenä (S2) –opiskelijalle (pdf)</a></p>
+            
+            <h3>Selkokirjoja on helpompaa lukea</h3>
+            <p>Selkokirjat tarjoavat iloa ja tietoa silloin, kun tavallisten kirjojen lukeminen ei 
+            onnistu. Kirjojen kieli on helpompaa ja lyhyempää kuin yleiskieli. Kirjojen ulkoasu on 
+            selkeä. Valikoimassa on tietokirjoja ja kaunokirjallisuutta.</p>
+            <p>Osa kirjoista on kirjoitettu suoraan selkokielelle. Osa on mukautettu selkokielelle 
+            alkuperäisteoksesta. </p>
+            <p>Selkokirjoja voivat lainata kaikki, jotka niitä tarvitsevat, esimerkiksi vanhukset, 
+            lukihäiriöiset, suomea toisena kielenä opiskelevat ja vammaiset.</p>
+
+            <h3>Viittomakielinen kirjasto</h3>
+            <img src="<?=$this->imageSrc('palvelut/viittomakielinen.png')?>" alt="Viittomakielisen kirjaston logo" />
+            <p>Viittomakielinen kirjasto on verkkopalvelu, johon kootaan viittomakielistä aineistoa.</p>
+            <p><a href="https://viittomakielinenkirjasto.fi/" target="blank">Siirry viittomakieliseen kirjastoon (viittomakielinenkirjasto.fi)</a></p>
+
+            <h3>Kouvolan kirjaston palvelut maahanmuuttajille</h3>        
+            
+            <p>Kouvolan pääkirjastossa on vieraiden kielten siirtokokoelma, jossa on lainattavana 
+            kirjoja aikuisille, nuorille ja lapsille.</p>
+            
+            <p>Siirtokokoelmien kirjat lainataan kirjastokortilla asiakaspalvelusta, ei automaatilla. 
+            Laina-aika on neljä viikkoa. Kirjat palautetaan samaan kirjastoon, josta ne on lainattu.</p>
+            
+            <p>Pääkirjastossa on kirjoja seuraavilla kielillä: albania, arabia, kiina, somali, thai, turkki ja ukraina.</p>
+            
+            <h4>Tutustu Kouvolan kirjastoon äidinkielelläsi</h4>
+            
+            <p>
+            <a href="http://youtu.be/_D6aEVJdssU" target="_blank" rel="nofollow">Suomi</a> (FIN, Youtube). <a target="_blank" href="<?=$this->fileSrc('kirjaston_esittely_suomeksi.pdf')?>">Tekstitiivistelmä videosta (pdf).</a><br />
+            <a href="http://youtu.be/yws3OR8pfGg" target="_blank" rel="nofollow">English</a> (ENG, Youtube). <a target="_blank" href="<?=$this->fileSrc('introduction_to_the_library.pdf')?>">Summary of the video (pdf).</a><br />
+            <a href="http://youtu.be/8vTN75S_2oQ" target="_blank" rel="nofollow">Pусский</a> (RUS, Youtube)<br />
+            <a href="http://youtu.be/JtVQctyZddU" target="_blank" rel="nofollow">Soomaali</a> (SOM, Youtube)<br />
+            <a href="http://youtu.be/GkzR9tT5UCk" target="_blank" rel="nofollow">Chinese</a> (CHN, Youtube)<br />
+            </p>
+            
+            <p>Yhteyshenkilö maahanmuuttaja-asioissa: Outi Kauppala</p>
+            <ul class="list-bullets">
+                <li>Puhelin: <a href="tel:+358206155237">020 615 5671</a></li>
+                <li>Sähköposti: <a href="mailto:outi.kauppala@kouvola.fi">outi.kauppala@kouvola.fi</a></li>
+            </ul>
+            
+            <h4>Sano se suomeksi -kapsäkit</h4>
+            <p>Kouvolan kirjastolla on lainattavana kaksi suomen kielen opiskelun tueksi tehtyä virikekapsäkkiä, joita voi käyttää maahanmuuttajien opetusryhmissä. Kapsäkit sisältävät materiaalia, jolla voidaan elävöittää kielen opiskelua. Kahden kapsäkin sisällöt ovat erilaisia keskenään.</p>
+            <p>Kapsäkin voi varata, se toimitetaan omaan lähikirjastoon, jonne sen voi myös palauttaa. Laina-aika on neljä viikkoa.</p>
+            <p><a target="_blank" href="https://kyyti.finna.fi/Search/Results?limit=0&lookfor=kaps%C3%A4kki&type=AllFields&filter%5B%5D=format%3A%220%2FPhysicalObject%2F%22">Selaa kapsäkkivalikoimaa verkkokirjastossa</a></p>
+        </div>
+
+        <div id="kotiinkuljetus" class="content-section">
+            <h2>Tilaa kirjat kotiin</h2>       
+            
+            <p>Voit tilata kirjoille kotiinkuljetuksen, jos et voi käyttää kirjastoa sairauden tai 
+            toimintakyvyn heikentymisen vuoksi, eikä läheinen voi asioida puolestasi. 
+            Kuljetusten tarve voi olla jatkuva tai määräaikainen. Kotiinkuljetus on ilmaista.</p>
+            
+            <p>Ennen kuljetusten aloittamista kirjaston työntekijä haastattelee asiakkaan ja sopii käytännön 
+            järjestelyistä. Asiakas kertoo, millaisesta aineistosta hän on kiinnostunut ja 
+            kirjaston työntekijä valitsee lainattavan aineiston asiakkaan toiveiden mukaisesti.</p>
+            
+            <p>Vapaaehtoistyöntekijä kuljettaa aineiston asiakkaalle kotiin yhdessä sovittuna aikana. 
+            Vapaaehtoistyöntekijöitä sitoo vaitiolovelvollisuus asiakkaan tiedoista.</p>
+            
+            <p>Asiakkaalla on käytettävissään kirjaston koko aineisto: kirjat, aikakauslehdet, 
+            äänikirjat, dvd- elokuvat sekä musiikkiaineistot.</p>
+            
+            <p>Voit ilmoittautua asiakkaaksi täyttämällä ja tulostamalla
+            <a href="<?= $this->fileSrc('kotipalvelu.pdf')?>" target="blank">ilmoittautumislomakkeen</a> ja tuomalla sen kirjastoon. Lomakkeita saa myös kirjastosta.</p>
+            
+            <h3>Kysy lisää kotiinkuljetuksesta</h3>
+            
+            <h4>Hamina</h4>
+            
+            <p>Asiakaspalvelu: <a href="tel:+358401991672">040 199 1672</a> tai <a href="tel:+358401991310">040 199 1310</a></p>
+            
+            <h4>Kotka</h4>
+            <p>Sanna Heinonen: <a href="tel:+358400381442">040 038 1442</a></p>
+            
+            <h4>Kouvola</h4>
+            <ul class="list-bullets">
+                <li>Pääkirjasto: <a href="tel:+358206156788">020 615 6788</a></li>
+                <li>Elimäen kirjasto: <a href="tel:+358206154812">020 615 4812</a></li>
+                <li>Haanojan kirjasto: <a href="tel:+358206156105">020 615 6105</a></li>    
+                <li>Inkeroisten kirjasto: <a href="tel:+358206154746">020 615 4746</a></li>    
+                <li>Jaalan kirjasto: <a href="tel:+358206154618">020 615 4618</a></li>    
+                <li>Korian kirjasto: <a href="tel:+358206154977">020 615 4977</a></li>
+                <li>Kuusankosken kirjasto: <a href="tel:+358206154046">020 615 4046</a></li>    
+                <li>Myllykosken kirjasto: <a href="tel:+358206154745">020 615 4745</a></li>    
+                <li>Valkealan kirjasto: <a href="tel:+358206154516">020 615 4516</a></li>    
+            </ul>
+            
+            <h4>Miehikkälä</h4>
+            <p>Asiakaspalvelu: <a href="tel:+358401992149">040 199 2149</a></p>
+            
+            <h4>Virolahti</h4>
+            <p>Asiakaspalvelu: <a href="tel:+358407107352">040 710 7352</a>
+        </div>
+            
+        <div id="aanikirjat" class="content-section">
+            <h2>Kuuntele äänikirjoja</h2>
+            <p>Kirjastosta voi lainata CD-levyille tallennettuja äänikirjoja. CD-äänikirjojen kuuntelu vaatii CD-soittimen. 
+            Osa äänikirjoista on tallennettu MP3-muotoon. Niiden kuunteluun tarvitset cd-soittimen, joka toistaa myös MP3-tiedostoja.<p>
+            <p>Suurin osa äänikirjoista on romaaneja, mutta kokoelmassa on myös tietokirjoja, runoja ja kuunnelmia. 
+            Äänikirjoja on myös vierailla kielillä.</p>
+            
+            <p>CD-äänikirjojen laina-aika on neljä viikkoa ja niitä voi uusia.</p>
+            
+            <p>Jos haluat kuunnella äänikirjoja puhelimella tai tabletilla, voit lainata e-äänikirjoja. 
+            <a href="<?=$this->url('content-page',  ['page' => 'eaineistot'])?>">Tutustu e-äänikirjavalikoimaan Kyyti-kirjastojen Ellibs-palvelussa (ellibslibrary.com)</a>.</p>
+            
+            <p><a target="_blank" href="https://kyyti.finna.fi/Content/e-kirjat_ohje">Ohjeet e-äänikirjojen kuunteluun</a>.</p>
+        </div>
+            
+        <div id="celia" class="content-section">
+            <h2>Celian äänikirjat lukemisesteisille</h2>
+            
+            <p>Celian äänikirjoja voivat käyttää henkilöt, joille tavallisen kirjan lukeminen on 
+            sairauden, vamman tai vastaavan syyn vuoksi vaikeaa. Tällaisia syitä voivat olla 
+            esimerkiksi näköön liittyvä ongelma, oppimisvaikeus ja lihasvoiman heikkous.</p>
+            
+            <p>Celia tuottaa äänikirjoina kaunokirjallisuutta ja tietokirjoja. 
+            Äänikirjapalvelun käyttäjäksi voi liittyä kirjastossa.
+            Celian äänikirjoja voi käyttää seuraavilla tavoilla:</p>
+            <ul class="list-bullets">
+                <li>Lainaamalla kirjastosta mp3-muotoisia äänikirjoja tavallisesti kirjastokortilla.</li>
+                <li>Liittymällä asiakkaaksi Celianetiin, lainaamalla kirjoja verkosta 
+                ja kuuntelemalla niitä tietokoneen, tabletin tai älypuhelimen kautta.</li>
+                <li>Liittymällä Celian kirjakerhoon, josta postitetaan kotiin mp3-levyjä kuukausittain.</li>
+            </ul>
+            
+            <p><a target="_blank" href="https://www.celia.fi/tietoa-celiasta/">Tietoa Celian palveluista (celia.fi)</a></p>
+            <p><a target="_blank" href="https://www.celianet.fi/">E-äänikirjojen lainaaminen Celianet-palvelusta (celianet.fi)</a></p>
+            <br>
+            <h3>Kysy lisää Celiasta</h3>
+            
+            <h4>Hamina</h4>
+            
+            <p>Celian äänikirjoja on lainattavissa Haminan pääkirjastossa ja Ruissalon kirjastossa. 
+            Näissä kirjastoissa voi myös liittyä Celian asiakkaaksi.</p>
+            
+            <p>Yhteyshenkilö: Miia Eerikäinen</p>
+            <ul class="list-bullets">
+                <li>Puhelin: <a href="tel:+358401991670">040 199 1670</a></li>
+                <li>Sähköposti: <a href="mailto:miia.eerikainen@hamina.fi">miia.eerikainen@hamina.fi</a></li>
+            </ul>
+            
+            <h4>Kotka</h4>
+            
+            <p>Celian äänikirjoja on lainattavissa Kotkan pääkirjastossa ja Karhulan kirjastossa. 
+            Celian asiakkaaksi voi liittyä pääkirjaston tietopalvelussa, Karhulan kirjastossa 
+            ja Karhuvuoren kirjastossa.</p>
+            
+            <p>Yhteyshenkilöt:</p>
+            <ul class="list-bullets">
+                <li>Pääkirjasto: <a href="tel:+358406883754">040 688 3754</a></li>
+                <li>Karhulan kirjasto: <a href="tel:+358406883587">040 688 3587</a></li>
+                <li>Karhuvuoren kirjasto: <a href="tel:+358401587338">040 158 7338</a></li>
+            </ul>
+            
+            <h4>Kouvola</h4>
+            
+            <p>Celian äänikirjoja on lainattavissa useimmissa Kouvolan kirjastoissa, mutta ei kirjastoautossa. 
+            Celian asiakkaaksi voi liittyä kaikissa Kouvolan kirjastoissa, ja kaikissa kirjastoissa opastetaan verkkokuuntelun käyttöön.
+            Pääkirjastossa myös Mediamaja antaa teknistä opastusta, neuvonta ja ajanvaraukset <a href="tel:+358206151333">p. 020 615 1333.</a> </p>
+            
+            <h4>Miehikkälä ja Virolahti</h4>
+            
+            <p>Celian äänikirjoja voit lainata Miehikkälän ja Virolahden kirjastoista. 
+            Kirjastoissa voi myös liittyä Celian asiakkaaksi.</p>
+            
+            <p>Lisätietoja:</p>
+            <ul class="list-bullets">
+                <li>Virolahti: <a href="tel:+358407107352">040 710 7352</a></li>
+                <li>Miehikkälä: <a href="tel:+358401992149">040 199 2149</a></li>
+            </ul>
+        </div>
+            
+        <div id="isotekstiset" class="content-section">
+            <h2>Isotekstiset kirjat</h2>
+            <p>Kirjastojen valikoimissa on isotekstisiä kirjoja, joissa on sama sisältö kuin 
+            tavallisessa painoksessa, mutta kirjasinkoko on tavallista suurempi. 
+            Isotekstistä kirjaa on helpompi lukea, kun näkö on heikentynyt tai 
+            jokin muu seikka vaikeuttaa lukemista.</p>
+            
+            <p>Isotekstisten kokoelmissa on enimmäkseen romaaneja, ja jonkin verran tietokirjoja.
+            <a target="_blank" href="https://kyyti.finna.fi/Search/Results?limit=0&lookfor=isotekstiset&type=AllFields&filter%5B%5D=format%3A%220%2FBook%2F%22">Selaa isotekstisten kirjojen valikoimaa</a>.</p>
+            
+            <p>Kirjat ovat kaikkien käytettävissä, ja niillä on normaali neljän viikon laina-aika.</p>
+            </div>
+            
+            <div id="lue_aaneen_vanhukselle" class="content-section">
+            <h2>Lue ääneen vanhukselle</h2>
+            <p>Ääneen lukeminen on helppo ja mainio viriketuokio vanhusten päiviä piristämään. 
+            Tarinat ovat myös oivallisia keskustelujen herättäjiä.</p>
+            
+            <p><a href="<?=$this->fileSrc('lukuvinkkeja_vanhuksille.pdf')?>" target="blank">Liitetiedostossa (pdf) 
+            on muutamia lukuvinkkejä</a> sinulle, joka esimerkiksi vapaaehtoisena luet 
+            vanhusryhmälle hoivakodissa tai luet omalle läheisellesi tai ystävällesi. 
+            Lisää luettavaa löydät kirjastosta. Tule tutkimaan hyllyjä tai pyydä vinkkejä henkilökunnalta.</p>
+        </div>
+            
+        <div id="virikkeita" class="content-section">
+            <h2>Virikkeitä vanhuksille Kouvolan kirjastosta</h2>
+            
+            <h3>Kirjastokeskiviikko</h3>
+            <p>Kouvolan ja Haminan kirjaston työntekijät lukevat kerran viikossa keskiviikkoisin klo 13 - 13.30 ikäihmisille suunnattuja erilaisia tekstejä. 
+            Palvelu on käytettävissä toistaiseksi.</p>
+            <p><a href="<?=$this->fileSrc('Kesä_2024_Kirjastokeskiviikko.pdf')?>" target="blank" alt="Linkki tapahtuma-aikoihin">Kesän 2024 lukujärjestys (pdf)</a></p>
+            <p><a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_YjFhNGUzODItYzUwNy00YmYzLTgwZGYtM2Y4ZGJiMmE0Y2Ew%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%252208b21313-8083-42aa-af1d-2f4c9f2cad5d%2522%252c%2522Oid%2522%253a%2522372b5c79-12aa-4990-9c7d-9b25f348a18d%2522%257d%26anon%3Dtrue&type=meetup-join&deeplinkId=25cc18ff-b103-41a8-aa6d-5251746bf5f1&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true" target="blank" alt="Linkki tapahtumaan">Kirjastokeskiviikon Teams-linkki</a></p>
+
+            
+            <h3>Kirjastobingo ryhmille</h3>
+            <p>Ohjelmatuokio, jonka pitää kirjastoammattilainen. Bingon pelaamisen ohessa 
+            ryhmä saa muun muassa tietoa kirjastosta, lukuvinkkejä, kuulee runoja ja jutustelee.</p>
+            
+            <h3>Tarina minussa -kirjavinkkaus ryhmille</h3>
+            <p>Ohjelmatuokio, jossa ryhmä saa kirjastoammattilaiselta perinteisen lukuvinkkauksen 
+            ja sen jälkeen pienen kirjallisen tehtävän. Se voi olla esimerkiksi kirjeen 
+            kirjoittaminen tärkeälle ihmiselle, tajunnanvirtaa annetusta aiheesta tai kirjan
+            kiteyttäminen yhdeksi lauseeksi. Tapahtumaan liittyy myös keskustelu, mutta
+            omien ajatusten jakaminen ryhmälle on aina vapaaehtoista.</p>
+            
+            <p>Lisätietoja kirjastobingosta ja Tarina minussa -kirjavinkkauksesta Raija Hasulta.
+            <ul class="list-bullets">
+                <li>Puhelin: <a href="tel:+358206155786">020 615 5786</a></li>
+                <li>Sähköposti: <a href="mailto:raija.hasu@kouvola.fi">raija.hasu@kouvola.fi</a></li>
+            </ul>
+            
+            <h3>Kapsäkit ryhmätoimintaan</h3>
+            
+            <p>Kouvolan kirjastolla on lainattavana kahdenlaisia kapsäkkejä, jotka on tarkoitettu 
+            ryhmätoimintaan. Kapsäkin voi varata, se toimitetaan omaan lähikirjastoon, jonne 
+            sen voi myös palauttaa. Laina-aika on neljä viikkoa.</p>
+            
+            <p><a target="_blank" href="https://kyyti.finna.fi/Search/Results?limit=0&lookfor=kaps%C3%A4kki&type=AllFields&filter%5B%5D=format%3A%220%2FPhysicalObject%2F%22">Selaa kapsäkkivalikoimaa verkkokirjastossa</a></p>
+            
+            <h4>Muistojen kapsäkit</h4> 
+            <p>Muistojen kapsäkit on tarkoitettu käytettäväksi ikääntyneiden ryhmätoiminnassa sekä peruskouluopetuksessa. Niitä on kuusi kappaletta:</p>
+            <ul class="list-bullets">
+            <li>Kahviaiheinen muistojen kapsäkki</li>
+            <li>Kun minä olin pieni -kapsäkki</li>
+            <li>Käsityöaiheinen kapsäkki</li>
+            <li>Lukutaidon kapsäkki</li>
+            <li>Pula-ajan kapsäkki</li>
+            <li>Wanhan tawaran kapsäkki</li>
+            </ul>
+            <p>Muistojen kapsäkit sisältävät vanhoja esineitä, ohjaajalle selosteet esineistä ja 
+            niiden käytöstä sekä aiheesta riippuen esimerkiksi lyhyitä DVD-ohjelmia tai 
+            aktivointitehtäviä ohjeineen.</p>
+            
+            <h4>Virikekapsäkit</h4> 
+            
+            <p>Virikekapsäkit on tehty ikääntyneiden ryhmiä varten. Niitä ovat muun muassa</p>
+            <ul class="list-bullets">
+                <li>Lauletaan yhdessä</li>
+                <li>Liikutaan yhdessä</li>
+                <li>Aivojumppa</li>
+                <li>Aistikapsäkki</li>
+                <li>Luonto</li>
+                <li>Terhokerho</li>
+                <li>Tiernapojat</li>
+            </ul>
+            <p>Aktivointikapsäkkien esineet ovat uutta tavaraa. Niissä on tarvittava materiaali
+            ja ohjeet ryhmän ohjaajalle.</p>
+        </div>
+    </div>
+</div>
+
+<!-- END of: Content/esteeton_kirjasto_fi.tpl -->

@@ -1,0 +1,103 @@
+<!-- START of: Content/kirjallisuus.fi.phtml -->
+<? $this->headTitle('Kirjallisuus'); $this->content()->setHeading('Kirjallisuus'); ?>
+
+<div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="margin-bottom: 30px;">  
+        <p><a href="https://kyyti.finna.fi/Content/lukuhaaste"><img src="<?=$this->imageLink('lukuhaaste24_banneri_pieni.jpg');?>" alt="Kyyti-kirjastojen lukuhaaste 2024"></a></p>
+    </div>
+</div>
+   
+<div class="row">
+    <div class="col-sm-12 hidden-xs" style="margin-bottom: 30px;">
+        <p><a href="https://kyyti.finna.fi/Content/lukuhaaste"><img src="<?=$this->imageLink('lukuhaaste24_banneri.jpg');?>" alt="Kyyti-kirjastojen lukuhaaste 2024"></a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('henkilokunta_suosittelee'); ?> 
+    </div>
+</div>
+
+<!-- Mobiilisivun aineistonostokarusellit matalammilla kansilla -->
+<div class="hidden-lg hidden-md hidden-sm">
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('carousel-uutuudet_mobiili'); ?> 
+        </div>    
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('carousel-sampokommentit_mobiili'); ?> 
+        </div>
+    </div>
+</div>
+
+<!-- Työpöytäsivun aineistonostokarusellit korkeammilla kansilla -->
+<div class="hidden-xs">
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed('carousel-uutuudet'); ?> 
+        </div>    
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('carousel-sampokommentit'); ?> 
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-md-4"> 
+        <h2>Kysy kirjallisuudesta</h2> 
+        
+        <p>Kysy kirjallisuudesta -palvelussa voit kysyä mitä vain kirjallisuudesta. Vastaajat ovat suomalaisten kirjastojen ammattilaisia.</p>
+        <p>Saat vastauksen sähköpostiisi kolmen arkipäivän kuluessa. </p>
+        
+        <p><img src="https://www.kirjastot.fi/sites/default/files/matbank/kk-logo_fi_green_short.png" alt="Kysy kirjallisuudesta -palvelun logo" class="right"> <a target="_blank" href="http://www.kirjasampo.fi/kysy">  Lähetä kysymys (kirjasampo.fi)</a></p>
+        
+        <p><a target="_blank" href="https://www.kirjastot.fi/kysy/vastaukset">Lue aiempia vastauksia (kirjastot.fi)</a></p>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+        <h2>Lukuneuvoja</h2>
+        
+        <img src="<?=$this->imageSrc('lukuneuvojakuva1.jpg')?>" alt="piirroskuva, nainen lukee kirjahyllyjen välissä">
+        <br>
+        <br>
+        <p>Etsitkö kiinnostavaa luettavaa? Kotkan kaupunginkirjaston lukuneuvojat auttavat etsinnässä. <a href="<?=$this->url('feedback-form', ['id' => 'Lukuneuvojapalvelu'])?>" target="_blank">Tutustu lukuneuvojapalveluun</a>!</p>
+        <br>
+    </div>
+    
+    <div class="col-sm-6 col-md-4">
+        <h2>Kysytyimmät</h2>
+        <p><img src="<?=$this->imageSrc('kysytyimmat.jpg')?>" alt="Valo paistaa kirjan sivuille"></p>
+        <p>Haluaisitko tietää mitä muut lukevat, minkä kirjojen suosio on nousussa ja mitä uutta Kyyti-kirjastojen kokoelmiin on viime aikoina hankittu?</p>
+        <p><a href="<?=$this->url('content-page', ['page'=>'kysytyimmat'])?>">Katso tästä Kyyti-kirjastojen lainatuimmat ja uusimmat kirjat</a></p>
+    </div>
+    
+    <!--Kirjallisuustapahtumat-->
+    <div class="col-sm-12 col-md-12">
+        <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/659e58856ab6f64e269bab2c'>
+        </script><div id='EVENTZWIDGET-659e58856ab6f64e269bab2c' class='EVENTZWIDGET'></div>
+        
+        <?php
+        $script = <<<JS
+         const searchTerms = new Map([
+                    ['kaikki',''],
+                    ['Kirjailijavieraat','kirjailija'],
+                    ['Lukupiirit','lukupiiiri'],
+                    ['Runopiirit', 'runopiiri'],
+                    ['Satutuokiot','satutuokio']]);
+                    
+        waitForWidgets(searchTerms);
+        JS;
+        echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+        ?>
+    </div>
+
+</div>
+
+<!-- END of: Content/kirjallisuus.fi.pthml -->

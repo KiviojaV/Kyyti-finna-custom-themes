@@ -1,0 +1,251 @@
+<!-- START of: finna - content/ohje_en-gb.phtml -->
+<? $this->headTitle('Instructions for using the online library'); $this->content()->setHeading('Instructions for using the online library'); ?>
+
+<div class="row">
+    <div class="col-sm-3 sidebar">
+        <div class="content-navigation-menu">
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div id="login" class="content-section">
+            <h2>Login</h2>
+            <p>By logging into the online library, you can renew loans, make reservations, and update your information.</p>
+            <p>How to log in</p>
+            <ol class="list-numbers">
+                <li>Tap the <strong>Login button</strong> (on mobile, <img src="<?=$this->imageSrc('ohje/oma_tili.jpg')?>" alt="My Account button" /> icon).</li>
+                <li>Enter your library card number (e.g. 285A123123) and the four-digit PIN code, then select <strong>Login</strong>.</li>
+            </ol>
+            <p>If you forget your PIN code, choose <strong>Forgot your password?</strong> in the login window. Enter your library card number and email address, then tap <strong>Recover password</strong>. You'll receive a link in your email to change your PIN code.</p>
+            <p>You can log out of the online library by tapping your name (on mobile, <img src="<?=$this->imageSrc('ohje/oma_tili2.jpg')?>" alt="My Account button" /> icon) and selecting <strong>Log Out</strong>.</p>
+        </div>
+
+
+        <div id="loans" class="content-section">
+            <h2>Renewing loans</h2>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/CheckedOut" target="blank">Loans page</a>.</li>
+                <li>If you want to renew all your loans, tap <strong>Renew All Items</strong>. If you only want to renew some loans, tap the checkbox next to the items to renew and select <strong>Renew Selected Items</strong>.</li>
+            </ol>
+        </div>
+        
+        <div id="loan_history" class="content-section">
+            <h2>Loan history</h2>
+            <p>You can view your previous loans on the <a href="https://kyyti.finna.fi/MyResearch/HistoricLoans" target="blank">Loan History page</a>.</p>
+            <p>You can clear your loan history by tapping the <strong>Clear Loan History</strong> button.</p>
+        </div>
+
+        <div id="search" class="content-section">
+            <h2>Searching for materials</h2>
+            <h3>Creating a query</h3>
+            <p>Search for materials by entering keywords in the search field and clicking the <strong>Search</strong> button (<img src="<?=$this->imageSrc('ohje/suurennuslasi.jpg')?>" alt="magnifying glass icon" /> icon).
+            You can use keywords such as the title, author, subject, or any other descriptive word for the material. If you enter multiple words in the search, you will be shown items that include all those words.</p>
+            <p>You can search with word inflections by truncating the search term with an asterisk *. For example, searching for dog* will find items with the words 'dog', 'dogs', or 'doghouse'. 
+            You can also truncate the search term in the middle of the word. Searching for eco*al will find words like 'economical' and 'ecological'.</p>
+            <p>You can search for a phrase by enclosing the search terms in quotation marks "". For example, searching for "medieval history" will find all items where the words "medieval" and "history" appear consecutively. 
+            The search will not find the phrase "medieval cultural history" or the separate words "medieval" and "history."</p>
+        
+            <h3>Limiting search results after the search</h3>
+            <p>After the search, you can further refine the results using the filtering options. You can filter results by</p>
+            <ul class="list-bullets">
+                <li>material type (e.g., books, videos, recordings)</li>
+                <li>library</li>
+                <li>department (e.g., adults or music) or</li>
+                <li>language of the material.</li>
+            </ul>
+            <p>You can set a filter by clicking its name. You can see more detailed filtering options by clicking the small black arrow next to the filter.</p>
+            <p>In the image below, the search has been narrowed down to DVDs in the collection of bookmobile Päivänsäde.</p>
+            <p><img src="<?=$this->imageSrc('ohje/rajausvalikko_en.jpg')?>" alt="Filter Menu for Narrowing Search Results" width="250" /></p>
+            <p>If you want to remove applied filters, click on the selected filter again.</p>
+        
+            <h3>Checking availability and detailed information of the material</h3>
+            <p>As a result of the search, you will get a list of items matching your search terms.</p>
+            <p><img src="<?=$this->imageSrc('hakutulos_en.jpg')?>" alt="Two search results in the search results list" width="600"/></p>
+            <p>From the list, you can see the libraries that have the material in their collections. Borrowed items are marked with a red cross, and items available on the shelf are marked with a green circle.</p>
+            <p><img src="<?=$this->imageSrc('ohje/saatavuuspallukat.jpg')?>" alt="Icons indicating available and borrowed material" /></p>
+            <p>If your library is not listed, click <strong>More</strong> to see all libraries that have the material in their collections.</p>
+            <p>If the location of the material in the search results is "Multiple locations," you can see the location by clicking on the name of the library in the search results list. The notation "Multiple locations" means that the material is in different places in the library, and the system cannot show only one location for the item.</p>
+        </div>
+
+
+       <div id="Reservations" class="content-section">
+            <h2>Reservations</h2>
+            <h3>Placing a reservation</h3>
+            <p>If the material you are looking for is not on the shelf or if you want to order the material from another library, you can make a reservation for it.</p>
+            <p>Here's how to reserve the material:</p>
+            <ol class="list-numbers">
+                <li>Find the material you want</li>
+                <li>Click the <strong>Place a hold on this title</strong> button. If you are not logged into the online library, the button name is <strong>Login to place a hold</strong></li>
+                <li>Choose the library from the <strong>Pickup Location</strong> menu where you want to pick up the reservation and click <strong>Submit Request</strong></li>
+                <li>Click <strong>Close</strong></li>
+            </ol>
+        
+            <h3>Cancelling and suspending the reservation</h3>
+            <p>If you want to cancel a reservation you made:</p>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Holds" target="blank">Holds</a></li>
+                <li>Click the checkbox next to the reservations to be canceled and choose <strong>Cancel Selected Holds</strong></li>
+            </ol>
+            <p>You can also suspend a made reservation. A suspended reservation stays in the reservation queue, but the reserved material will not be delivered to you until you release the reservation.</p>
+            <p>When you want to suspend a reservation, click <b>Edit Selected Holds</b> and choose <strong>Freeze</strong>. Remove the suspension by choosing <strong>Release</strong>.</p>
+        </div>
+
+
+        <div id="edit_information" class="content-section">
+            <h2>Personal information and message settings</h2>
+        
+            <h3>Updating email address and phone number</h3>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Profile page</a></li>
+                <li>Enter your phone number in the <strong>SMS Number</strong> field and your email address in the <strong>Email</strong> field</li>
+                <li>Click the <strong>Save Personal Information</strong> button</li>
+            </ol>
+            <p>New email addresses and phone numbers will be updated with a delay as the library confirms the changes.</p>
+        
+            <h3>Updating address</h3>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Profile page</a></li>
+                <li>Select <strong>Request address change</strong></li>
+                <li>Enter your address information on the form</li>
+                <li>Click the <strong>Send</strong> button</li>
+            </ol>
+            <p>New addresses will be updated with a delay as the library confirms the change.</p>
+        
+            <h3>Changing reservation code</h3>
+            <p>Reservations are picked up from the library with a personal reservation code. The reservation code is by default a random number series, but you can change it as desired.</p>
+            <p>Here's how to change the reservation code:</p>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Profile page</a>.</li>
+                <li>Select <strong>Submit Address Change Request</strong></li>
+                <li>Enter your desired reservation code in the <strong>Hold identifier</strong> field</li>
+                <li>Click the <strong>Send</strong> button</li>
+            </ol>
+            <p>The reservation code will be updated with a delay as the library confirms the change.</p>
+        
+            <h3>Subscribing to reminder messages and arrival notifications</h3>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Profile page</a>.</li>
+                <li>Select <strong>Notification Settings Change Request</strong>.</li>
+                <li>Choose email or text message as the delivery method for messages you want to receive. If you do not want to receive messages, leave the checkboxes empty. You can subscribe to the following types of messages:
+                    <ul class="list-bullets">
+                        <li>Due Date Reminder = Reminder of approaching due dates. In addition to the delivery method, you can choose how many days before the due date you want the reminder</li>
+                        <li>Pickup notice = Notification of arrived reservations</li>
+                        <li>Checkin and Checkout receipt = Receipt for returned and borrowed materials</li>
+                        <li>Overdue Notice = Notice when loans are overdue</li>
+                    </ul>
+                </li>
+                <li>Click <strong>Send</strong></li>
+            </ol>
+        
+            <h3>Changing library card PIN code</h3>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Profile page</a>.</li>
+                <li>Click <strong>Change PIN Code of the Library Card</strong>.</li>
+                <li>Enter your current PIN in the <strong>Old PIN</strong> field and your new PIN in the <strong>New PIN</strong> and <strong>Repeat New PIN</strong> fields.</li>
+                <li>Click <strong>Submit</strong></li>
+            </ol>
+            <p>The PIN will be updated not only in the online library but also in other library services, such as self-service libraries and self-service machines.</p>
+        </div>
+
+
+        <div id="online_payments" class="content-section">
+            <h2>Payment of fines</h2>
+            <p>Here's how you can pay your overdue fines in the online library:</p>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Fines" target="blank">Fines page</a></li>
+                <li>Click the <strong>Pay online</strong> button</li>
+                <li>Follow the instructions provided by the payment service</li>
+            </ol>
+        </div>
+        
+        <div id="library_cards" class="content-section">
+            <h2>Acting on behalf of a child</h2>
+        
+            <h3>Attaching a child's library card to your account</h3>
+            <p>You can also attach your children's library cards to your user account. After attachment, you can renew your child's loans, reserve materials for them, and update their contact information.</p>
+            <p>Here's how to attach a child's library card to your account:</p>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/LibraryCards/Home" target="blank">Library Cards page</a></li>
+                <li>Click the <strong>Connect library/parallel card</strong> button</li>
+                <li>You can give the card a name in the <strong>Library card name</strong> field. If you leave the field blank, the card name will be the card number</li>
+                <li>Enter the child's library card number and four-digit PIN, then click <strong>Save</strong></li>
+            </ol>
+        
+            <h3>Using a child's library card</h3>
+            <p>Once you have attached a child's library card to your account, you can use it as if it were your own. For example, you can renew your child's loans as follows:</p>
+            <ol class="list-numbers">
+                <li>Log in to the online library with your library card number</li>
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/CheckedOut" target="blank">Loans page</a></li>
+                <li>Select the child's library card from the <strong>Library card</strong> menu</li>
+                <li>Click <strong>Renew All Items</strong></li>
+            </ol>
+            <p>Other online library functions that require login, such as reservation, editing personal information, and paying fees, work in the same way. An exception is favourite lists and saved searches, which can only be viewed by logging into the child's own account.</p>
+        </div>
+        
+        <div id="saved_searches" class="content-section">
+            <h2>Saving searches and alerts</h2>
+        
+            <h3>Saving a search</h3>
+            <p>You can save searches for later use.</p>
+            <p>Here's how to save a search:</p>
+            <ol class="list-numbers">
+                <li>Log in to the online library.</li>
+                <li>Perform a search.</li>
+                <li>Go to the end of the search results list and click <img src="<?=$this->imageSrc('ohje/nasta.png')?>" alt="Pin icon for saving the search" /><strong>Save Search</strong>.</li>
+            </ol>
+            <p>You can view your saved searches on the <a href="https://kyyti.finna.fi/Search/History?require_login" target="blank">Saved Searches page</a>. 
+            You can delete a saved search by clicking <strong>Delete </strong>(<img src="<?=$this->imageSrc('ohje/poista.jpg')?>" alt="delete button" />).</p>
+        
+            <h3>Subscribing to new item alerts</h3>
+            <p>You can subscribe to email alerts for saved searches, receiving a list of new search results.</p>
+            <p>Here's how to subscribe to an alert:</p>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/Search/History?require_login" target="blank">Saved Searches page</a>.</li>
+                <li>Select <strong>Alert</strong> from the menu and choose either daily or weekly as the email delivery interval.</li>
+            </ol>
+            <p>For example, you can create an alert that sends a weekly notification of new books by Enni Mustonen acquired by the main library in Kotka:</p>
+            <ol class="list-numbers">
+                <li>Search for "Stephen King".</li>
+                <li>Refine the search to books and the Kotka main library collection using the <strong>Narrow Search</strong> menu.
+                <br>
+                <img src="<?=$this->imageSrc('ohje/rajausvalikko2_en.jpg')?>" alt="Kotka main library and books selected in the refinement menu" width="250" /></li>
+                <li>Click the <strong>Save Search</strong> button.</li>
+                <li>Open the <a href="https://kyyti.finna.fi/Search/History?require_login" target="blank">Saved Searches page</a>.</li>
+                <li>Choose <strong>Weekly</strong> from the <strong>Alert</strong> menu for the saved search.</li>
+            </ol>
+            <p>The alert will send emails to the address you specified on the <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Profile page</a> under <strong>Finna account settings</strong>.</p>
+        </div>
+
+        <div id="favourite_lists" class="content-section">
+            <h2>Favourite lists</h2>
+        
+            <h3>Adding items to your favourite list</h3>
+            <ol class="list-numbers">
+                <li>Log in to the online library.</li>
+                <li>Find the item you want to add to your favourite list. Click the <strong>Save to list</strong> button (<img src="<?=$this->imageSrc('ohje/nasta.png')?>" alt="Pin icon for adding to favorites" />)</li>
+                <li>Choose a list from the menu to save the favourite.If you want to create a new list for the item, click <strong>or create a new list</strong>, enter a name for the list, and click <strong>Save</strong></li>
+                <li>If desired, write notes about the item in the <strong>Add a note to the material</strong> field</li>
+                <li>Click <strong>Save</strong></li>
+            </ol>
+        
+            <h3>Editing the list</h3>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Favorites" target="blank">Favorites page</a>.</li>
+                <li>Select the favorite list from the <strong>Favourites</strong> menu</li>
+                <li>Click the checkbox next to the items you want to edit, then choose an action from the <strong>Selected</strong> menu. 
+                For example, you can remove items or add them to another list</li>
+            </ol>
+            <p>If you want to change the order of items on the list, select <strong>Edit Order</strong>, drag the items to the desired order, and click <strong>Save Order</strong>.</p>
+        
+            <h3>Sharing the favourite list</h3>
+            <p>Here's how to share your favourite list with others:</p>
+            <ol class="list-numbers">
+                <li>Open the <a href="https://kyyti.finna.fi/MyResearch/Favorites" target="blank">Favourites page</a></li>
+                <li>Select the favourite list from the <strong>Saved items</strong> menu</li>
+                <li>Set the visibility of the list to <strong>Public</strong> and click on <strong>Public list link</strong></li>
+                <li>You can now copy the link to the list from the address bar and share it as desired</li>
+            </ol>
+            <p>Even if you set the favourite list as public, others will only see the list if you share the link with them.</p>
+        </div>
+    </div>
+</div>
+<!-- END of: finna - content/ohje_en-gb.phtml -->

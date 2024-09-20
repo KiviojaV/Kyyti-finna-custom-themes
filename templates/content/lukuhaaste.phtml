@@ -1,0 +1,131 @@
+<!-- START of: Content/lukuhaaste.fi.phtml -->
+
+<? $this->headTitle('Lukuhaaste 2024'); $this->content()->setHeading('Lukuhaaste 2024'); ?>
+<div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="margin-bottom: 30px;">  
+        <p><img src="<?=$this->imageLink('lukuhaaste24_banneri_pieni.jpg');?>" alt=""/></p>
+    </div>
+</div>
+   
+<div class="row">
+    <div class="col-sm-12 hidden-xs" style="margin-bottom: 30px;">
+        <p><img src="<?=$this->imageLink('lukuhaaste24_banneri.jpg');?>" alt=""/></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="haasteluokka">
+    <div class="col-xs-12 col-sm-7">
+        <h2>Osallistu haasteeseen</h2>
+        <p>Voit osallistua lukuhaasteeseen joko sähköisellä lomakkeella tai tulostamalla lomakkeen ja palauttamalla sen kirjastoon.</p>
+        <ul class="list-bullets">
+            <li><a href="https://link.webropolsurveys.com/Participation/Public/921014ee-978a-491b-af16-16ef3cd6cd49?displayId=Fin2967596" target="blank">Lähetä sähköinen lomake (webropolsurveys.com)</a></li>
+            <li><a href="<?= $this->fileSrc('lomake_2024_tulostettava.pdf')?>" target="_blank">Tulosta lomake (pdf)</a></li>
+            <li><a href="<?= $this->fileSrc('kyyti-lukuhaaste_2024_tulostettava.pdf')?>" target="_blank">Lukuhaasteen esite (pdf)</a>. Esitteitä saa myös kirjastosta.</li>
+        </ul>
+
+        <h2>Kirjat</h2>
+        <p>Kirjojen kansikuvia napauttamalla näet paperikirjojen tiedot ja saatavuuden. Monia haasteen kirjoja voi lainata myös äänikirjana, e-kirjana tai e-äänikirjana. 
+        Voit tarkastaa näiden saatavuuden hakemalla kirjan nimellä sivun ylälaidan haulla.</p>
+        
+        <h3>Tammikuu</h3>
+        <p>Tammikuun miniessee: <a href="<?= $this->fileSrc('lukuhaasteen_miniessee_2024_01.pdf')?>" target="_blank">Ei nimi miestä pahenna ellei mies nimeä (pdf)</a></p>
+        <p>Vinkkilista: Kirjan nimi on vain yksi sana</p><?= $this->feed('lukuhaaste_24_01_kirjan_nimi_on_vain_yksi_sana'); ?> 
+        <p>Vaihtoehtoinen lista: Kirjalla on pitkä nimi</p><?= $this->feed('lukuhaaste_24_01_kirjalla_on_pitka_nimi'); ?>
+        <br>
+        <h3>Helmikuu</h3>
+        <p>Helmikuun miniessee: <a href="<?= $this->fileSrc('lukuhaasteen_miniessee_2024_02.pdf')?>" target="_blank">Norjankielinen kaunokirjallisuus (pdf)</a></p>
+        <p>Vinkkilista: Kaunokirjallisuutta Norjasta</p><?= $this->feed('lukuhaaste_24_02_kaunokirjallisuutta_norjasta'); ?>
+        <p>Vaihtoehtoinen lista: Kirja vieraalta mantereelta</p><?= $this->feed('lukuhaaste_24_02_kirja_vieraalta_mantereelta'); ?>
+        <br>
+        <h3>Maaliskuu</h3>
+        <p>Maaliskuun miniessee: <a href="<?= $this->fileSrc('lukuhaasteen_miniessee_2024_03.pdf')?>" target="_blank">Kirjan sisällä on kirjeitä (pdf)</a></p>
+        <p>Vinkkilista: Kirjassa käydään kirjeenvaihtoa</p><?= $this->feed('lukuhaaste_24_03_kirjassa_kaydaan_kirjeenvaihtoa'); ?>
+        <p>Vaihtoehtoinen lista: Essee</p><?= $this->feed('lukuhaaste_24_03_essee'); ?>
+        <br>
+        <h3>Huhtikuu</h3>
+        <p>Huhtikuun miniessee: <a href="<?= $this->fileSrc('lukuhaasteen_miniessee_2024_04.pdf')?>" target="_blank">Taiteilijaromaani (pdf)</a></p>
+        <p>Vinkkilista: Taiteilijaromaani</p><?= $this->feed('lukuhaaste_24_04_taiteilijaromaani'); ?> 
+        <p>Vaihtoehtoinen lista: Tietokirja jostain taiteenlajista</p><?= $this->feed('lukuhaaste_24_04_tietokirja_jostain_taiteenlajista'); ?>  
+        <br>
+        <h3>Toukokuu</h3>
+        <p>Toukokuun miniessee: <a href="<?= $this->fileSrc('lukuhaasteen_miniessee_2024_05.pdf')?>" target="_blank">Kirjassa on joki (pdf)</a></p>
+        <p>Vinkkilista: Kirjassa on joki</p><?= $this->feed('lukuhaaste_24_05_kirjassa_on_joki'); ?> 
+        <p>Vaihtoehtoinen lista: Kirjassa on meri</p><?= $this->feed('lukuhaaste_24_05_kirjassa_on_meri'); ?> 
+        <br>
+        <h3>Kesäkuu</h3>
+        <p>Kesäkuun miniessee: <a href="<?= $this->fileSrc('lukuhaasteen_miniessee_2024_06.pdf')?>" target="_blank">Suljetun paikan mysteeri (pdf)</a></p>
+        <p>Vinkkilista: Suljetun huoneen mysteeri</p><?= $this->feed('lukuhaaste_24_06_suljetun_huoneen_mysteeri'); ?>
+        <p>Vaihtoehtoinen lista: Jännityskirja, jossa matkustetaan</p><?= $this->feed('lukuhaaste_24_06_jannityskirja_jossa_matkustetaan'); ?>
+        <br>
+        <h3>Heinäkuu</h3>
+        <p>Heinäkuun miniessee: <a href="<?=$this->fileSrc('lukuhaasteen_miniessee_2024_07.pdf')?>" target="_blank">Kansallisaarteemme urheilusankarit (pdf)</a></p>
+        <p>Vinkkilista: Urheilijaelämäkerta</p><?= $this->feed('lukuhaaste_24_07_urheilijaelamakerta'); ?>
+        <p>Vaihtoehtoinen lista: Kirja, joka sijoittuu Pariisiin</p><?= $this->feed('lukuhaaste_24_07_kirja_joka_sijoittuu_pariisiin'); ?>
+        <br>
+        <h3>Elokuu</h3>
+        <p>Elokuun miniessee: <a href="<?=$this->fileSrc('lukuhaasteen_miniessee_2024_08.pdf')?>" target="_blank">Tove Janssonin syntymästä 110 vuotta (pdf)</a></p>
+        <p>Vinkkilista: Tove Jansson 110 v. syntymästä</p><?= $this->feed('lukuhaaste_24_08_tove_jansson_syntymasta'); ?>
+        <p>Vaihtoehto: Muun suomenruotsalaisen kirjailijan kirjoittama kirja</p><?= $this->feed('lukuhaaste_24_08_muun_suomenruotsalaisen_kirjailijan_kirjoittama_kirja'); ?>
+        <br>
+        <br>
+        <h3>Syyskuu</h3>
+        <p>Syyskuun miniessee: <a href="<?=$this->fileSrc('lukuhaasteen_miniessee_2024_09.pdf')?>" target="_blank">Se tapahtui hyllyjen välissä (pdf)</a></p>
+        <p>Vinkkilista: Tapahtumapaikkana kirjakauppa tai kirjasto</p><?= $this->feed('lukuhaaste_24_09_tapahtumapaikkana_kirjakauppa_tai_kirjasto'); ?>
+        <p>Vaihtoehtoinen lista: Koulu- tai opiskelumaailmaan sijoittuva kirja</p><?= $this->feed('lukuhaaste_24_09_koulu_tai_opiskelumaailmaan_sijoittuva_kirja'); ?>
+        <br>
+        <h3>Lokakuu</h3>
+        <p>Vinkkilista: Kirjassa oranssi kansi</p><?= $this->feed('lukuhaaste_24_10_kirjassa_on_oranssi_kansi'); ?>
+        <p>Vaihtoehtoinen lista: Kirjassa turkoosi kansi</p><?= $this->feed('lukuhaaste_24_10_kirjassa_on_turkoosi_kansi'); ?>
+        <br>
+        <h3>Marraskuu</h3>
+        <p>Vinkkilista: Humoristinen romaani</p><?= $this->feed('lukuhaaste_24_11_humoristinen_romaani'); ?> 
+        <p>Vaihtoehtoinen lista: Vitsikirja</p><?= $this->feed('lukuhaaste_24_11_vitsikirja'); ?> 
+        <br>
+        <h3>Joulukuu</h3>
+        <p>Vinkkilista: Esikoisromaani</p><?= $this->feed('lukuhaaste_24_12_esikoisromaani'); ?>  
+        <p>Vaihtoehtoinen lista: Klassikkoromaani</p><?= $this->feed('lukuhaaste_24_12_klassikkoromaani'); ?>
+    </div>       
+
+    <div class="col-xs-12 col-sm-5">
+    <h2>Tietoa lukuhaasteesta</h2>
+        
+    <p>Kyyti-lukuhaaste on Kyyti-kirjastojen aikuisten lukuhaaste. Se 
+    suoritetaan lukemalla tai kuuntelemalla 12 kirjaa, yksi kustakin 
+    kuukausittaisesta teemasta. Jokaiselle pääteemalle on myös tarjolla 
+    vaihtoehtoinen teema. Haastevihko sisältää muutamia kirjavinkkejä, 
+    mutta luettavaksi voi valita minkä tahansa teemaan sopivan teoksen. 
+    Haasteen voi aloittaa milloin vain ja suorittaa omaan tahtiin. Kaikki 
+    haastelomakkeen vuoden 2024 loppuun mennessä palauttaneet 
+    osallistuvat kirjakaupan lahjakortin arvontaan.</p>
+    <p>Jos haluat ajankohtaista tietoa lukuhaasteesta, voit liittyä <a href="https://www.facebook.com/groups/kyytilukuhaaste" target="blank">lukuhaasteen Facebook-ryhmään</a>.</p>
+    
+    <div id="mc_embed_signup">
+        <form action="https://finna.us1.list-manage.com/subscribe/post?u=8d171ce1cd7f49e14efcf8aac&amp;id=47de39e453" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+        	<h2>Liity lukuhaasteen postituslistalle</h2>
+        	<p>Saat kuukausittaisen lukuhaastekirjeen kirjoittamalla sähköpostiosoitteesi
+            Sähköpostiosoite-kenttään ja napauttamalla <strong>Tilaa lukuhaastekirje</strong> -painiketta.</p>
+            
+            <p>Lukuhaastekirje sisältää haastetiimin tervehdyksen, kuukauden teemoja käsittelevän alustuksen ja laajan kirjavinkkilistan. 
+            Kirjeet ovat saatavilla myös Kyyti-Finnasta ja paperisena kirjastosta.</p>
+            <div class="mc-field-group">
+        	<label for="mce-EMAIL">Sähköpostiosoite </label>
+        	<br>
+        	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" size="30">
+            </div>
+            	<div id="mce-responses" class="clear">
+            		<div class="response" id="mce-error-response" style="display:none"></div>
+            		<div class="response" id="mce-success-response" style="display:none"></div>
+            	</div>
+            	<br>
+                <div style="padding: 0;" class="btn btn-primary"><input type="submit" value="Tilaa lukuhaastekirje" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></div>
+            </div>
+        </form>
+    </div>
+    
+    </div>
+</div>
+</div>
+
+<!-- END of: Content/lukuhaaste.fi.tpl -->

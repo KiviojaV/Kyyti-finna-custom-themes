@@ -1,0 +1,275 @@
+<!-- START of: finna - content/help_fi.phtml -->
+<? $this->headTitle('Verkkokirjaston ohjeet'); $this->content()->setHeading('Verkkokirjaston ohjeet'); ?>
+
+<div class="row">
+    <div class="col-sm-3 sidebar">
+        <div class="content-navigation-menu">
+        </div>
+    </div>
+    <div class="col-sm-9">
+    <div id="kirjautuminen" class="content-section">
+        <h2>Kirjautuminen</h2>
+        <p>Kirjautumalla verkkokirjastoon voit uusia lainat, tehdä varauksia ja muokata omia tietojasi. </p>
+        <p>Näin kirjaudut</p>
+        <ol class="list-numbers">
+            <li>Napauta <strong>Kirjaudu-painiketta</strong> (puhelimilla <img src="<?=$this->imageSrc('ohje/oma_tili.jpg')?>" alt="Oma tili -painike" />-kuvake).</li>
+            <li>Kirjoita kirjastokortin numero (esimerkiksi 285A123123) ja nelinumeroinen tunnusluku ja valitse <strong>Kirjaudu</strong>.</li>
+        </ol>
+        <p>Jos et muista tunnuslukuasi, valitse kirjautumisikkunassa <strong>Unohditko tunnuslukusi?</strong> 
+        Kirjoita kirjastokortin numero ja sähköpostiosoite ja napauta <strong>Palauta salasana</strong> -painiketta. Saat sähköpostiisi linkin, josta voit vaihtaa tunnusluvun.</p>
+        <p>Voit kirjautua ulos verkkokirjastosta napauttamalla nimeäsi (puhelimilla <img src="<?=$this->imageSrc('ohje/oma_tili2.jpg')?>" alt="Oma tili -painike" />-painike) ja valitsemalla <strong>Kirjaudu ulos</strong>.</p>
+    </div>
+
+    <div id="lainat" class="content-section">
+        <h2>Lainojen uusiminen</h2>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/CheckedOut" target="blank">Lainat-sivu</a>.</li>
+            <li>Jos haluat uusia kaikki lainasi, napauta <strong>Uusi kaikki lainat</strong>. Jos haluat uusia vain osan lainoista, 
+            napauta uusittavien teosten kohdalla valintaruutua ja valitse <strong>Uusi valitut lainat</strong>.</li>
+        </ol>
+    </div>
+
+    <div id="lainaushistoria" class="content-section">
+        <h2>Lainaushistoria</h2>
+        <p>Näet aiemmat lainasi <a href="https://kyyti.finna.fi/MyResearch/HistoricLoans" target="blank">Lainaushistoria-sivulta</a>.</p>
+        <p>Voit poistaa lainaushistorian napauttamalla <strong>Tyhjennä historia</strong> -painiketta.</p>
+    </div>
+
+    <div id="search" class="content-section">
+        <h2>Aineiston hakeminen</h2>
+        <h3>Haun kirjoittaminen</h3>
+        <p>Hae aineistoa kirjoittamalla hakusanat hakukenttään ja napauttamalla <strong>Hae</strong>-painiketta (<img src="<?=$this->imageSrc('ohje/suurennuslasi.jpg')?>" alt="suurennuslasi-kuvake" />-kuvake). 
+        Hakusanoina voit käyttää teoksen nimeä, tekijää, aihetta tai muuta aineistoa kuvaavaa sanaa. 
+        Jos kirjoitat hakuun useita sanoja, haku etsii vain teokset, joissa esiintyvät kaikki sanat.</p>
+        <p>Voit hakea kaikilla sanan taivutusmuodoilla katkaisemalla hakusanan tähdellä *. 
+        Haku “koir*” etsii esimerkiksi teokset, joissa esiintyy sana "koira", "koirien" tai "koira-aitaus". 
+        Hakusanan voi katkaista myös sanan keskeltä. Haku “koi*a” etsii esimerkiksi sanat “koira” ja “koirilla”.</p>
+        <p>Voit hakea usean sanan ilmausta kirjoittamalla hakusanat lainausmerkkeihin “”. 
+        Esimerkiksi haku "keskiajan historia" etsii kaikki teokset, joissa esiintyvät sanat “keskiajan” ja “historia” peräkkäin. 
+        Haku ei esimerkiksi etsi sanaa "keskiajan kulttuurihistoria” tai erikseen esiintyviä sanoja “keskiajan” ja “historia”.</p>
+
+        <h3>Hakutulosten rajaaminen haun jälkeen </h3>
+        <p>Haun jälkeen voit vielä tarkentaa hakua rajausvalikosta. Voit rajata tuloksia esimerkiksi</p>
+        <ul class="list-bullets">
+            <li>aineistotyypillä (esimerkiksi kirjat, videot, äänitteet),</li> 
+            <li>kirjastoittain,</li>
+            <li>osastoittain (esimerkiksi aikuiset tai musiikki) tai</li>
+            <li>teoksen kielellä.</li>
+        </ul>
+        <p>Voit asettaa rajauksen napauttamalla sen nimeä. Näet tarkempia rajausvaihtoehtoja napauttamalla pientä mustaa nuolta rajauksen vieressä.</p>
+        <p>Alla kuvassa on rajattu haku vain Haminan kirjastoauton kokoelmassa oleviin DVD-levyihin.</p>
+        <p><img src="<?=$this->imageSrc('ohje/rajausvalikko.jpg')?>" alt="Hakutulosten rajaamisen valikko" width="250" /></p>
+        <p>Jos haluat poistaa tekemiäsi rajauksia, napauta uudestaan valittua rajausta.</p>
+
+        <h3>Teoksen saatavuuden ja tarkempien tietojen tarkastaminen </h3>
+        <p>Haun tuloksena saat listan hakusanojasi vastaavista teoksista.</p>
+        <p><img src="<?=$this->imageSrc('ohje/hakutuloksia.jpg')?>" alt="Kaksi hakutulosta hakutuloslistassa" width="600"/></p>
+        <p>Listasta näet kirjastot, joiden kokoelmissa teos on. Lainatut teokset on merkitty punaisella rastilla ja hyllyssä olevat vihreällä ympyrällä.</p>
+        <p><img src="<?=$this->imageSrc('ohje/saatavuuspallukat.jpg')?>" alt="Saatavilla olevan ja lainatun teoksen varauskuvakkeet" /></p>
+        <p>Jos oma kirjastosi ei näy listassa, napauta <strong>Lisää</strong>-painiketta, niin näet kaikki kirjastot, joiden kokoelmassa teosta on.</p> 
+        <p>Jos hakutuloslistassa teoksen sijainti on “Useita sijainteja”, näet teoksen sijainnin napauttamalla hakutuloslistassa teoksen nimeä ja avautuvalla sivulla kirjaston nimeä. 
+        Merkintä “Useita sijainteja” tarkoittaa, että teosta on kirjastossa useassa eri paikassa, eikä järjestelmä pysty näyttämään vain yhtä sijaintia teokselle.</p>
+    </div>
+
+    <div id="varaaminen" class="content-section">
+        <h2>Varaaminen</h2>
+        <h3>Teoksen varaaminen</h3>
+        <p>Jos etsimääsi teosta ei ole hyllyssä tai haluat tilata teoksen toisesta kirjastosta, voit tehdä siihen varauksen.</p>  
+        <p>Näin varaat teoksen</p> 
+        <ol class="list-numbers">
+            <li>Etsi haluamasi teos.</li>
+            <li>Napauta <strong>Varaa teos</strong> -painiketta. Jos et ole kirjautunut verkkokirjastoon, painikkeen nimi on <strong>Kirjaudu sisään varataksesi</strong>.</li>
+            <li>Valitse <strong>Noutopaikka</strong>-valikosta kirjasto, josta haluat noutaa varauksen ja napauta <strong>Lähetä varauspyyntö</strong>.</li>
+            <li>Napauta <strong>Sulje</strong>.</li>
+        </ol>
+        
+        <h3>Varauksen peruminen ja keskeyttäminen </h3>
+        <p>Jos haluat perua tekemäsi varauksen</p>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Holds" target="blank">Varaukset-sivu</a>.</li>
+            <li>Napauta peruttavien varausten kohdalla valintaruutua ja valitse <strong>Peru valitut varaukset</strong>.</li>
+        </ol>        
+        <p>Tehdyn varauksen voi myös keskeyttää. Keskeytetty varaus pysyy varausjonossa, mutta varattua teosta ei toimiteta sinulle ennen kuin vapautat varauksen.</p> 
+        <p>Kun haluat keskeyttää varauksen, valitse Varaukset-sivulla varauksen kohdalla <strong>Keskeytä varaus</strong>. Poista keskeytys valitsemalla <strong>Vapauta</strong>.</p> 
+    </div>
+    
+    <div id="varastokirjastotilaus" class="content-section">
+        <h2>Kaukolainan tilaaminen Varastokirjastosta</h2>
+        <p>Voit tilata Kyytin verkkokirjaston kautta aineistoa kaukolainaan Varastokirjastosta. 
+        Varastokirjasto säilyttää kirjastojen vähemmän käytettyä aineistoa ja moni Kyyti-kirjastojen kokoelmista poistettu tai 
+        muuten harvinaisempi teos löytyy Varastokirjaston yli kahden miljoonan niteen kokoelmasta.</p>
+        <p>Kaukolainatilaukset Varastokirjastosta ovat maksullisia. Voit tarkastaa oman kuntasi tilaushinnan 
+        <a href="https://kyyti.finna.fi/Content/asiakkaana#payments" target="blank">hinnastosta</a>.</p>
+
+        <h3>Näin haet ja tilaat aineistoa</h3>
+        <ol class="list-numbers">
+            <li>Hae etsimääsi teosta. Jos teosta ei löydy Kyyti-kirjastojen kokoelmasta, voit etsiä sitä Varastokirjastosta napauttamalla <strong>Varastokirjasto</strong>-välilehteä.
+            <br>
+            <img src="<?=$this->imageSrc('ohje/haku_kyytissa.png')?>" alt="Varastokirjasto-painikkeen sijainti hakulaatikon alapuolella" width="750" /></li>
+            <li>Jos teos on saatavilla Varastokirjastosta, voit tilata sen napauttamalla teoksen kohdalla <strong>Tilaa aineisto</strong> -painiketta. 
+            Jos et ole vielä kirjautunut verkkokirjastoon, painikkeen nimi on <strong>Kirjaudu sisään tilataksesi</strong> ja 
+            järjestelmä pyytää ennen tilauslomakkeen avaamista kirjastokortin numeron ja tunnusluvun.</li>
+            <li>Valitse tilauslomakkeella kirjasto, josta haluat noutaa teoksen. Voit myös tarvittaessa antaa tarkempia tietoja tilattavasta teoksesta tai artikkelikopiosta.</li>
+            <li>Lähetä tilaus napauttamalla <strong>Lähetä</strong>-painiketta.</li>
+            <li>Kun tilaus on noudettavissa, saat ilmoituksen sähköpostilla tai tekstiviestillä.</li>
+        </ol>
+    </div>
+
+    <div id="tietojen_muokkaaminen" class="content-section">
+        <h2>Omat tiedot ja viestiasetukset</h2>
+        <h3>Sähköpostiosoitteen ja puhelinnumeron päivittäminen </h3>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Omat tiedot -sivu</a>.</li>
+            <li>Kirjoita puhelinnumero <strong>Numero tekstiviesteille</strong> -kenttään ja sähköpostiosoitteesi <strong>Sähköposti</strong>-kenttään.</li>   
+            <li>Napauta <strong>Tallenna henkilötiedot</strong> -painiketta.</li> 
+        </ol>
+        <p>Uusi sähköpostiosoite ja puhelinnumero päivittyvät tietoihisi viiveellä, koska kirjasto vahvistaa vielä muutokset.</p>
+      
+        <h3>Osoitteen päivittäminen </h3>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Omat tiedot -sivu</a>.</li> 
+            <li>Valitse <strong>Tee osoitteenmuutospyyntö</strong>.</li> 
+            <li>Kirjoita osoitetietosi lomakkeelle.</li> 
+            <li>Napauta <strong>Lähetä</strong>-painiketta.</li> 
+        </ol>
+        <p>Uusi osoite päivittyy tietoihin viiveellä, koska kirjasto vahvistaa vielä muutoksen.</p>
+      
+        <h3>Varaustunnuksen vaihtaminen</h3>
+        <p>Varaukset noudetaan kirjastosta henkilökohtaisella varaustunnuksella. Varaustunnus on oletuksena satunnainen numerosarja, mutta voit vaihtaa varaustunnuksen haluamaksesi.</p>  
+        <p>Näin vaihdat varaustunnuksen</p>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Omat tiedot -sivu</a>.</li> 
+            <li>Valitse <strong>Tee osoitteenmuutospyyntö</strong>.</li> 
+            <li>Kirjoita haluamasi varaustunnus <strong>Varaustunnus</strong>-kenttään.</li> 
+            <li>Napauta <strong>Lähetä</strong>-painiketta.</li> 
+        </ol>
+        <p>Varaustunnus päivittyy tietoihin viiveellä, koska kirjasto vahvistaa vielä muutoksen.</p>
+      
+        <h3>Muistutusviestien ja saapumisilmoitusten tilaaminen</h3>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Omat tiedot -sivu</a>.</li>
+            <li>Valitse <strong>Tee viestiasetusten muutospyyntö</strong>.</li> 
+            <li>Valitse listasta lähetystavaksi joko sähköposti tai tekstiviesti niille viesteille, joita haluat vastaanottaa. 
+            Jos et halua vastaanottaa viestejä, jätä valintaruudut tyhjäksi. Voit tilata seuraavanlaisia viestejä:
+            <ul class="list-bullets">
+                <li>Eräpäivämuistutus = Muistutus lainojen eräpäivän lähestymisestä. Lähetystavan lisäksi voit valita kuinka monta päivää ennen eräpäivää haluat muistutuksen.</li> 
+                <li>Saapumisilmoitus = Ilmoitus saapuneesta varauksesta.</li> 
+                <li>Palautus- ja lainauskuitti = Kuitti palautetusta ja lainatusta aineistosta.</li> 
+                <li>Erääntymisilmoitus = Ilmoitus, kun lainat ovat myöhässä.</li>
+            </ul>
+            </li>
+            <li>Napauta <strong>Lähetä</strong>. 
+        </ol>
+        
+        <h3>Kirjastokortin tunnusluvun vaihtaminen</h3>  
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Omat tiedot -sivu</a>.</li> 
+            <li>Napauta <strong>Vaihda kortin tunnusluku-painiketta</strong>.</li> 
+            <li>Kirjoita <strong>Vanha tunnusluku</strong> -kenttään nykyinen tunnuslukusi ja <strong>Uusi tunnusluku</strong>- ja <strong>Toista uusi tunnusluku</strong> -kenttiin uusi tunnusluku.</li> 
+            <li>Napauta <strong>Lähetä</strong>-painiketta. 
+        </ol>
+        <p>Tunnusluku päivittyy verkkokirjaston lisäksi myös muihin kirjaston palveluihin, kuten omatoimikirjastoon ja lainausautomaatteihin. </p>
+    </div>
+
+    <div id="verkkomaksut" class="content-section">
+        <h2>Maksujen maksaminen</h2>
+        <p>Näin maksat myöhästymismaksusi verkkokirjastossa:</p>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Fines" target="blank">Maksut-sivu</a>.</li> 
+            <li>Napauta valintaruutua niiden maksujen vieressä, jotka haluat maksaa. Jos haluat maksaa kaikki maksut, napauta "Valitse kaikki"-valintaruutua.</li>
+            <li>Napauta <strong>Siirry maksamaan</strong> -painiketta.</li> 
+            <li>Seuraa maksupalvelun ohjeita.</li> 
+        </ol>
+    </div>
+
+    <div id="kirjastokortit" class="content-section">
+        <h2>Lapsen puolesta asioiminen</h2>
+        <h3>Lapsen kirjastokortin liittäminen omaan tiliin</h3>
+        <p>Voit liittää käyttäjätiliisi myös lastesi kirjastokortit. Liittämisen jälkeen voit esimerkiksi uusia lapsen lainat, varata hänelle aineistoa ja päivittää lapsen yhteystiedot.</p>
+        <p>Näin liität lapsen kirjastokortin tiliisi </p>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/LibraryCards/Home" target="blank">Kirjastokortit-sivu</a>.</li> 
+            <li>Napauta <strong>Liitä kirjastokortti/rinnakkaiskortti</strong> -painiketta.</li>
+            <li>Voit antaa kortille nimen <strong>Kirjastokortin nimi</strong> -kenttään. Jos jätät kentän tyhjäksi, kortin nimeksi tulee kortin numero.</li> 
+            <li>Kirjoita lapsen kirjastokortin numero ja nelinumeroinen tunnusluku ja napauta <strong>Tallenna</strong>-painiketta.</li> 
+        </ol>
+    
+        <h3>Lapsen kirjastokortilla asiointi</h3>    
+        <p>Kun olet liittänyt lapsen kirjastokortin omaan tiliisi, voit asioida hänen kortillaan kuin omallasi. Voit esimerkiksi uusia lapsen lainat näin:</p>
+        <ol class="list-numbers">
+            <li>Kirjaudu verkkokirjastoon oman kirjastokorttisi numerolla.</li> 
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/CheckedOut" target="blank">Lainat-sivu</a>.</li> 
+            <li>Valitse <strong>Kirjastokortti</strong>-valikosta lapsen kirjastokortti.</li> 
+            <li>Napauta <strong>Uusi kaikki lainat</strong>.</li> 
+        </ol>
+        <p>Myös muut verkkokirjaston kirjautumista vaativia toiminnot, kuten varaaminen, omien tietojen muokkaaminen ja maksujen maksaminen, toimivat samalla tavalla. 
+        Poikkeus ovat suosikkilistat ja tallennetut haut, jotka näkee vain kirjautumalla lapsen omalle tilille.</p>
+    </div>
+
+    <div id="uutuusvahdit" class="content-section">
+      <h2>Hakujen tallentaminen ja uutuusvahdit</h2>
+      <h3>Haun tallentaminen </h3>
+      <p>Voit tallentaa tekemiäsi hakuja myöhempää käyttöä varten.</p>
+      <p>Näin tallennat haun </p>
+        <ol class="list-numbers">
+            <li>Kirjaudu verkkokirjastoon.</li> 
+            <li>Tee haku.</li> 
+            <li>Siirry hakutuloslistan loppuun ja napauta <strong>Tallenna haku</strong> -painiketta.</li> 
+        </ol>
+        <p>Tallennetamasi haut näet <a href="https://kyyti.finna.fi/Search/History?require_login" target="blank">Tallennetut haut -sivulla</a>.
+        Voit poistaa tallennetun haun napauttamalla <strong>Poista</strong>-painiketta (<img src="<?=$this->imageSrc('ohje/poista.jpg')?>" alt="poistopainike" />-kuvake). </p>
+
+        <h3>Uutuusvahdin tilaaminen</h3>
+        <p>Voit tilata tallennetuista hauista sähköpostiisi uutuusvahdin, eli listan haun löytämistä uusista tuloksista.</p>
+        <p>Näin tilaat uutuusvahdin</p>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/Search/History?require_login" target="blank">Tallennetut haut -sivu</a>.</li> 
+            <li>Valitse <strong>Uutuusvahti</strong>-valikosta sähköpostien lähetysväliksi joko päivittäin tai viikoittain.</li> 
+        </ol>
+        <p>Voit tehdä esimerkiksi uutuusvahdin, joka lähettää viikottain tiedon uusista Kotkan pääkirjastoon hankituista Enni Mustosen kirjoista:</p>
+        <ol class="list-numbers">
+            <li>Hae sanoilla “enni mustonen”.</li> 
+            <li>Rajaa haku kirjoihin ja Kotkan pääkirjaston kokoelmaan <strong>Rajaa hakua</strong> -valikosta. 
+            <br>
+            <img src="<?=$this->imageSrc('ohje/rajausvalikko2.jpg')?>" alt="Rajausvalikossa valittuna Kotkan pääkirjasto ja kirjat" width="250" /></li> 
+            <li>Napauta <strong>Tallenna Haku</strong> -painiketta.</li> 
+            <li>Avaa <a href="https://kyyti.finna.fi/Search/History?require_login" target="blank">Tallennetut haut -sivu</a>.</li> 
+            <li>Valitse haun kohdalta <strong>Uutuusvahti</strong>-valikosta <strong>Viikottain</strong>.</li>
+        </ol>    
+        <p>Uutuusvahti lähettää sähköpostit osoitteeseen, jonka olet määritellyt <a href="https://kyyti.finna.fi/MyResearch/Profile" target="blank">Omat tiedot -sivulla</a> kohdassa <strong>Uutuusvahtien sähköpostiosoite</strong>.</p>
+    </div>
+
+    <div id="suosikkilistat" class="content-section">
+        <h2>Suosikkilistat</h2>
+        <h3>Teosten lisääminen suosikkilistalle</h3>
+        <ol class="list-numbers">
+            <li>Kirjaudu verkkokirjastoon.</li> 
+            <li>Etsi teos, jonka haluat lisätä suosikkilistalle. Napauta <strong>Lisää suosikkeihin</strong> -painiketta (<img src="<?=$this->imageSrc('ohje/nasta.png')?>" alt="Nasta-kuvake suosikin lisäämiseen" />-kuvake).</li> 
+            <li>Valitse valikosta lista, johon haluat tallentaa suosikin. 
+            Jos haluat teoksen uudelle suosikkilistalle, napauta <strong>tai luo uusi lista</strong> -painiketta, anna listalle nimi ja napauta <strong>Tallenna</strong>-painiketta.</li>
+            <li>Voit halutessasi kirjoittaa muistiinpanoja teoksesta <strong>Lisää muistiinpano aineistolle</strong> -kenttään.</li> 
+            <li>Napauta <strong>Tallenna-painiketta</strong>.</li> 
+        </ol> 
+        
+        <h3>Listan muokkaaminen</h3>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Favorites" target="blank">Suosikit-sivu</a>.</li> 
+            <li>Valitse suosikkilista <strong>Suosikit</strong>-valikosta.</li> 
+            <li>Napauta muokattavien teosten kohdalla valintaruutua ja valitse <strong>Valituille</strong>-valikosta toimenpide. 
+            Voit esimerkiksi poistaa teoksia tai lisätä ne toiselle listalle.</li> 
+        </ol> 
+        <p>Jos haluat muokata teosten järjestystä listalla, valitse <strong>Muokkaa järjestystä</strong>, vedä teokset haluamaasi järjestykseen ja napauta <strong>Tallenna järjestys</strong>.</p>
+
+        <h3>Suosikkilistan jakaminen</h3>
+        <p>Näin jaat suosikkilistan muille</p>
+        <ol class="list-numbers">
+            <li>Avaa <a href="https://kyyti.finna.fi/MyResearch/Favorites" target="blank">Suosikit-sivu</a>.</li>
+            <li>Valitse suosikkilista <strong>Suosikit</strong>-valikosta.</li>
+            <li>Valitse listan näkyvyydeksi <strong>Julkinen</strong> ja napauta kohtaa <strong>Listan julkinen linkki</strong>.</li>
+            <li>Voit nyt kopioida listan linkin osoiteriviltä ja jakaa sen haluamallasi tavalla eteenpäin.</li>
+        </ol>
+        <p>Vaikka asetat suosikkilistan julkiseksi, muut näkevät listan vain, jos jaat listan linkin heille. </p>
+    </div>
+    </div>
+</div>
+<!-- END of: finna - content/help_fi.phtml -->

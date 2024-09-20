@@ -1,0 +1,120 @@
+<!-- START of: content/lapset_ja_nuoret_fi.phtml -->
+<? $this->headTitle('Lapset ja nuoret'); $this->content()->setHeading('Lapset ja nuoret'); ?>
+
+<div class="row">
+    <div class="col-sm-8">
+        <h2 class="infoboksi-header">Kyyti tubettaa</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <?php $cookieConsent = $this->plugin('cookieConsent'); ?>
+            <?php if (!$cookieConsent->isEnabled() || $cookieConsent->isCategoryAccepted('video')): ?>
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLfKV17HE88YvkNwMjr3Nw2phAS27eNsCI" frameborder="0" allow="fullscreen picture-in-picture"></iframe>
+            <?php else: ?>   
+            <?=$this->iframe()->renderLinkBox('https://www.youtube.com/embed/videoseries?list=PLfKV17HE88YvkNwMjr3Nw2phAS27eNsCI', ['video'])?>
+            <?php endif; ?>
+        </div>
+    </div>
+    
+    <div class="col-sm-4">
+        <div class="mobile-margin visible-xs"></div>
+        <h2 class="infoboksi-header">Lukudiplomit</h2>
+        
+        <figure class="figure">
+            <img src="<?=$this->imageSrc('lanu/lukudiplomit.jpg')?>" class="figure-img img-fluid rounded responsive" alt="Punatukkainen tyttö lukee kirjaa"/>
+        </figure>
+        <br>
+        <p>Lukudiplomit innostavat lapsia ja nuoria lukemaan, vahvistavat lukutaitoa ja antavat elämyksiä.</p>
+        <div class="lukudiplomilista">
+            <ul class="list-bullets">
+            <li><a href="<?=$this->url('content-page',  ['page' => 'satudiplomi'])?>">Satudiplomi  </a></li>
+            <li><a href="<?=$this->url('content-page',  ['page' => 'lanu_lukukipina_1-2_lk'])?>">Lukukipinä (1.-2.lk)  </a></li>
+            <li><a href="<?=$this->url('content-page',  ['page' => 'lanu_lukuliekki_3-4_lk'])?>">Lukuliekki  (3.-4.lk) </a></li>
+            <li><a href="<?=$this->url('content-page',  ['page' => 'lukuliekki-peli'])?>">Lukuliekki-peli (3.-4.lk)</a></li>
+            <li><a href="<?=$this->url('content-page',  ['page' => 'lanu_lukuroihu_5-6_lk'])?>">Lukuroihu (5.-6.lk)</a></li>
+            <li><a href="<?=$this->url('content-page',  ['page' => 'lanu_ylakoulun_diplomi'])?>">Yläkoulun lukudiplomi</a></li>
+            <li><a href="<?=$this->url('content-page',  ['page' => 'lukuhaaste_lukudiplomi'])?>">Lukeva Kouvolan lukuhaaste (eskarit-2.lk)</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('lanu_uutuudet'); ?>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('lanu_poimintoja'); ?> 
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('lanu_kirjavinkkeja'); ?> 
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <?= $this->feed("sivupiirikaruselli"); ?>
+    </div> 
+</div>
+
+<!--Tapahtumalohko-->
+<div class="row">
+    <div class="col-sm-12">
+        <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/66d9a00800a4571945639cdb'>
+            </script><div id='EVENTZWIDGET-66d9a00800a4571945639cdb' class='EVENTZWIDGET'></div>
+            
+            <?php
+            $script = <<<JS
+            const searchTerms = new Map([
+                        ['Valitse aihe',''],
+                        ['Elokuvat','Elokuvat'],
+                        ['Kirjailijavieraat','kirjailija'],
+                        ['Kirjallisuus','Kirjallisuus'],
+                        ['Lukeminen','lukupiiri'],
+                        ['Musiikki','Musiikki'],
+                        ['Näyttelyt','Näyttelyt'],
+                        ['Satutuokiot','satutuokio']]);
+                        
+            waitForWidgets(searchTerms);
+            JS;
+            echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+            ?>
+    </div>
+</div>
+<!--Tapahtumalohko päättyy-->
+<br>
+<br>
+
+<div class="row">
+    <div class="col-sm-8"> 
+        <h2 class="infoboksi-header">Sivupiiri vinkkaa</h2>
+        <div style="position: relative; padding-bottom: 90%; padding-top: 25px; height: 0;">
+            <iframe src="https://kirjastokaista-embed.kirjastot.fi/app/themes/kirjastokaista/scripts/js-1_from_sivupiiri_vinkkaa.php" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="mobile-margin visible-xs"></div>
+            <h2 class="infoboksi-header">Kouluille ja päiväkodeille</h2>
+            
+            <figure class="figure">
+            <img src="<?=$this->imageSrc('ryhmat.jpg')?>" class="figure-img img-fluid rounded responsive" alt="Tyttö ottaa kirjaa kirjaston hyllystä"/>
+            </figure>
+            <br>
+            <p>Kirjastot järjestävät vierailuja ja mediataitojen opetusta kouluille, päiväkodeille ja muille ryhmille.</p>
+            <p>Vierailut ja opetus kunnittain</p>
+            <ul class="list-bullets">
+            	<li><a href="<?=$this->url('content-page',  ['page' => 'ryhmakaynnit'])?>#Hamina">Hamina</a></li>
+            	<li><a href="<?=$this->url('content-page',  ['page' => 'ryhmakaynnit'])?>#Iitti">Iitti</a></li>
+            	<li><a href="<?=$this->url('content-page',  ['page' => 'ryhmakaynnit'])?>#Kotka">Kotka</a></li>
+            	<li><a href="<?=$this->url('content-page',  ['page' => 'ryhmakaynnit'])?>#Kouvola">Kouvola</a></li>
+            </ul>    
+    </div>
+</div>
+
+<!-- END of: content/lapset_ja_nuoret_fi.phtml -->

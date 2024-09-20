@@ -1,0 +1,64 @@
+<!-- START of: Content/musiikki.fi.phtml -->
+
+<? $this->headTitle('Musiikki'); $this->content()->setHeading('Musiikki'); ?>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('musiikkivinkkeja'); ?> 
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('musiikkiuutuudet'); ?>
+    </div>
+</div>
+  
+<div class="row">
+    <div class="col-sm-4 col-md-4">
+        <h2 class="nosto-header">Lainaa soitin kirjastosta</h2>   
+        <p><a href="https://bit.ly/2L0l4HT"><img src="<?=$this->imageLink('musiikkivinkkeja/ukulele.jpg')?>" alt="Kirjastojen soittimia" /></a> </p>
+        <p>Voit lainata soittimia kotiin musiikkiosastoilta.</p>
+        <p>Soittimien laina-aika on kaksi viikkoa.</p>
+        <p><a href="https://bit.ly/2L0l4HT">Selaa soitinvalikoimaa</a></p>
+    </div>    
+
+<div class="col-sm-4 col-md-4">
+    <h2 class="nosto-header">Musiikin ytimessä</h2>   
+    <iframe src="https://musiikkikirjastot-embed.kirjastot.fi/musiikin-ytimessa/"  height="335"></iframe>
+</div>  
+
+<div class="col-sm-4 col-md-4">
+    <h2 class="nosto-header">Kysy musiikista!</h2>
+    <p>Vastaajina toimivat musiikkikirjastojen ammattilaiset. 
+    Vastaukset tallennetaan myös palvelun arkistoon.</p>
+    <p><a href="http://www.musiikkikirjastot.fi/kysy/" target="_blank">Kysy</a> tai <a href="https://www.kirjastot.fi/kysy/haku?keys=&amp;feeds=188297" target="_blank">etsi vastauksia arkistosta</a>
+    </p>
+    <img style="margin:  5px 70px" src="<?=$this->imageLink('kk-logo_fi_green_short.png')?>" alt="Kysy kirjastonhoitajalta -palvelun logo.">
+</div>
+
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->feed('levyhyllyt'); ?> 
+    </div>
+</div>  
+
+<div class="row">
+    <div class="col-md-12">  
+        <?= $this->feed('musiikkia_verkossa'); ?>  
+    </div>
+</div>
+
+<!-- Kymenlaakson muusikoita, musatapahtumia ja musiikkia esittelevä lohko. Lisätään, jos musaihmiset saavat joskus tämän koottua.
+<div class="col-md-4">
+<h2 class="nosto-header">Kymenlaakso soi</h2>   
+<p><a href="<?=$this->url('content-page',  ['page' => 'musiikkitapahtumia'])?>"><img src="<?=$this->imageLink('musiikkivinkkeja/kymenlaakso_soi.jpg')?>" alt="Musiikkitapahtumia Kymenlaaksossa" /></a> </p>
+
+<p>Tutustu <a href="<?=$this->url('content-page',  ['page' => 'musiikkitapahtumia'])?>">Kymenlaaksolaisiin musiikkitapahtumiin ja levyihin.</a></p>
+</div>
+-->
+
+<!-- END of: Content/musiikki.fi.tpl -->

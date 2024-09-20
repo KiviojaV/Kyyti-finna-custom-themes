@@ -1,0 +1,188 @@
+/* Tapahtumalohkon määritykset */
+
+.EVENTZWIDGET {
+    .bubster-search-wrapper {
+    
+        .bubster-search-date-buttons .bubster-search-date-title {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-size: 24px !important;
+            //font-size: 1.8rem;
+            line-height: 1.33;
+            text-align: left;
+            padding: 15px;
+        }
+        
+        .bubster-search-filters {
+            justify-content:flex-start;
+            
+            .bubster-search-filter-area {
+                order:1;
+            }
+            
+            .bubster-search-filter-category {
+                order:3;
+            }
+            
+            .search-term-filter {
+                order:2;
+            }
+            
+            .bubster-search-filter-button-reset {
+                height: 50px!important;
+                line-height: 50px!important;
+                padding: 0 8px!important;
+                cursor: pointer;
+                border-radius: 5px;
+                border: none;
+                color: #ffffff !important;
+                background-color: #8c0052 !important;
+                justify-content:center !important;
+                margin:0px !important;
+                
+                order:4;
+            }
+            
+            .bubster-search-filter {
+                font-size:1em;
+                padding: 10px 5px 10px 10px;
+                width: calc(25% - 36.66px);
+            }
+        }
+    }
+        
+    .bubster-search-wrapper .bubster-search-filters .bubster-search-filter-button {
+        display:none;
+    }
+    
+    .bubster-search-filter-q {
+        display:none;
+    }
+        
+    @media (max-width: 450px) {
+        .bubster-search-wrapper {
+            margin: 0px 0px 20px 0px;
+            
+            .bubster-search-filters {
+                
+                .bubster-search-filter {
+                    width:100%!important;
+                    height:50px;
+                }
+                
+                .bubster-search-filter-button-reset {
+                    width: calc(50% - 20px) !important;
+                }
+            }
+        }
+        .bubster-list-4 {
+            display: flex;
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-right: 0.5em;
+            
+            .bubster-page {
+                position: relative !important;
+                width: 100%;
+                flex-direction: column !important;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                padding-bottom: 10px;
+                box-shadow: 1px 1px 7px 3px #f0fbfd;
+                
+                .bubster-image {
+                    position: relative !important;
+                    display: block;
+                    width: 100% !important;
+                    height: 200px !important;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    background-color: #eee;
+                }
+                
+                .bubster-summary {
+                    width: auto !important;
+                    padding: 5px 0 5px 10px !important;
+                    font-size: 14px;
+                    line-height: 1.3;
+                    
+                    .bubster-location {
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        max-height: 40px;
+                        overflow: hidden;
+                        padding-left: 25px;
+                        margin-bottom: 5px;
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+        }
+
+        .bubster-list-4.bubster-css-default .bubster-more {
+            clear: both;
+            position: relative;
+            //display: block;
+            width: 100% !important;
+            padding: 8px 10px 8px 10px;
+            margin-top: 10px;
+            font-size: 100%;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: rgb(140, 0, 82);
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            overflow-anchor: none;
+            margin: 0 auto;
+
+            a {
+                border-radius: 10px;
+                padding: 0.57em;
+                border: 1px solid rgba(140, 0, 82, 0.7);
+            }
+        }
+    }
+
+    @media only screen and (min-width: 451px) and (max-width: 767px) {
+        .bubster-list-4 .bubster-page .bubster-image {
+            width: 170px !important;
+            height: 95px !important;
+        }
+        
+        .bubster-search-wrapper .bubster-search-filters .bubster-search-filter {
+            width: calc(50% - 20px) !important;
+            height: 50px;
+        }
+        
+        .bubster-search-filter-button-reset {
+            width: calc(50% - 20px) !important;
+        }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .bubster-list-4 .bubster-page .bubster-image {
+            width: 100%;
+            padding-bottom: 56.25%
+        }
+        
+        .bubster-search-wrapper .bubster-search-filters .bubster-search-filter {
+            width: calc(25% - 15px) !important;
+            height: 50px;
+        }
+        
+        .bubster-search-filter-button-reset {
+            width: calc(25% - 15px) !important;
+        }
+        
+    }
+}

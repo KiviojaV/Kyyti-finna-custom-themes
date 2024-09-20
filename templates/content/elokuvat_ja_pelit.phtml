@@ -1,0 +1,90 @@
+<!-- START of: Content/elokuvat.fi.phtml -->
+
+<? $this->headTitle('Elokuvat ja pelit'); $this->content()->setHeading('Elokuvat ja pelit'); ?>
+
+<div class="row">
+    <h2 class="nosto-header">Cineast-elokuvapalvelu</h2>
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">  
+        <p><a href="https://www.cineast.fi/"><img class="img-responsive" src="<?=$this->imageLink('elokuvat/cineast_mobiilibanneri.jpg')?>" alt="Elokuvien kansia ja Cineastin logo"/></a></p>
+    </div>
+</div>
+   
+   <div class="row">
+   <div class="hidden-xs col-sm-12">
+    <p><a href="https://www.cineast.fi/"><img class="img-responsive" src="<?=$this->imageLink('elokuvat/cineast_banneri.jpg')?>" alt="Elokuvien kansia ja Cineastin logo"/></a></p>
+    <br>
+</div>
+ </div>
+
+<div class="row">
+    <div class="col-md-12">    
+        <?= $this->feed('elokuvia_eri_aiheista'); ?> 
+    </div>
+</div>
+
+<!-- Mobiilisivun aineistonostokarusellit matalammilla kansilla -->
+<div class="hidden-lg hidden-md hidden-sm">
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('elokuvauutuudet_mobiili'); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('peliuutuudet_mobiili'); ?>
+        </div>
+    </div> 
+</div>
+
+<!-- Työpöytäsivun aineistonostokarusellit korkeammilla kansilla -->
+<div class="hidden-xs">
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('elokuvauutuudet'); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('peliuutuudet'); ?>
+        </div>
+    </div> 
+</div>
+
+  <div class="row">
+  <div class="col-sm-4 col-md-4">
+   <h2 class="infoboksi-header">Mitä on mediakasvatus?</h2>
+    <p><img src="<?=$this->imageLink('elokuvat/mediakasvatus.jpg')?>" alt="Poika katsoo kuvaa kannettavalta tietokoneelta"/></p>
+    <p>Mediakasvatuksella pyritään edistämään kaikenikäisten valmiuksia ja taitoja mediakultuurissa elämiseen.</p>
+    <p><a href="https://mediakasvatus.fi/">Tietoa ja materiaaleja mediakasvatuksesta (mediakasvatus.fi)</a></p>
+    <p><a href="https://pelikasvatus.fi/">Tietoa pelikasvatuksesta (pelikasvatus.fi)</a></p>
+  </div>
+  
+<div class="col-sm-4 col-md-4">
+   <h2 class="infoboksi-header">Pelaaminen kirjastoissa</h2>
+    <p><img src="<?=$this->imageLink('elokuvat/pelaajat.jpg')?>" alt="Kaksi ihmistä pelaa Playstationia sohvalla"/></p>
+    <p>Kirjastossa voit pelata konsolipelejä ja lautapelejä</p>
+    <p><a href="<?=$this->url('content-page',  ['page' => 'pelaaminen_kirjastoissa'])?>">Kirjastojen pelikoneet ja pelit</a></p> 
+    </div>
+
+<div class="col-sm-4 col-md-4">
+   <h2 class="infoboksi-header">Lainattavat pelit</h2>
+    <p><img src="<?=$this->imageLink('elokuvat/pelilaitteet.jpg')?>" alt="Playstation-pelikonsoli, peliohjaimia ja virtuaalilasit pöydällä"/></p>
+    <p>Kyyti-kirjastoista löydät paljon lainattavia lautapelejä sekä konsolipelejä!</p>
+    <p>Selaa Kyyti-kirjastojen</p>
+    <ul class="list-bullets">
+        <li><a href="https://bit.ly/3JfB29s">lautapelikokoelmaa</a></li>
+        <li><a href="https://bit.ly/3KjdRww">videopelikokoelmaa</a></li> 
+    </ul>
+    </div>
+  </div>
+  <br>
+  
+<div class="row">
+   <div class="col-md-12">
+     <?= $this->feed('verkkovinkit'); ?> 
+   </div>
+ </div>
+
+<!-- END of: Content/elokuvat_ja_pelit.fi.tpl -->

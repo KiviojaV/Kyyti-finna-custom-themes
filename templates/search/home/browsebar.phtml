@@ -1,0 +1,28 @@
+<!-- START of: finna - search/browsebar.phtml -->
+<div class="browsebar">
+    <div class="container">
+            <div class="browse-link text-center"><a href="/Content/somekanavat" alt="Kyyti-kirjastojen somekanavat"><i class="fa fa-facebook"></i><i class="fa fa-instagram"></i><?=$this->transEsc('')?></a></div>
+       
+        
+        <nav class="navbar">
+            <!-- <span class="browsebar-title"><?=$this->translate('Browse')?></span> -->
+             <div class="wrapper resize-drag nav-wrapper"> 
+                <ul class="nav navbar-nav nav-ul">
+                    <li><a class="iconlabel format-1bookbook" href="MyResearch/CheckedOut"><?=$this->transEsc("browsebar_omatlainat")?></a></li>
+                    <? if ($this->layout()->userLang === "en-gb"): ?>
+                        <li><a class="iconlabel format-1bookbook" href="MyResearch/Holds"><?=$this->transEsc("browsebar_omatvaraukset")?></a></li>
+                    <? endif; ?>
+                    <li><a class="iconlabel format-1bookbook" href="MyResearch/Fines"><?=$this->transEsc("browsebar_fines")?></a></li>
+                    <li><a class="iconlabel format-1bookbook" href="MyResearch/Profile"><?=$this->transEsc("browsebar_omat_tiedot")?></a></li>
+                    <? if ($this->layout()->userLang === "fi"): ?>
+                    <li><a class="iconlabel format-1bookbook" href="https://kyyti.finna.fi/Feedback/Form/Kaukolainatilaukset" target="_blank"><?=$this->transEsc("browsebar_tilaa_kaukolaina")?></a></li>
+                    <li><a class="iconlabel format-1bookbook" href="https://kyyti.finna.fi/Feedback/Form/Hankintaehdotus"><?=$this->transEsc("browsebar_tee_hankintaehdotus")?></a></li>
+                    <li><a class="iconlabel format-1bookbook" href="https://kyyti.finna.fi/Content/sovellukset"><?=$this->transEsc("browsebar_mobiilisovellukset")?></a></li>
+                    <? endif; ?>
+                </ul>
+                
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- END of: finna - search/browsebar.phtml -->
