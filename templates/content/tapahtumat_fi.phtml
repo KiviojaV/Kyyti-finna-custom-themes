@@ -5,56 +5,28 @@
 <!-- Välilehdet -->
 <div class="row">
     <div class="col-sm-12">
-        <div class="tapahtumapallukat">
-            <h2>Tulevat tapahtumat</h2>
-            <ul class="nav nav-pills" role="tablist">
-                <li role="presentation" class="active"><a href="#Kouvola_events" aria-controls="Kouvolan tapahtumat" role="tab" data-toggle="tab">Kouvola</a></li>
-                <li role="presentation"><a href="#Kotka_events" aria-controls="Kotkan tapahtumat" role="tab" data-toggle="tab">Kotka</a></li>
-                <li role="presentation"><a href="#Hamina_events" aria-controls="Haminan tapahtumat" role="tab" data-toggle="tab">Hamina</a></li>
-                <li role="presentation"><a href="#Miehikkala_Pyhtaa_Virolahti_events" aria-controls="Miehikkälän, Pyhtään ja Virolahden tapahtumat" role="tab" data-toggle="tab">Miehikkälä, Pyhtää ja Virolahti</a></li>
-                <li role="presentation"><a href="#childrens_events" aria-controls="Lasten tapahtumat" role="tab" data-toggle="tab">Lapset ja nuoret</a></li>
-                <li role="presentation"><a href="#literature_events" aria-controls="Kirjallisuusaiheiset tapahtumat" role="tab" data-toggle="tab">Kirjallisuus</a></li>
-            </ul>
-        </div>
-        <div class="tab-content">
-            
-            <!--Kouvolan tapahtumat-->
-            <div role="tabpanel" class="tab-pane active" id="Kouvola_events">
-                <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/6569c121af7ac91dacfafab4'></script>
-                <div id='EVENTZWIDGET-6569c121af7ac91dacfafab4' class='EVENTZWIDGET'></div>
-            </div>
-            
-            <!--Kotkan tapahtumat-->
-            <div role="tabpanel" class="tab-pane" id="Kotka_events">
-               <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/659fa54e32b7e50755b977a0'></script>
-               <div id='EVENTZWIDGET-659fa54e32b7e50755b977a0' class='EVENTZWIDGET'></div>
-            </div>
-            
-            <!--Haminan tapahtumat-->
-            <div role="tabpanel" class="tab-pane" id="Hamina_events">
-                <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/6569c515c7645c123502f8bb'></script>
-                <div id='EVENTZWIDGET-6569c515c7645c123502f8bb' class='EVENTZWIDGET'></div>
-            </div>
-            
-            <!--Miehikkälän, Pyhtään ja Virolahden tapahtumat-->
-            <div role="tabpanel" class="tab-pane" id="Miehikkala_Pyhtaa_Virolahti_events">
-                <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/6581b3df1211b77b4eb09ecd'></script>
-                <div id='EVENTZWIDGET-6581b3df1211b77b4eb09ecd' class='EVENTZWIDGET'></div>
-            </div>
-            
-            <!--Lasten tapahtumat-->
-            <div role="tabpanel" class="tab-pane" id="childrens_events">
-                <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/65817de3a57ec9651411e7a7'>
-                </script><div id='EVENTZWIDGET-65817de3a57ec9651411e7a7' class='EVENTZWIDGET'></div>
-            </div>
-            
-            <!--Kirjallisuustapahtumat-->
-            <div role="tabpanel" class="tab-pane" id="literature_events">
-                <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/65cf6e6c9ce9c6380ceb3ebd'></script>
-                <div id='EVENTZWIDGET-65cf6e6c9ce9c6380ceb3ebd' class='EVENTZWIDGET'></div>
-            </div>
-        </div>
-        <div class="enemmanpainike"><a href="https://www.kymenlaaksonyt.fi/fi-FI/topic/65389e4d7b77345d378da2ea?mode=event&count=9">Näytä Kaikki</a></div>
+        <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/66f517ed9ac88141ab5522f4'>
+        </script><div id='EVENTZWIDGET-66f517ed9ac88141ab5522f4' class='EVENTZWIDGET'></div>
+        
+        <?php
+        $script = <<<JS
+        const searchTerms = new Map([
+                    ['Valitse aihe',''],
+                    ['Digiopastukset','Digiopastus'],
+                    ['Elokuvat','Elokuvat'],
+                    ['Kirjailijavieraat','kirjailija'],
+                    ['Kirjallisuus','Kirjallisuus'],
+                    ['Lukukoirat','lukukoiratt'],
+                    ['Lukupiirit','lukupiiiri'],
+                    ['Musiikki','Musiikki'],
+                    ['Näyttelyt','Näyttelyt'],
+                    ['Satutuokiot','satutuokio']
+        ]);
+                    
+        waitForWidgets(searchTerms);
+        JS;
+        echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+        ?>
     </div>
 </div>
 <!-- END of: Content/tapahtumat.fi.tpl -->
