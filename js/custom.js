@@ -1,21 +1,15 @@
 /* Add your custom template javascript here */
 
-/*function finnaCustomInit() {
-
-    // Viedään tapahtumapalikan "näytä enemmän" painikkeesta oikealle välilehdelle
-    $(() => {
-      const {hash} = document.location;
-      if (!hash) return false;
-      $(`.nav.nav-pills [href="${hash}"]`).tab('show');
+function finnaCustomInit() {
+    $(()=>{
+        let $accountName = $('span.profile-title').siblings().first();
+        let $newContent =  $accountName.text().split('.')[1];
+        $accountName.text($newContent);
     });
-}*/
+}
 
 /* Add your custom template javascript here */
 
-/*function finnaCustomInit() {
-
-
-}*/
 
 function handleEventlisteners(searchTerms,chosenCategory='') {
     Object.keys(document.BUBSTER_WIDGETS.rendered).forEach((widgetId) => {
