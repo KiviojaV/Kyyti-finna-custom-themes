@@ -1,0 +1,17 @@
+<rss version="2.0">
+<channel>
+    <title>Poimintoja</title>
+    <language>fi-fi</language>
+
+    <item>
+        <title>Tutustu Kyytin lukukoiriin</title>
+        <link>Content/lukukoirat</link>
+        <description>
+            Tiesitkö, että kirjastoissa työskentelee välillä myös koirakavereita? Nämä seitsemän lukukoirakaverusta voi löytää Kotkan ja Kouvolan kirjastoista.
+    	</description>
+        <enclosure url='/themes/custom/images/lanu/sara_levea.jpg' length="" type="image/jpeg"/>
+    </item>
+
+    
+</channel>
+</rss>

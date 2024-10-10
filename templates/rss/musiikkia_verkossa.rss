@@ -1,0 +1,35 @@
+<rss version="2.0">
+<channel>
+	<title>Musiikkia verkossa</title>
+    <language>fi-fi</language>
+
+<item>
+    <title>Naxos Music Library</title>
+    <link>https://kouvola.naxosmusiclibrary.com/</link>
+    <description>Klassisen musiikin suoratoistopalvelu. Palvelussa on myös jonkin verran kansanmusiikkia sekä vanhempaa bluesia ja jazzmusiikkia. Voit käyttää palvelua myös mobiilisovelluksella.</description>
+    <enclosure url='/themes/custom/images/musiikkivinkkeja/naxos.jpg' length="" type="image/jpeg"/>
+</item>
+
+<item>
+    <title>Naxos Music Library Jazz</title>
+    <link>https://kouvola.naxosmusiclibrary.com/Jazz</link>
+    <description>Kuuntele jazzia eri aikakausilta suoratoistona. Voit käyttää palvelua myös mobiilisovelluksella.</description>
+    <enclosure url='/themes/custom/images/musiikkivinkkeja/saksofoni.jpg' length="" type="image/jpeg"/>
+</item>
+
+<item>
+    <title>IMSLP/Petrucci</title>
+    <link>https://imslp.org/wiki/Main_Page</link>
+    <description>The International Music Score Library Project (IMSLP) -nuottikirjastossa on satojatuhansia wikiperiaatteella koottuja vapaasti käytettäviä nuotteja.</description>
+    <enclosure url='/themes/custom/images/musiikkivinkkeja/nuotti.jpg' length="" type="image/jpeg"/>
+</item>
+
+<item>
+    <title>All Music</title>
+    <link>https://www.allmusic.com/</link>
+    <description>Etsi tietoa rakastamistasi albumeista, bändeistä, muusikoista ja lauluista All Musicin kattavasta musiikkitietokannasta.</description>
+    <enclosure url='/themes/custom/images/musiikkivinkkeja/allmusic.jpg' length="" type="image/jpeg"/>
+</item>
+
+</channel>
+</rss>

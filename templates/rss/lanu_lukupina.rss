@@ -1,0 +1,51 @@
+<rss version="2.0">
+<channel>
+    <title>Lanu_lukukipina</title>
+    <language>fi-fi</language>
+
+    <item>
+        <title>Urheilu ja harrastukset </title>
+        <link>https://kyyti.finna.fi/List/1173910</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/lanu_lukukipina/lukukipina_1_2023.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Eläimellistä menoa </title>
+        <link>https://kyyti.finna.fi/List/1173922</link>
+        <description>
+        </description>
+        <enclosure url='/themes/custom/images/lanu_lukukipina/lukukipina_2_2023.png' length="" alt="" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Naurettavan hyvää </title>
+        <link>https://kyyti.finna.fi/List/1174669</link>
+        <description>
+        
+        </description>
+        <enclosure url='/themes/custom/images/lanu_lukukipina/lukukipina_3_2023.png' length="" alt="Pino nuorten aikuisten kirjoja" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Ihmeelliset ja uskomattomat</title>
+        <link>https://kyyti.finna.fi/List/1174675</link>
+        <description></description>
+        <enclosure url='/themes/custom/images/lanu_lukukipina/lukukipina_4_2023.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Koulu ja kaverit </title>
+        <link>https://kyyti.finna.fi/List/1173898</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/lanu_lukukipina/lukukipina_5_2023.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Rikokset ja rötökset </title>
+        <link>https://kyyti.finna.fi/List/1173889</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/lanu_lukukipina/lukukipina_6_2023.png' length="" type="image/png"/>
+    </item>
+</channel>
+</rss>

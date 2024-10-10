@@ -1,0 +1,58 @@
+<rss version="2.0">
+<channel>
+    <title>Lanu_lukukipina</title>
+    <language>fi-fi</language>
+
+    <item>
+        <title>Lorutellen </title>
+        <link>https://kyyti.finna.fi/List/1211983</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/satudiplomi/1.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Minä ja kaverit </title>
+        <link>https://kyyti.finna.fi/List/1212001</link>
+        <description>
+        </description>
+        <enclosure url='/themes/custom/images/satudiplomi/2.png' length="" alt="" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Rauhoitutaan vähän, sanoi mummo </title>
+        <link>https://kyyti.finna.fi/List/1212016</link>
+        <description>
+        
+        </description>
+        <enclosure url='/themes/custom/images/satudiplomi/3.png' length="" alt="Pino nuorten aikuisten kirjoja" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Luonto lähellä</title>
+        <link>https://kyyti.finna.fi/List/1212040</link>
+        <description></description>
+        <enclosure url='/themes/custom/images/satudiplomi/4.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Seikkailut ja sankarit </title>
+        <link>https://kyyti.finna.fi/List/1212043</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/satudiplomi/5.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Tutkitaan maailmaa </title>
+        <link>https://kyyti.finna.fi/List/1212778</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/satudiplomi/6.png' length="" type="image/png"/>
+    </item>
+    
+        <item>
+        <title>Olemme erilaisia </title>
+        <link>https://kyyti.finna.fi/List/1212787</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/satudiplomi/7.png' length="" type="image/png"/>
+    </item>
+</channel>
+</rss>

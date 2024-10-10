@@ -1,0 +1,39 @@
+<rss version="2.0">
+<channel>
+	    <title>Karusellin otsikko</title>
+    <language>fi-fi</language>
+
+	<item>
+ <title>Varatuimmat elokuvat</title>
+ <link>https://kyyti.finna.fi/List/621464</link>
+<description>
+
+		</description>
+<enclosure url='/themes/custom/images/musiikkikaruselli/adult-beautiful-blur-1040159.jpg' length="" type="image/jpeg"/>
+</item>	
+
+<item>
+<title>Varatuimmat CD-levyt</title>
+<link>
+https://kyyti.finna.fi/List/621665
+</link>
+<description>
+
+ </description>
+<enclosure url='/themes/custom/images/musiikkikaruselli/computer-devices-electronics-159376.jpg' length="" type="image/jpeg"/>
+</item>   
+
+
+
+
+<item>
+ <title>Henkilökunta suosittelee</title>
+ <link>https://kyyti.finna.fi/List/621671</link>
+<description>
+Henkilökunta suosittelee
+</description>
+<enclosure url='/themes/custom/images/musiikkikaruselli/bloom-blossom-flora-934059.jpg' length="" type="image/jpeg"/>
+</item>	
+
+</channel>
+</rss>

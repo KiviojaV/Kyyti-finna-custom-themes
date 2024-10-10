@@ -1,0 +1,37 @@
+<rss version="2.0">
+<channel>
+	<title>Verkkovinkit</title>
+    <language>fi-fi</language>
+
+<item>
+    <title>Elokuvia Finnassa</title>
+    <link>https://bit.ly/3LNtgFH</link>
+    <description>Suomen kirjastojen, arkistojen ja museoiden kokoelmat yhdistävällä Finna.fi-sivustolla on myös paljon elokuvia, dokumentteja ja muita videoita.</description>
+    <enclosure url='/themes/custom/images/elokuvat/finnaleffat.jpg' length="" type="image/jpeg"/>
+</item>
+
+<item>
+    <title>Ikärajat peleissä</title>
+    <link>https://www.kirjastot.fi/pelit/ikarajat-peleissa?language_content_entity=fi</link>
+    <description>Digitaalisissa peleissä on oltava niiden haitallisista sisällöistä kertovat merkinnät. 
+    Ikärajojen tarkoituksena on auttaa valitsemaan lapsen kehitystasolle sopivia mediasisältöjä.</description>
+    <enclosure url='/themes/custom/images/elokuvat/ikarajat.jpg' length="" type="image/jpeg"/>
+</item>
+
+<item>
+    <title>Elonet</title>
+    <link>https://elonet.finna.fi/</link>
+    <description>Suomalainen elokuvatietokanta, jossa on katsottavissa yli 200 kotimaista elokuvaa ja lähes kaksituhatta muuta filmiä.</description>
+    <enclosure url='/themes/custom/images/elokuvat/elonet.jpg' length="" type="image/jpeg"/>
+</item>	
+
+<item>
+    <title>Lautapeliopas</title>
+    <link>https://www.lautapeliopas.fi</link>
+    <description>Lautapeliopas kertoo kaiken olennaisen lautapeleistä suomeksi. 
+    Sivusto arvostelee uudet pelit, kertoo tärkeimmät uutiset ja neuvoo lautapelien maailmaan.</description>
+    <enclosure url='/themes/custom/images/elokuvat/lautapeliopas.jpg' length="" type="image/jpeg"/>
+</item>
+
+</channel>
+</rss>

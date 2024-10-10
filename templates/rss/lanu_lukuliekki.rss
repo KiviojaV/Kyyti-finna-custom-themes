@@ -1,0 +1,58 @@
+<rss version="2.0">
+<channel>
+    <title>Lanu_lukuliekki</title>
+    <language>fi-fi</language>
+
+    <item>
+        <title>Tarinat </title>
+        <link>https://kyyti.finna.fi/List/1182740</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/lanu_lukuliekki/1.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Sarjakuvat </title>
+        <link>https://kyyti.finna.fi/List/1179701</link>
+        <description>
+        </description>
+        <enclosure url='/themes/custom/images/lanu_lukuliekki/2.png' length="" alt="" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Helppoa ja nopeaa  </title>
+        <link>https://kyyti.finna.fi/List/1187090</link>
+        <description>
+        
+        </description>
+        <enclosure url='/themes/custom/images/lanu_lukuliekki/3.png' length="" alt="Pino nuorten aikuisten kirjoja" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Vapaavalintaiset ja ylimääräiset </title>
+        <link>https://kyyti.finna.fi/List/1186526</link>
+        <description></description>
+        <enclosure url='/themes/custom/images/lanu_lukuliekki/4.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Tietokirjat </title>
+        <link>https://kyyti.finna.fi/List/1182230</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/lanu_lukuliekki/5.png' length="" type="image/png"/>
+    </item>
+    
+    <item>
+        <title>Runot </title>
+        <link>https://kyyti.finna.fi/List/1162192</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/lanu_lukuliekki/6.png' length="" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Sadut </title>
+        <link>https://kyyti.finna.fi/List/1162198</link>
+        <description> </description>
+        <enclosure url='/themes/custom/images/lanu_lukuliekki/7.png' length="" type="image/png"/>
+    </item>
+</channel>
+</rss>

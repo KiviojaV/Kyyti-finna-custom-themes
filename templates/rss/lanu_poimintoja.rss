@@ -1,0 +1,40 @@
+<rss version="2.0">
+<channel>
+    <title>Poimintoja</title>
+    <language>fi-fi</language>
+
+    <item>
+        <title>Haminan kirjaston maskottien tarina</title>
+        <link>lanupoiminta_helmeri_ja_tuovi</link>
+        <description>
+            Haminan kirjaston maskottien Helmeri-pöllön ja Tuovi-toukan tarina.
+    	</description>
+        <enclosure url='/themes/custom/images/lanu/helmeri_ja_tuovi.jpg' length="" type="image/jpeg"/>
+    </item>
+
+    <item>
+        <title>Kyytin lukukoirat</title>
+        <link>lanupoiminta_lukukoirat</link>
+        <description>
+            Tiesitkö, että kirjastoissa työskentelee välillä myös koirakavereita? Nämä seitsemän lukukoirakaverusta voi löytää Kotkan ja Kouvolan kirjastoista.
+    	</description>
+        <enclosure url='/themes/custom/images/lanu/wiiru.jpg' length="" type="image/jpeg"/>
+    </item>
+
+    <item>
+        <title>Mediamaja pelittää</title>
+        <link>lanupoiminta_mediamaja_pelittaa</link>
+        <description>
+    	</description>
+        <enclosure url='/themes/custom/images/lanu/super_mario.jpg' length="" type="image/jpeg"/>
+    </item>
+    
+    <item>
+        <title>Kotkan kirjaston karhujen tarina</title>
+        <link>lanupoiminta_karhujen-tarina</link>
+        <description>
+    	</description>
+        <enclosure url='/themes/custom/images/lanu/karhujen-tarina_banneri.jpg' length="" type="image/jpeg"/>
+    </item>
+</channel>
+</rss>

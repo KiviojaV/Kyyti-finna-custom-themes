@@ -1,0 +1,62 @@
+<rss version="2.0">
+<channel>
+    <title>Sähköisiä suosituksia</title>
+    <language>fi-fi</language>
+
+    <item>
+        <title>Kotimaista viihdettä, tunteiden tuiverrusta</title>
+        <link>https://www.ellibslibrary.com/collection?sort=custom_311</link>
+        <description></description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/Tunteiden_tuiverrusta_2023.jpeg' length="" type="image/jpeg"/>
+    </item>
+    
+    <item>
+        <title>Jännitystä</title>
+        <link>https://www.ellibslibrary.com/collection?sort=custom_304</link>
+        <description>Oletko jo kuunnellut nämä jännittävät äänikirjat?</description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/yksinäinen_penkki_2023.jpg' length="" type="image/jpg"/>
+    </item>
+    
+    <item>
+        <title>Historiallisia romaaneja</title>
+        <link>https://www.ellibslibrary.com/fi/collection/0?sort=custom_281</link>
+        <description>Historiallisia romaaneja e-kirjoina eri vuosisadoilta.</description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/taskukello.png' length="" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Musiikkitaivaan tähtiä</title>
+        <link>https://www.ellibslibrary.com/fi/collection/0?sort=custom_274</link>
+        <description></description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/tähdet.jpg' length="" type="image/jpg"/>
+    </item>
+
+    <item>
+        <title>Finlandia-voittajien tuotantoa</title>
+        <link>https://www.ellibslibrary.com/kyyti/?sort=custom_267</link>
+        <description>Finlandia-palkinnon voittaneiden mestarikirjailijoiden teoksia e-kirjoina ja e-äänikirjoina.</description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/jalonen.png' length="" type="image/png"/>
+    </item>
+
+    <item>
+        <title>Suomi sodassa</title>
+        <link>https://www.ellibslibrary.com/kyyti/?sort=custom_262</link>
+        <description>Suomalaista sotahistoriaa e-kirjoina.</description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/sota2.jpg' length="" type="image/jpeg"/>
+    </item>
+    
+    <item>
+        <title>Lapsille e-kirjoja</title>
+        <link>https://www.ellibslibrary.com/kyyti/?sort=custom_257</link>
+        <description>Luetaanko yhdessä? Tässä perheen pienimmille sopivaa luettavaa e-kirjoina.</description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/cottonbro.jpg' length="" type="image/jpeg"/>
+    </item>
+
+    <item>
+        <title>Jännitystä pimeneviin iltoihin</title>
+        <link>https://www.ellibslibrary.com/kyyti/?sort=custom_253</link>
+        <description>Täältä löytyy jännäreitä e-kirjoina. Oletko jo lukenut nämä?</description>
+        <enclosure url='/themes/custom/images/lukuvinkkeja/jannitys.jpg' length="" type="image/jpeg"/>
+    </item>
+</channel>
+</rss>

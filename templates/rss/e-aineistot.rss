@@ -1,0 +1,64 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+    <title>Henkilökunta suosittelee</title>
+    <language>fi-fi</language>
+    <item>
+        <title>E-kirjat ja e-äänikirjat</title>
+        <link>https://www.kansalliskirjasto.fi/fi/e-kirjasto/e-kirjasto-sovelluksen-kayttoohjeet</link>
+        <description>Kirjaston kokoelmissa on monipuolinen valikoima e-kirjoja ja e-äänikirjoja kaikenikäisille. 
+        Voit lukea tai kuunnella kirjoja lataamalla E-kirjasto-sovelluksen Googlen Play-kaupasta tai Applen App Storesta.</description>
+        <enclosure url='/themes/custom/images/eaineistot/ekirjat2.jpg' length="" type="image/jpeg"/>
+    </item>
+    <item>
+        <title>Kotimaiset sanomalehdet</title>
+        <link>https://www.epress.fi/</link>
+        <description>Yli 200 kotimaisen sanomalehden numerot viimeisen vuoden ajalta.
+        Voit lukea lehtiä kirjaston tietokoneilla tai kirjautumalla kirjaston langattomaan verkkoon.</description>
+        <enclosure url='/themes/custom/images/eaineistot/kotimaiset_sanomalehdet3.jpg' length="" type="image/jpeg"/>
+    </item>
+    <item>
+        <title>Etäkäyttöiset kotimaiset aikakauslehdet</title>
+        <link>https://www.kansalliskirjasto.fi/fi/e-kirjasto/e-kirjasto-sovelluksen-kayttoohjeet</link>
+        <description>Yli 80 kotimaisen aikakauslehden numerot viimeisen vuoden ajalta.
+        
+        Etäkäytetttäviä lehtiä voit lukea omalla laitteella missä tahansa. 
+        Lehtien lukemiseen tarvitset E-kirjasto-sovelluksen, jonka voit ladata Googlen Play-kaupasta tai Applen App Storesta.</description>
+        <enclosure url='/themes/custom/images/eaineistot/kotimaiset_aikakauslehdet3.jpg' length="" type="image/jpeg"/>
+    </item>
+    <item>
+        <title>Kirjastossa luettavat kotimaiset aikakauslehdet</title>
+        <link>https://kyyti.emagz.fi/</link>
+        <description>Osaa kotimaisista aikakauslehdistä voit lukea vain eMagz-palvelussa kirjaston tietokoneilla tai kirjautumalla kirjaston langattomaan verkkoon. 
+        Valikoimassa on noin 20 aikakauslehteä.</description>
+        <enclosure url='/themes/custom/images/eaineistot/kotimaiset_aikakauslehdet_lahi.jpg' length="" type="image/jpeg"/>
+    </item>
+    <item>
+        <title>Ulkomaiset sanoma- ja aikakauslehdet</title>
+        <link>https://www.pressreader.com/</link>
+        <description>7 000 sanoma- ja aikakauslehteä 120 maasta 60 kielellä.
+        Voit lukea lehtiä joko etänä tai kirjastossa. Etäkäyttöön tarvitset kirjastokortin numeron ja tunnusluvun.</description>
+        <enclosure url='/themes/custom/images/eaineistot/ulkomaiset_sanomalehdet2.jpg' length="" type="image/jpeg"/>
+    </item>
+    <item>
+        <title>Elokuvien suoratoisto</title>
+        <link>https://www.cineast.fi/</link>
+        <description>Cineast-elokuvapalvelussa voit katsoa ilmaiseksi kuusi elokuvaa kuukaudessa.
+        Elokuvavalikoima päivittyy koko ajan.
+        Katsomiseen tarvitset kirjastokortin numeron ja tunnusluvun.</description>
+        <enclosure url='/themes/custom/images/eaineistot/cineast.jpg' length="" type="image/jpeg"/>
+    </item>
+    <item>
+        <title>Musiikin suoratoisto</title>
+        <link>https://kyyti.finna.fi/Content/e-aineistojen_ohjeet#kuuntele_musiikkia_netissa</link>
+        <description>Klassista, jazzia ja maailmanmusiikkia.
+        Kuunteluun tarvitset kirjastokortin numeron.</description>
+        <enclosure url='/themes/custom/images/eaineistot/naxos_world.jpg' length="" type="image/jpeg"/>
+    </item>
+    <item>
+        <title>Ohjeet</title>
+        <link>https://kyyti.finna.fi/Content/e-aineistojen_ohjeet</link>
+        <description>Ohjeet e-kirjojen, e-äänikirjojen, etäkäytettävien aikakauslehtien, ulkomaisten lehtien ja musiikin suoratoiston käyttämiseen.</description>
+        <enclosure url='/themes/custom/images/eaineistot/ohjeet.jpg' length="" type="image/jpeg"/>
+    </item>
+</channel>
+</rss>
