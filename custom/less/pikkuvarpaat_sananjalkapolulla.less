@@ -1,0 +1,179 @@
+.pikkuvarpaat {
+    .hankelogot {
+        img {
+            
+             @media (max-width:768px) {
+                width:100%;
+                //margin:1em;
+                padding:1em;
+                min-height:22mm;
+             }
+             
+            @media (min-width:768px) and (max-width:991px){
+                width:45%;
+                //margin:1em;
+                padding:1em;
+                min-height:22mm;
+             }
+             
+             @media (min-width:992px) {
+                width:30%;
+                margin:1em;
+                min-height:22mm;
+             }
+
+        }
+    }
+    
+    finna-feed .wrapper img {
+        width: auto;
+        height: 100% !important;
+        object-fit: cover;
+    }
+    
+    .yhteystiedot {
+        margin-lleft
+        li {
+            padding:0em 0em 0em 2em !important;
+        }
+    }
+    
+    .tekstiosio {
+        @media (min-width:768px) {
+            margin:2em 0em 2em 0em;
+        
+            li {
+                padding:0.5em 0em 0.5em 0.5em;
+                font-size:20px;
+            }
+        }
+        
+        @media (max-width:768px) {
+            margin:2em 0em 3em 0em;
+        
+            h3, h2, p, ul {
+                padding:1em 0.2em 1em 0.7em;
+            }
+            
+            li {
+                font-size:20px;
+                padding: 0.2em 0.2em 0.2em 1em;
+            }
+        }
+        
+        .taiteilija {
+            p { margin:0em 0em 0em 1em;}
+        }
+        
+
+
+    }
+    .hankelogo {
+        margin:1em 1em 1em 1em;
+    }
+    
+    @font-face {
+      font-family: "Cormorant";
+      src: url('../files/fonts/cormorant.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: "Cormorant light";
+      src: url('../files/fonts/cormorant-light.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: "Nunito regular";
+      src: url('../files/fonts/Nunito-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: "Cardo regular";
+      src: url('../files/fonts/cardo-regular-webfont.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    
+    
+    p {
+        font-family: "Nunito regular";
+        margin: 0em 0em 0em 0em;
+    }
+    
+    
+    h3 {
+        font-family: Cardo regular;
+        font-size:30px !important;
+        font-weight:150;
+        //overflow-wrap: normal;
+
+    }
+    
+    .slider-title {
+        word-break: normal !important;
+        padding:0em 1em 0em 1em !important;
+    }
+    
+    finna-feed.carousel-slider.splide--ltr .slider-text-part .slider-header {
+        display: none;
+        font-size: 18px;
+        font-weight: 150;
+    }
+    
+    h2 {
+        font-family: Cardo regular;
+        font-size:30px !important;
+        font-weight:150;
+        overflow-wrap: normal !important;
+        @media (max-width:768px) {
+            padding:1em 0.2em 1em 0.7em;
+        }
+        
+        @media (min-width:768px) {
+            padding:2em 0em 2em 0.2em;;
+        }
+
+    }
+    
+    .peikkomummo-kuva {
+        
+        max-width: 85%;
+        box-shadow: -1px 4px 18px 8px #fcfcfc;
+        border: solid #f6fbfe;
+        margin:2em 1em 0em 1em;
+    }
+    
+    @media (max-width:768px) {
+        finna-feed.carousel-slider.splide--ltr .slider-image, finna-feed.carousel-slider.splide--ltr .slider-text-part {
+            width: auto;
+            max-width: 100%;
+            max-height: min-content;
+        }
+        
+        .splide__list {
+            backface-visibility: hidden;
+            display: -ms-flexbox;
+            display: flex;
+            height: 400px;
+            margin: 0!important;
+            padding: 0!important;
+        }
+        
+        finna-feed .feed-item-holder .feed-link {
+            display: flex;
+            height: 400px;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
