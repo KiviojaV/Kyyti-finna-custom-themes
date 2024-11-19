@@ -1,4 +1,49 @@
+.btn-round .service-wifi .info-element {
+    display:none !important;
+}
 
+/* Kirjastohakemiston buttonit */
+.contact-links {
+  /* Piilotetaan wifi-iconi */
+  .btn-round {
+      display:none !important;
+  }
+}
+
+#opening_hours {
+    @media (min-width: 700px) and (max-width: 991px) {
+
+        .location-row-general {
+            max-width:50%;
+            padding:1em;
+        }
+        
+        .info-col {
+            max-width:50%;
+            padding:1em;
+        }
+        .organisation-info-widget .info-element {
+            display: inline-flex;
+        }
+        
+        .contact-links {
+            align-items:center;
+            display:inline-flex;
+            align-items:center ;
+            flex-wrap: wrap;
+            .btn {
+                align-content:center;
+            }
+        }
+        
+        .contact-links .btn, .contact-links .collection-hierarchytree #tree-preview>a, .collection-hierarchytree .contact-links #tree-preview>a {
+            justify-content: center;
+            .fa {
+                line-height:35px;
+            }
+        }
+    }
+}
 
 // *** Common styles for organisation info page and widget ***
 .organisation-info {
