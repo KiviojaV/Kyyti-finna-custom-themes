@@ -2,6 +2,27 @@
 <channel>
 	<title>Musiikkivinkkeja</title>
     <language>fi-fi</language>
+    
+<item>
+    <title>Soul &amp; Funk</title>
+    <link>https://kyyti.finna.fi/MyResearch/MyList/1677134</link>
+    <description>Kokoelmalevyjä ja klassikoita</description>
+    <enclosure url='/themes/custom/images/musiikkivinkkeja/funksoul.jpg' length="" alt="Vinyylilevyjä seinällä" type="image/jpg"/>
+</item>
+
+<item>
+    <title>Indiepop ja -rock</title>
+    <link>https://kyyti.finna.fi/MyResearch/MyList/1732971</link>
+    <description>Ulkomaista ja kotimaista indiepoppia ja -rockkia.</description>
+    <enclosure url='/themes/custom/images/musiikkivinkkeja/indiepop_ja_rock.jpg' length="" alt="Sähkökitara, rummut ja vahvistin" type="image/jpg"/>
+</item>
+
+<item>
+    <title>Kotimaista jytämusaa</title>
+    <link>https://kyyti.finna.fi/List/1676864</link>
+    <description>Huoltoasemakasetteja, harvinaista discoa ja muuta elektronista jytkettä.</description>
+    <enclosure url='/themes/custom/images/musiikkivinkkeja/suomidisco_kassut_2024.jpg' length="" alt="Musiikkikasetti." type="image/jpg"/>
+</item>
 
 <item>
     <title>Haastavaa ja kiinnostavaa</title>
