@@ -1,0 +1,217 @@
+/* All custom less-code here */
+
+// Selaapalkin määritykset
+@import 'browsebar';
+
+// Organisation info -määritykset
+@import 'custom-organisation-info';
+
+// E-aineistosivun määritykset
+@import './content-scss/e_aineistot';
+
+// Etusivun tyylimääritykset
+@import 'etusivu';
+
+// Hakutulos-sivu
+@import 'hakutulos';
+
+// Karusellien määritykset
+@import 'syotteet';
+
+// Lapset ja nuoret -sivu
+@import './content-scss/lapset_ja_nuoret';
+
+// Haminan lehtitaulukon määritykset
+@import 'lehtitaulukko';
+
+// Lukemalla jaksaa -hankesivun määritykset
+@import 'lukemalla_jaksaa';
+
+// Lukuhaaaste -sivu
+@import 'lukuhaaste';
+
+// Maksut Content-sivut
+@import './content-scss/maksut';
+
+// Piilotusmääritykset
+@import 'piilotukset';
+
+// Pikkuvarpaat sanapolulla -hankesivun määritykset
+@import './content-scss/pikkuvarpaat_sananjalkapolulla';
+
+// Tapahtumapalikan tyylimääritykset
+@import 'tapahtumat';
+
+// Tiedonhaku -sivun määritykset
+@import './content-scss/tiedonhaku';
+
+/* Hakulaatikon taustakuvan  kohdistus */
+.template-dir-search.template-name-home .search-form-container {
+  padding-top: 10em;
+  padding-bottom: 7em;
+}
+
+/* Nosto-header */
+.nosto-header {
+  background: #ffffff;
+  display: inline-block;
+  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #000;
+}
+
+/* Kysymysmerkkipallukan taustaväri */
+i.fa.fa-question-circle-big {
+  background-color: #fff;
+}
+
+.slick-list>.slick-track {
+  margin-left: 0;
+}
+
+/* Infoboksi */
+.infoboksi {
+  font-size: medium;
+
+  p {
+    color: #000000;
+  }
+
+  a:link {
+    color: #007091;
+  }
+
+  a:visited {
+    color: #007091;
+  }
+
+  .carousel-header {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Mediamajan 3D-tulostimen esittelyvideo */
+.ultimaker_iframe {
+  max-width: 100%;
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .finna-campaign-item .finna-campaign-title {
+    padding-top: 0;
+  }
+}
+
+/* Footteri */
+.footer {
+  a:link {
+    color: #007091;
+  }
+
+  a:visited {
+    color: #007091;
+  }
+
+  p {
+    color: #000000;
+  }
+}
+
+/* Tarkennettu haku - painikelinkit */
+.btn-link {
+  color: #007091;
+}
+
+.tooltip-local-advanced,
+.tooltip-pci-advanced,
+.tooltip-eds-advanced,
+.tooltip-summon-advanced {
+  color: #007091;
+}
+
+.searchbox-columns a {
+  color: #007091;
+}
+
+/* Lainat */
+.status .badge.ok {
+  color: #8c0052;
+}
+
+.status .badge.ok::before {
+  color: #8c0052;
+}
+
+/* Sovelluskauppojen linkkien muotoilu */
+.kyyti-badge {
+  display: inline-block;
+  overflow: hidden;
+  height: 56px;
+  width: auto;
+  padding: 16px 16px 0px 0px;
+}
+
+.kyyti-badge-container a:hover {
+  border-bottom: 0px;
+}
+
+.details {
+  color: #007091;
+}
+
+/* Alasivujen otsikkokehysten asemointi */
+.main.template-dir-content.template-name-content h2 {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+/* Listapallukoiden väri ja muut määritykset */
+.list-bullets-blue {
+  color: #007091;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 1.2em;
+  padding-bottom: 0.9em;
+
+  li {
+    list-style-type: disc;
+  }
+}
+
+.list-bullets {
+  margin-top: -3px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 3.2em;
+  padding-bottom: 0.9em;
+
+  li {
+    list-style-type: disc;
+    padding-left: 0.9em;
+  }
+}
+
+.list-numbers {
+  margin-top: -10px;
+
+  li {
+    list-style-type: decimal;
+    padding-left: 0.9em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .list-bullets {
+    padding-left: 10%;
+  }
+}
+
+/* Lomakkeet */
+.form-info {
+    font-weight: normal !important;
+}
+
+.icon-black {
+  color: #000000;
+}
