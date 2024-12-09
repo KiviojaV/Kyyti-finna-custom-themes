@@ -1,0 +1,16 @@
+/*Lukuhaaste-karusellien säädöt*/
+  .haasteluokka {
+        & .carousel {
+            &  .slick-initialized {
+                /*poistaa sivumäärä-pisteet karusellin alla*/
+                & .slick-dots {
+                    display: none !important;
+                }
+            }
+        }
+    }
+.haasteluokka {
+    & .carousel-text {
+background: none;
+    }
+}
