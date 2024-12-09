@@ -1,17 +1,19 @@
 /* Add your custom template javascript here */
 
+/* Poistaa kryptisen alkuosan asiakassivun käyttäjätunnuksesta */
 function finnaCustomInit() {
-    $(()=>{
+    $(() => {
         let $accountName = $('span.profile-title').siblings().first();
-        let $newContent =  $accountName.text().split('.')[1];
+        let $newContent = $accountName.text().split('.')[1];
         $accountName.text($newContent);
     });
 }
 
-/* Add your custom template javascript here */
 
-
-function handleEventlisteners(searchTerms,chosenCategory='') {
+/*
+Localhubin tapahtumawidgettien toimintaan vaikuttavat skriptit
+*/
+const handleEventlisteners = function(searchTerms, chosenCategory = '') {
     Object.keys(document.BUBSTER_WIDGETS.rendered).forEach((widgetId) => {
 
         let searchTermFilter = document.createElement('select');
@@ -21,62 +23,75 @@ function handleEventlisteners(searchTerms,chosenCategory='') {
         searchTermFilter.ariaLabel = "Valitse tapahtuman aihe";
         searchTermFilter.tabIndex = 0;
 
-        searchTerms.forEach((value,searchTerm) => {
+        searchTerms.forEach((value, searchTerm) => {
             let searchOption = new Option(searchTerm, value);
             searchTermFilter.appendChild(searchOption);
         })
-        
+
         if (chosenCategory.length !== 0) {
             searchTermFilter.value = chosenCategory;
         }
         let currentCategory = searchTermFilter.value;
-        
+
         let widgetSearchPanel = document.getElementById(widgetId).querySelector('form').children[1];
-                        
+
         if (widgetSearchPanel) {
-            handleSearchForm(widgetId,currentCategory,searchTerms);
-            
-            handleAreaFilter(widgetId, currentCategory,searchTerms);
-            
-            handleSearchTermFilter(searchTermFilter,widgetId, currentCategory,searchTerms);
-            widgetSearchPanel.appendChild(searchTermFilter,searchTerms);
-            
-            handleGroupFilter(widgetId, currentCategory,searchTerms);
-            
-            handleEmptyButton(widgetId, currentCategory,searchTerms);
+
+            handleSearchForm(widgetId, currentCategory, searchTerms);
+
+            handleAreaFilter(widgetId, currentCategory, searchTerms);
+
+            handleSearchTermFilter(searchTermFilter, widgetId, currentCategory, searchTerms);
+            widgetSearchPanel.appendChild(searchTermFilter, searchTerms);
+
+            handleGroupFilter(widgetId, currentCategory, searchTerms);
+
+            handleEmptyButton(widgetId, currentCategory, searchTerms);
         }
-        handleMoreButton(widgetId);
+        
+        let moreButtonExists = handleMoreButton(widgetId);
+        
+        
+        const bubsterList = document.getElementById(widgetId).
+                            getElementsByClassName('bubster-list-4 bubster-widgets-plugin bubster-css-default')[0].children;
+                            
+        let eventCards = moreButtonExists ? Array.from(bubsterList).slice(2,-1) 
+                                          : Array.from(bubsterList).slice(2);
+            
+        if (eventCards && eventCards.length != 0) {
+            handleEventCards(eventCards,widgetId);
+        }
     });
 }
 
-function handleSearchForm(widgetId) {
+
+const handleSearchForm = function(widgetId) {
     let searchForm = document.getElementById(widgetId).querySelector('form');
     searchForm.removeAttribute('onsubmit');
     searchForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
-        const interval = setInterval(() => {
-            if (document.getElementById(widgetId).querySelector('form').hasAttribute('onSubmit')) {
-                clearInterval(interval);
-                handleEventlisteners(searchTerms,currentCategory);
-            }
-        }, 200);
+        async () => {
+            await document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
+            handleEventlisteners(searchTerms, currentCategory);
+        };
     });
 }
 
-function handleMoreButton(widgetId) {
+const handleMoreButton = function(widgetId) {
     let moreBtn = document.getElementById(widgetId).getElementsByClassName("bubster-more")[0];
     if (moreBtn) {
         moreBtn.removeAttribute('onclick');
         moreBtn.addEventListener('click', document.BUBSTER_WIDGETS.rendered[widgetId].fnGetMore);
+        return true;
     }
+    return false;
 }
 
-function handleEmptyButton(widgetId, currentCategory) {
+const handleEmptyButton = function (widgetId, currentCategory) {
     let emptyFiltersButton = document.
-                            getElementById(widgetId).
-                            getElementsByClassName(
-                            "bubster-search-filter bubster-search-filter-button bubster-search-filter-button-reset")[0]
+        getElementById(widgetId).
+        getElementsByClassName(
+            "bubster-search-filter bubster-search-filter-button bubster-search-filter-button-reset")[0]
     if (emptyFiltersButton) {
         emptyFiltersButton.className = 'bubster-search-filter-button-reset';
         emptyFiltersButton.removeAttribute('onclick');
@@ -86,7 +101,7 @@ function handleEmptyButton(widgetId, currentCategory) {
             const interval = setInterval(() => {
                 if (document.getElementById(widgetId).getElementsByClassName("bubster-search-filter bubster-search-filter-area")[0].hasAttribute('onChange')) {
                     clearInterval(interval);
-                    handleEventlisteners(searchTerms,currentCategory);
+                    handleEventlisteners(searchTerms, currentCategory);
                 }
             }, 200);
         });
@@ -101,33 +116,33 @@ function handleAreaFilter(widgetId, currentCategory) {
         const interval = setInterval(() => {
             if (document.getElementById(widgetId).getElementsByClassName("bubster-search-filter bubster-search-filter-area")[0].hasAttribute('onChange')) {
                 clearInterval(interval);
-                handleEventlisteners(searchTerms,currentCategory);
+                handleEventlisteners(searchTerms, currentCategory);
             }
         }, 200);
     });
 }
 
-function handleGroupFilter(widgetId,currentCategory) {
+const handleGroupFilter = function(widgetId, currentCategory) {
     let searchGroupFilter = document.getElementById(widgetId).getElementsByClassName("bubster-search-filter bubster-search-filter-category")[0];
     if (searchGroupFilter) {
         searchGroupFilter.ariaLabel = "Valitse kohderyhmä";
         searchGroupFilter.options[0].textContent = "Valitse kohderyhmä";
         searchGroupFilter.options[1].textContent = "Lapset ja nuoret";
         searchGroupFilter.removeAttribute('onchange');
-        searchGroupFilter.addEventListener('change', ()=> {
+        searchGroupFilter.addEventListener('change', () => {
             document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
             const interval = setInterval(() => {
                 if (document.getElementById(widgetId).getElementsByClassName("bubster-search-filter bubster-search-filter-category")[0].hasAttribute('onChange')) {
                     clearInterval(interval);
-                    handleEventlisteners(searchTerms,currentCategory);
+                    handleEventlisteners(searchTerms, currentCategory);
                 }
             }, 200);
         });
     }
 }
 
-function handleSearchTermFilter(searchTermFilter, widgetId,currentCategory) {
-    searchTermFilter.addEventListener('change',() => {
+const handleSearchTermFilter = function(searchTermFilter, widgetId, currentCategory) {
+    searchTermFilter.addEventListener('change', () => {
         let field = document.getElementById(widgetId).getElementsByClassName("bubster-search-filter bubster-search-filter-q")[0];
         field.value = searchTermFilter.value;
         document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
@@ -135,13 +150,45 @@ function handleSearchTermFilter(searchTermFilter, widgetId,currentCategory) {
         const interval = setInterval(() => {
             if (document.getElementById(widgetId).querySelector('form').hasAttribute('onSubmit')) {
                 clearInterval(interval);
-                handleEventlisteners(searchTerms,currentCategory);
+                handleEventlisteners(searchTerms, currentCategory);
             }
         }, 200);
     });
 }
 
-function waitForWidgets(searchTerms,numberOfWidgets=1) {
+const handleEventCards = function(eventCards, widgetId) {
+    eventCards.forEach((card) => {
+        var link = card.querySelector('a');
+        
+        link.removeAttribute('onClick');
+        
+        link.addEventListener('click',(e)=>{
+            e.preventDefault();
+            let cardId = card.id.split('-')[2];
+
+            document.BUBSTER_WIDGETS.rendered[widgetId].fnOpenPageDetails(cardId);
+
+            handleCloseButton(cardId);
+            
+        });
+    });
+}
+
+const handleCloseButton = function(cardId) {
+    const interval = setInterval(() => {
+        let closeButton = document.getElementById(cardId).querySelector('i');
+        if (closeButton) {
+            clearInterval(interval);
+
+            closeButton.removeAttribute('onClick');
+            closeButton.addEventListener('click', () => {
+                document.BUBSTER_WIDGETS.utils.fnClosePageDetails(cardId);
+            });
+        }
+    }, 200);
+}
+
+const waitForWidgets = function(searchTerms, numberOfWidgets = 1) {
     const interval = setInterval(() => {
         if (typeof document.BUBSTER_WIDGETS.rendered !== 'undefined'
         && Object.keys(document.BUBSTER_WIDGETS.rendered).length === numberOfWidgets) {
