@@ -1,0 +1,62 @@
+/* Piilota palaute-linkki navbarista 
+.nav a[id=feedback-link] {
+  display: none;
+}
+*/
+/* Hävitä palautekupla etusivulta */
+.floating-feedback-btn {
+   display: none;
+}
+
+/*Nidenäytön Aineiston tarjoamiskohdan piilotus */
+.organisation-menu .recordProvidedBy,
+.image-rights .recordProvidedBy {
+  display: none;
+}
+
+/* Vie viite-painikkeen piilottaminen saatavuustiedoista */
+.record .nav-pills li.dropdown {
+    display: none;
+}
+
+/* Peru kaikki varaukset -painikkeen piilotus */
+#cancelAll {
+  display: none;
+}
+
+/* Piilota varauksen noutomuistutus omat tiedot sivulta */
+#messaging-form div:nth-child(6) {
+  display: none;
+}
+
+#messaging-form div:nth-child(7) {
+  display: none;
+}
+
+/* Kirjastokortin viivakoodin piilotus asiakastietojen kirjastokortit-välilehdeltä */
+.librarycard-barcode {
+  display: none;
+}
+
+/* Ennakkoilmoitus ei lähde, jos viive asetetaan nollaksi */
+/* .form-control option[value="0"] {
+  display: none;
+}
+*/
+
+/* Piilotettu otsake */
+.b {
+  visibility: hidden;
+}
+
+/* Tarkan haun kartan piilotus */
+.search-map-container {
+  display: none;
+}
+
+/* Jätetään pois Urlit tulostaessa sivuja */
+@media print {
+  a[href]:after {
+    content: none
+  }
+}

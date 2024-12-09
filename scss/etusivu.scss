@@ -1,0 +1,226 @@
+/* Etusivun määrityksiä */
+
+.tiedotebox {
+    a:link { 
+        color: #007091;
+    }
+} 
+
+/* h1.introductionText
+{
+    font-size: 1.3em;
+    padding: 5px 3px 3px 3px;
+    color: #fff;
+    font-weight: 600;
+    background: none;
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 1px;
+} */
+
+/* Tämä muokkaisi lisäotsikkoa, jos sellainen olisi
+h3.introductionText {
+    color:$brand-secondary;
+} */
+
+//hakuboksi, tuo alun litania varmistaa, että koskee vain etusivua
+.template-name-home.searchbox {
+    margin-top: 2em;
+}
+
+/* Vasen ja oikea ylälohko */    
+.left-column-content {
+    margin-top:2rem;
+    h2 {
+        margin-bottom:2rem;
+    }
+    
+    .list-feed {
+        .feed-header {
+            width: 100%; 
+        }
+        li.title {
+            display: block;
+            line-height: 1.2em;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.right-column-content {
+    margin-top:2rem;
+    padding-bottom: 15px;
+    background: none;
+    h2 {
+        width: 100%;
+        margin-bottom:2rem;
+    }
+}
+
+/* Tarkennetun haun painike etusivulla */
+.nav.searchbox .searchbox-home .btn.btn-link {
+  background: #0272ba;
+}
+
+.searchbox .searchbox-home .btn.btn-link {
+  background: #fff;
+  color: #000;
+}
+
+/*infoboksit englanninkielisille sivuille*/
+.englishInfobox {
+    margin-top:30px;
+    
+    /* nappi */
+    .btn-primary {
+        margin-left:11px;
+        font-size:1.1em;
+        //padding:10px;
+    }
+    /*valkoinen laatikko*/
+    .white-box {
+        margin: 20px 0px;
+        padding: 10px 20px;
+        color: #2b2b2b;
+        background: #ffffff;
+        border: none;
+        font-size: 1.3em;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    /*valkoinen ilman varjoa*/
+    .no-shadow-white-box {
+        margin: 20px 0px;
+        padding: 10px 20px;
+        color: #2b2b2b;
+        background: #ffffff;
+        border: none;
+        font-size: 1.3em;
+    }
+    
+    /*harmaa laatikko*/
+    .gray-box {
+        margin: 20px 0px;
+        padding: 10px 20px;
+        color: #2b2b2b;
+        background: #f5f5f5;
+        border: none;
+        font-size: 1.3em;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+    /*kustomoidut pallukat*/
+    .list-bullets-english-home > li {
+        list-style-type: disc;
+        list-style-position: inside;
+        margin-top: -3px;
+        font-size: 1.2em;
+        line-height: 1.5;
+        padding-left: 0.5em;
+        padding-bottom: 0.9em;
+        font-size:1em;
+    }
+}
+
+/* Supernostot etusivulla */
+.nosto-1 {
+    background-image: url(../images/lanu/pitsahaaste5.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-right: 2px solid #fff;
+}
+
+.nosto-1 .nosto-1-content {
+    background: rgba(1,1,1,0.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.nosto-1 .nosto-1-title {
+    padding-top: 1em;
+    font-size: 3.5em;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-shadow: 6px 6px 10px #000000;
+}
+
+.nosto-1 p {
+    color: #000000;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+}
+
+.nosto-hover-title {
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* määrittää mobiilivälilehtien otsikoiden tyylin */
+.mobiilivalilehdet {
+    .nav {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1.4em;
+    }
+    
+    .nav-tabs>li.active>a {
+        color:#007c90;
+    }
+}
+
+/* Ajankohtaista syöte-lista */
+.ajankohtaista {
+    font-size: medium;
+    a:link { color: #007091; }
+    .feed-container .list-feed li .title {
+        display: block;
+        line-height: 1.2em;
+        margin-bottom: 15px;
+    }
+}
+
+.carousel-header.local {
+  	//display: table-cell;
+  	width: auto;
+  	margin: 0 0 0 0;
+}
+
+.carousel-header.local.right {
+    //display: table-cell;
+  	text-align: right;
+  	border-radius: 0px 4px 4px 0px;
+  	color:#007c90;
+  	font-size:16px;
+  	float:right;
+  	margin-left:auto;
+}
+
+.carousel-header-container h2 {
+    border-radius: 4px;
+}
+
+.carousel-header {
+    background:#FFFFFF00;
+}
+
+// Tiedotteiden otsikoiden asettelu
+.carousel-header-container {
+    display: flex;
+  	width: 100%;
+  	padding:21px 11px 10px 0;
+  	border-bottom: 1px solid #e7e7e7;
+  	margin-bottom:7px;
+    
+}

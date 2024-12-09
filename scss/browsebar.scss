@@ -1,0 +1,36 @@
+/* Selaa-palkin marginaali */
+.browsebar nav.navbar .nav-wrapper {
+    margin-left: 0px;
+}
+
+/* Selaa-palkin Kyyti-kirjastot -painikkeen taustaväri ja määritykset */
+.browsebar .browse-link {
+    background-color: rgba(140, 0, 82, 0.17); 
+}
+
+@media (max-width: $screen-xs-max) {
+   .browsebar nav.navbar { 
+      width: 55%;
+   }
+ }
+ 
+ /* Selaa palkin some */
+.browsebar .fa-facebook {
+    padding: 20px;
+    font-size: 50px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.browsebar .fa-instagram {
+    padding: 20px;
+    font-size: 50px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Browsebar läpinäkyvyys, tummensin yhden kymmenyksen nykyiselle taustakuvalle (19.3.2024) */
+.browsebar {
+    background-color: rgba(140, 0, 82, 0.8);
+}

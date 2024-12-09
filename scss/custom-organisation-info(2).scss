@@ -1,0 +1,274 @@
+/* kirhakemiston sulkuteksti ja osoiteteksti */
+.organisation-info .closed {
+  color: #d50000;
+}
+
+/* Kirhakemiston pallukka */
+i.fa.fa-map-marker {
+    color: #007091;
+}
+
+/* Palvelu */
+.tooltip {
+    color: #007091;
+}
+
+/* Kirjastohakemiston buttonit */
+.contact-links {
+  /* Piilotetaan wifi- ja tulostus-iconit */
+  .btn-round {
+      display:none !important;
+  }
+}
+
+// Tablettikokoisen näytön määritykset aukiololohkolle
+#opening_hours {
+    @media (min-width: 700px) and (max-width: 991px) {
+
+        .location-row-general {
+            max-width:50%;
+            padding:1em;
+        }
+        
+        .info-col {
+            min-width:50%;
+            padding:1em;
+            
+        }
+        .organisation-info-widget .info-element {
+            display: inline-flex;
+        }
+        
+        .contact-links {
+            align-items:center;
+            display:inline-flex;
+            align-items:center ;
+            flex-wrap: wrap;
+            .btn {
+                align-content:center;
+            }
+        }
+        
+        .contact-links .btn, .contact-links .collection-hierarchytree #tree-preview>a, .collection-hierarchytree .contact-links #tree-preview>a {
+            justify-content: center;
+            .fa {
+                line-height:35px;
+            }
+        }
+        
+        .organisation-info .js-opening-times .mobile-schedules {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .address {
+          flex-basis: 100%;
+        }
+    }
+}
+
+/*@media (min-width: 451px) and (max-width: 767px) {
+    
+}*/
+
+// *** Common styles for organisation info page and widget ***
+.organisation-info {
+    .finna-panel {
+        .panel-collapse, .panel-body {
+            outline: 0;
+        }
+
+    }
+
+    .location-is-open {
+        color: green;
+    }
+    .location-is-closed {
+        color: #c33b00;
+    }
+
+    .js-opening-times {
+        padding-bottom: 20px;
+
+        .js-opening-times-week {
+
+            .date-rows {
+
+                .time-row {
+                    .description {
+                        flex: 1 1 60%;
+                        display: flex;
+                        padding-left: 10px;
+
+                        .info {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// *** Organisation info page ***
+.organisation-info-page {
+    padding-bottom: 25px;
+
+    h2 {
+        font-size: $font-size-large + 3px;
+    }
+
+    .consortium-info {
+        margin-bottom: 20px;
+
+        .description {
+            width: 70%;
+            float: right;
+            max-width: 900px;
+            @media (max-width: $screen-xs-max) {
+                float: none;
+                width: 100%;
+            }
+        }
+
+    }
+
+    .location-information {
+        margin-bottom: 2rem;
+
+        @media (min-width: $screen-sm-min) {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .location-details {
+        margin-top: 1em;
+
+        @media (max-width: $screen-xs-max) {
+            // Override negative margins of .row on narrow screens:
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .finna-panel {
+            clear: both;
+            margin-bottom: 1rem;
+            &.js-opening-times {
+                .panel-title {
+                    @media (max-width: $screen-xs-max) {
+                        max-width: none;
+                    }
+                }
+                .panel-body {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+            p {
+                margin-bottom: 0 !important;
+                padding-bottom: 0;
+                overflow-wrap: break-word;
+            }
+            img {
+                margin-bottom: 5px;
+                margin-top: 1em;
+            }
+            .location-description {
+                font-weight: normal;
+                margin-bottom: 1em;
+                margin-top: 1.1em;
+                overflow: hidden;
+                min-height:110px;
+                
+                ul {
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+            }
+            .building-year, .building-name {
+                font-size: 0.9em;
+            }
+        }
+
+        .personnel {
+            div {
+                padding-right:0.5em;
+            }
+            @media (max-width: 450px) {
+                .table-responsive td, .table-responsive tbody>tr>th, .search-history-table td, .search-history-table tbody>tr>th {
+                    display: grid;
+                    align-items: first baseline;
+                    text-align: left;
+                    background: #fff;
+                    padding-left:1.5em;
+                }
+                .job-title {
+                    padding-left:0 !important;
+                }
+            }
+            .table-striped>tbody>tr:nth-of-type(odd), .search-history-table>tbody>tr:nth-of-type(odd) {
+                background-color: #ffffff;
+            }
+            
+            table {
+                th,
+                td {
+                    width: 50%;
+                    white-space:nowrap;
+                }
+                th:nth-of-type(2),
+                td:nth-of-type(2) {
+                    display: none;
+                }
+                .job-title {
+                    display: block;
+                    padding-left:0.5em;
+                }
+            }
+            
+            @media (min-width: $screen-sm-min + 1) {
+                .table-striped>tbody>tr:nth-of-type(odd), .search-history-table>tbody>tr:nth-of-type(odd) {
+                    background-color: #f7f7f7;
+                }
+                table {
+                    th,
+                    td {
+                        width: calc(100%/3);
+                    }
+                    th:nth-of-type(2),
+                    td:nth-of-type(2) {
+                        display: table-cell;
+                    }
+                    .job-title {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// *** Widget ***
+$organisation-info-max-w: 400px !default;
+
+.organisation-info-widget {
+
+    .btn {
+        background: #0272ba;
+        //background: #8c0052;
+    }
+}
+
+/* Karttanäkymä */
+.show-map a { color: #007091;
+}
+.leaflet-container .leaflet-control-attribution
+{
+color: #000;
+}
+.leaflet-container .leaflet-control-attribution {
+    background: #fff;
+}   
+
