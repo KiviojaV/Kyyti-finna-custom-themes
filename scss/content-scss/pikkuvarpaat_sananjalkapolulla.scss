@@ -1,0 +1,173 @@
+.main.template-dir-content.template-name-content .pikkuvarpaat h3, .main.template-dir-feedcontent.template-name-content .pikkuvarpaat h3 {
+    font-size: 30px;
+    margin: 0;
+    padding-top: .2em;
+    padding-bottom: 1em;
+}
+
+.pikkuvarpaat {
+    
+    .hankelogot {
+        img {
+            padding: 1em;
+            min-height: 22mm;
+            @media (max-width: 768px) {
+                width: 100%;
+
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 45%;
+            }
+
+            @media (min-width: 992px) {
+                width: 30%;
+            }
+        }
+    }
+    
+    .carousel-slider.splide--ltr .slider-text-part .slider-header {
+        font-size: 24px;
+        font-weight: 150;
+        margin: .8em 0 .8em 0;
+    }
+
+    finna-feed .wrapper img {
+        width: auto;
+        height: 100% !important;
+        object-fit: cover;
+    }
+    
+    .col-lg-6 {
+        margin-bottom:2em;
+    }
+
+    .tekstiosio {
+        @media (min-width: 768px) {
+            margin: 2em 0;
+            li {
+                padding: 0.5rem 0rem 0.5rem 0.5rem;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin: 2em 0 3em;
+            h3, h2, p, ul {
+                padding: 1rem 0.2rem 1rem 0.7rem;
+            }
+
+            li {
+                font-size: 20px;
+                padding: 0.2rem 0.2rem 0.2rem 1rem;
+            }
+        }
+
+        .taiteilija {
+            p {
+                margin: 0 0 0 1rem;
+            }
+        }
+    }
+
+    .hankelogo {
+        margin: 1em;
+    }
+
+    @font-face {
+        font-family: "Cormorant";
+        src: url('../files/fonts/cormorant.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: "Cormorant light";
+        src: url('../files/fonts/cormorant-light.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: "Nunito regular";
+        src: url('../files/fonts/Nunito-Regular.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: "Cardo regular";
+        src: url('../files/fonts/cardo-regular-webfont.woff2') format('woff2');
+    }
+
+    p {
+        font-family: "Nunito regular";
+        margin: 0;
+    }
+
+    h3 {
+        font-family: "Cardo regular";
+        font-size: 30px;
+        font-weight: 150;
+    }
+
+    .slider-title {
+        word-break: normal !important;
+        padding: 0 1rem !important;
+    }
+    
+
+    .finna-feed .carousel-slider .splide--ltr .slider-text-part .slider-header h2 {
+        font-size: 24px !important;
+        font-weight: 150;
+        margin:1em 1em 1em 1em;
+    }
+
+    h2 {
+        font-family: "Cardo regular";
+        font-size: 30px;
+        font-weight: 150;
+        overflow-wrap: normal !important;
+
+        @media (max-width: 768px) {
+            padding: 1em 0.2em 1em 0.7em;
+        }
+
+        @media (min-width: 768px) {
+            padding: 2em 0 2em 1rem;
+        }
+    }
+
+    .peikkomummo-kuva {
+        max-width: 85%;
+        box-shadow: -1px 4px 18px 8px #fcfcfc;
+        border: solid #f6fbfe;
+        margin: 2rem 1rem 0 1rem;
+    }
+
+    @media (max-width: 768px) {
+        finna-feed.carousel-slider.splide--ltr .slider-image,
+        finna-feed.carousel-slider.splide--ltr .slider-text-part {
+            width: auto;
+            max-width: 100%;
+            max-height: min-content;
+        }
+        
+        .carousel-slider.splide--ltr .slider-text-part .slider-header {
+            font-size: 20px !important;
+            font-weight: 150;
+            margin: 0.8em 0em 0.8em 0em;
+        }
+
+        .splide__list {
+            display: flex;
+            height: 400px;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        finna-feed .feed-item-holder .feed-link {
+            display: flex;
+            height: 400px;
+            width: 100%;
+        }
+        
+        h3, h2 {
+            font-size: 26px !important;
+        }
+    }
+}

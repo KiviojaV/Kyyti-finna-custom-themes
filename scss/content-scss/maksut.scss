@@ -1,0 +1,35 @@
+/*
+
+Maksut-sivut
+/Content/maksut*
+
+*/
+
+.maksutaulukko {
+    td {
+      padding: 0.7em 1em 0.7em 0.2em;
+      vertical-align: text-top;
+    }
+    
+    tr {
+      border-bottom: 1px solid black;
+      font-size: 1.1em;
+    }
+    
+    .vikarivi {
+      border-bottom: none;
+    }
+    
+    td:nth-child(1) {
+      width: 17em;
+    }
+    
+    td:nth-child(2) {
+      width: 7em;
+      text-align: center;
+    }
+    
+    .eka_sarake_levea {
+      width: 30em !important;
+    }
+}
