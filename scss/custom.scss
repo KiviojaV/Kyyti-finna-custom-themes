@@ -25,10 +25,10 @@
 @import 'lehtitaulukko';
 
 // Lukemalla jaksaa -hankesivun määritykset
-@import 'lukemalla_jaksaa';
+@import './content-scss/lukemalla_jaksaa';
 
 // Lukuhaaaste -sivu
-@import 'lukuhaaste';
+@import './content-scss/lukuhaaste';
 
 // Maksut Content-sivut
 @import './content-scss/maksut';
