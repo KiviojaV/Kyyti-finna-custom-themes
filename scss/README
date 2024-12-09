@@ -1,0 +1,3 @@
+Pyritty ryhmittelemään tyyli-määritykset erillisiin SCSS-tiedostoihin  käyttötarkoitustensa perusteella. 
+Custom.scss tuo nämä määritykset ja sisältää myös yleisiä määrityksiä. 
+Joihinkin tiettyihin Content-sivuihin luodut määritykset löytyvät kansiosta content-scss.
