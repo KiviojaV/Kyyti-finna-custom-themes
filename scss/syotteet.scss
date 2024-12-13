@@ -38,13 +38,25 @@
 
 /* Ajankohtaista-karusellin alatekstien muotoilu */
 finna-feed.carousel.splide--ltr .feed-item-holder .carousel-slide-header p.title-bottom {
-    font-size: 1.2em;
+    font-size: 1.1rem;
     font-weight: 600;
     background: 0 0;
     text-shadow: none;
     color: #121212;
+    height:100px !important;
 }
 
+/* Tyylitellään päivämäärä sijoittumaan vasempaan yläkulmaan ja piilotetaan siitä "Julkaistu" */ 
+.template-dir-search .template-name-home .carousel-date {
+    font-size: 1.1rem;
+    position: absolute;
+    top: -33px;
+    left: 0px;
+    background: rgba(1, 1, 1, 0.6);
+    padding: 5px 5px 5px 10px;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
 
 .feed-no-m-p {
     .feed-container {
@@ -82,3 +94,4 @@ finna-feed.carousel.splide--ltr .feed-item-holder .carousel-slide-header p.title
 .modal-content .close {
     color: #f9f2f6;
 }
+
