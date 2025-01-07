@@ -67,6 +67,10 @@
     }
         
     @media (max-width: 450px) {
+        
+        .bubster-widgets-plugin .bubster-page-hidden {
+            display: none !important;
+        }
         .bubster-search-wrapper {
             margin: 0px 0px 20px 0px;
 
