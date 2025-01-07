@@ -69,73 +69,70 @@
     @media (max-width: 450px) {
         .bubster-search-wrapper {
             margin: 0px 0px 20px 0px;
-            
+
             .bubster-search-filters {
-                
+
                 .bubster-search-filter {
-                    width:100%!important;
-                    height:50px;
+                    width: 100% !important;
+                    height: 50px;
                 }
-                
+
                 .bubster-search-filter-button-reset {
                     width: calc(50% - 20px) !important;
                 }
             }
         }
-        .bubster-list-4 {
+        
+        .bubster-list-4 .bubster-page {
+            position: relative;
+            width: 100%;
             display: flex;
-            flex-direction: row !important;
-            flex-wrap: wrap;
+            flex-direction: column;
+            flex-wrap: nowrap;
             align-items: flex-start;
-            gap: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-right: 0.5em;
+            margin-bottom: 10px;
+        }
+        
+        .bubster-list-4 .bubster-page .bubster-image-wrapper {
+            width: 100%;
+            height: 200px;
+        }
+        
+        .bubster-list-4 .bubster-page .bubster-summary {
+            width: 100%;
+        }
+        
+        .bubster-summary {
+            width: auto !important;
+            padding: 5px 0 5px 10px !important;
+            font-size: 14px;
+            line-height: 1.3;
             
-            .bubster-page {
-                position: relative !important;
-                width: 100%;
-                flex-direction: column !important;
-                flex-wrap: nowrap;
-                align-items: flex-start;
-                padding-bottom: 10px;
-                box-shadow: 1px 1px 7px 3px #f0fbfd;
-                
-                .bubster-image {
-                    position: relative !important;
-                    display: block;
-                    width: 100% !important;
-                    height: 200px !important;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: cover;
-                    background-color: #eee;
-                }
-                
-                .bubster-summary {
-                    width: auto !important;
-                    padding: 5px 0 5px 10px !important;
-                    font-size: 14px;
-                    line-height: 1.3;
-                    
-                    .bubster-location {
-                        font-size: 13px;
-                        font-weight: 400;
-                        line-height: 20px;
-                        max-height: 40px;
-                        overflow: hidden;
-                        padding-left: 25px;
-                        margin-bottom: 5px;
-                        margin-right: 0.5em;
-                    }
-                }
+            .bubster-location {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 20px;
+                max-height: 40px;
+                overflow: hidden;
+                padding-left: 25px;
+                margin-bottom: 5px;
+                margin-right: 0.5em;
             }
+        }
+        
+        .bubster-page {
+            position: relative !important;
+            width: 100%;
+            flex-direction: column !important;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            padding-bottom: 10px;
+            box-shadow: 1px 1px 7px 3px #f0fbfd;
         }
 
         .bubster-list-4.bubster-css-default .bubster-more {
             clear: both;
             position: relative;
-            //display: block;
             width: 100% !important;
             padding: 8px 10px 8px 10px;
             margin-top: 10px;
