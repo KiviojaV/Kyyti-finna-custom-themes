@@ -51,9 +51,7 @@ i.fa.fa-map-marker {
         
         .contact-links .btn, .contact-links .collection-hierarchytree #tree-preview>a, .collection-hierarchytree .contact-links #tree-preview>a {
             justify-content: center;
-            .fa {
-                line-height:35px;
-            }
+
         }
         
         .organisation-info .js-opening-times .mobile-schedules {
@@ -67,9 +65,6 @@ i.fa.fa-map-marker {
     }
 }
 
-/*@media (min-width: 451px) and (max-width: 767px) {
-    
-}*/
 
 // *** Common styles for organisation info page and widget ***
 .organisation-info {
@@ -253,16 +248,9 @@ i.fa.fa-map-marker {
 // *** Widget ***
 $organisation-info-max-w: 400px !default;
 
-.organisation-info-widget {
-
-    .btn {
-        background: #0272ba;
-        //background: #8c0052;
-    }
-}
-
 /* Karttanäkymä */
-.show-map a { color: #007091;
+.show-map a {
+    color: #007091;
 }
 .leaflet-container .leaflet-control-attribution
 {
@@ -272,3 +260,60 @@ color: #000;
     background: #fff;
 }   
 
+/* Puhelinikoni aukioloaikatiedoissa */
+.organisation-info-widget .fa-phone-square {
+    content: "\f098";
+    font-size: 2.3rem;
+    line-height:2.5rem;
+    color: #0272ba;
+    padding: 0px 0px 0px 0px;
+    height:2rem;
+}
+
+/* Kirjekuoriikoni aukioloaikatiedoissa */
+.organisation-info-widget .fi-envelope {
+    content: '\e01f';
+    font-size: 2.5rem;
+    color: #0272ba;
+    padding: 0px 0px 0px 0px;
+}
+
+.organisation-info-widget .fa-bus {
+    //content: '\e01f';
+    font-size: 1.3rem;
+    padding: 0px 0px 0px 0px;
+    line-height:2rem;
+}
+
+.organisation-info-widget .btn, .collection-hierarchytree #tree-preview > a {
+    border-radius: 5px;
+    border: 0;
+}
+
+.contact-links .btn {
+    padding: 0px 0px 0px 0px !important;
+    margin: 0px 3px 0px 3px !important;
+}
+
+.organisation-info-widget .btn:not(.btn-link), .organisation-info-widget .collection-hierarchytree #tree-preview > a:not(.btn-link), .collection-hierarchytree .organisation-info-widget #tree-preview > a:not(.btn-link) {
+    margin: 0px 0px 0px 0px;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    background: #0272ba;
+    border-radius:4px;
+    font-size:inherit;
+    margin-bottom:0px;
+}
+
+#main > div.container-fluid.home-1 > div > div.hidden-sm.hidden-xs > div.left-column-content > div > div > div > div > div.js-content > div > div.location-row-general.js-details > div > div > button.btn.btn-open-widget.emails.email.info-element.btn-link {
+    padding: 0px 0px 0px 0px;
+}
+
+#main > div.container-fluid.home-1 > div > div.hidden-sm.hidden-xs > div.left-column-content > div > div > div > div > div.js-content > div > div.location-row-general.js-details > div > div > button.btn.btn-open-widget.phone.info-element.btn-link {
+    padding: 0px 0px 0px 0px;
+}
+
+.feed-grid .grid-item .grid-info .title {
+    display: block;
+}
