@@ -1,11 +1,18 @@
 /* Add your custom template javascript here */
 
-/* Poistaa kryptisen alkuosan asiakassivun käyttäjätunnuksesta */
+
 function finnaCustomInit() {
+    
+    /* Poistaa kryptisen alkuosan asiakassivun käyttäjätunnuksesta */
     $(() => {
         let $accountName = $('span.profile-title').siblings().first();
         let $newContent = $accountName.text().split('.')[1];
         $accountName.text($newContent);
+    });
+    
+    /* Asettaa mobiilivälilehdistä etusivulla ensimmäisen linkin aktiiviseksi sivun latautuessa */
+    $(() => {
+        $(".mobiilivalilehdet li.active a").first().attr("class", "active");
     });
 }
 
@@ -70,7 +77,9 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
         // Viimeinen elementti bubsterListissä on joko lisää-painike tai tapahtumakortti. Tarkistetaan
         // onko lisää-painiketta samalla kun se käsitellään ja päätellään näin mitkä ovat tapahtumakortteja
         let moreButtonExists = handleMoreButton(widgetId);
-        let eventCards = moreButtonExists ? Array.from(bubsterList).slice(2, -1)
+        let eventCards 
+        = moreButtonExists 
+            ? Array.from(bubsterList).slice(2, -1)
             : Array.from(bubsterList).slice(2);
 
         if (eventCards && eventCards.length != 0 && !eventCards[0].classList.contains('bubster-no-content')) {
