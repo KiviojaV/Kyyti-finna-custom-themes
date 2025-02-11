@@ -20,7 +20,7 @@
 
 /* Tämä muokkaisi lisäotsikkoa, jos sellainen olisi
 h3.introductionText {
-    color:$brand-secondary;
+    color:$secondary;
 } */
 
 //hakuboksi, tuo alun litania varmistaa, että koskee vain etusivua
@@ -174,11 +174,19 @@ h3.introductionText {
       justify-content: space-evenly;
       font-size: 1.4em;
     }
-    
-    .nav-tabs>li.active>a {
-        color:#007c90;
+    .nav-tabs>li {
+       a {
+           color:#007c90;
+           padding:0em 0.6em 0.2em 0.5em;
+       }
+       a.active {
+          color:black !important;
+          border-bottom:4px solid #8c0052;
+       }
     }
 }
+
+ 
 
 /* Ajankohtaista syöte-lista */
 .ajankohtaista {
@@ -189,6 +197,10 @@ h3.introductionText {
         line-height: 1.2em;
         margin-bottom: 15px;
     }
+}
+
+.feed-container .list-feed {
+    margin-top: 16px;
 }
 
 .carousel-header.local {
@@ -223,4 +235,10 @@ h3.introductionText {
   	border-bottom: 1px solid #e7e7e7;
   	margin-bottom:7px;
     
+}
+
+// Päivämäärän asettelu työpöytäversion tiedotteisiin
+.feed-container .list-feed.with-image .date {
+    padding: 0px 3px 0px 3px;
+    left: 0px;
 }
