@@ -1,0 +1,341 @@
+<?=$this->doctype('HTML5')?>
+<!-- START of: finna - layout/layout.phtml -->
+<?php // Set up the search box -- there are three possible cases:
+  // 1. No search box was set; we should default to the normal box
+  // 2. It was set to false; we should display nothing
+  // 3. It is set to a custom string; we should display the provided version
+  // Set up default search box if no data was provided from the template;
+  // this covers case 1.  Cases 2 and 3 are then covered by logic below.
+  if (!isset($this->layout()->searchbox)) {
+    $this->layout()->searchbox = $this->render('search/searchbox.phtml');
+  }
+?>
+<?php $currentTabClass = $this->layout()->currentTabId ? ' tab-' . preg_replace('/[^a-z0-9]/', '', strtolower($this->layout()->currentTabId)) : '' ?>
+<html lang="<?=$this->layout()->userLang?>"<?php if ($this->layout()->rtl): ?> dir="rtl"<?php endif; ?>>
+  <head>
+    <?php $this->setupThemeResources(); ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <?php // Turn off automatic telephone number detection on iOS ?>
+    <meta name="format-detection" content="telephone=no">
+    <?php // set finna-facebook.png image for Facebook sharing if image is present and we aren't on record view
+      if ($this->imageLink('finna-facebook.png') != '' && $this->layout()->templateName != 'view') {
+        $this->headMeta()->setProperty('og:image', $this->serverUrl() . $this->imageLink('finna-facebook.png'));
+      }
+    ?>
+
+    <?php if ($appleTouchIcon = $this->imageSrc()->getSourceAddress('webapp-icon-180.png')): ?>
+      <link rel="apple-touch-icon" sizes="180x180" href="<?=$this->escapeHtmlAttr($appleTouchIcon)?>">
+    <?php endif ?>
+    <?php if ($webAppManifest = $this->imageSrc()->getSourceAddress('manifest.json')): ?>
+      <link rel="manifest" href="<?=$webAppManifest?>">
+    <?php endif ?>
+
+    <?=$this->headMeta()?>
+    <?php
+      // Format the page title using the translation system:
+      $siteConfig = $this->config()->get('config')->Site;
+      // Disabled escaping of title temporarily so that we get it unescaped first:
+      $this->headTitle()->setAutoEscape(false);
+      $fullTitle = $this->translate(
+          'title_wrapper',
+          [
+            '%%pageTitle%%' => $this->headTitle()->renderTitle(),
+            '%%siteTitle%%' => $siteConfig->title,
+            '%%titleSeparator%%' => $siteConfig->titleSeparator ?? '|',
+          ]
+      );
+      // Enable escaping again for proper output:
+      $this->headTitle()->setAutoEscape(true);
+      echo $this->headTitle($fullTitle, \Laminas\View\Helper\Placeholder\Container\AbstractContainer::SET);
+
+      // Set up OpenSearch link:
+      $this->headLink(
+          [
+              'href' => $this->url('search-opensearch') . '?method=describe',
+              'type' => 'application/opensearchdescription+xml',
+              'title' => $this->transEsc('Library Catalog Search'),
+              'rel' => 'search',
+          ]
+      );
+      // We need to generate the icons early, because they may add some stylesheets;
+      // if we render them after the headLink / headStyle calls, some dependencies
+      // may not load correctly. Thus, we render early, but use this later.
+      $icons = '{}';
+      if (!isset($this->renderingError)) {
+        $this->render('finna-js-icons.phtml');
+        $icons = $this->render('js-icons.phtml');
+      }
+
+      $finnaSurvey = in_array($this->layout()->templateDir, ['search', 'record']) && $this->finnaSurvey()->isEnabled();
+
+      if ($finnaSurvey) {
+        $this->headScript()->appendFile('finna-survey.js');
+      }
+      $isLandingPage = $this->layout()->templateName === 'home' && $this->layout()->templateDir === 'search';
+    ?>
+    <?=$this->headLink()?>
+    <?=$this->headStyle()?>
+    <?php
+      // Collect small scripts together and append as one block:
+      $appendScripts = [];
+
+      // Set global variables for Javascript code:
+      $this->headScript()->prependScript(
+          'var userIsLoggedIn = ' . ($this->auth()->getUserObject() ? 'true' : 'false') . ';'
+      );
+
+      if (!isset($this->renderingError)) {
+        // Deal with cart stuff:
+        $cart = $this->cart();
+        if ($cart->isActive()) {
+          $this->headScript()->appendFile('vendor/js.cookie.js');
+          $this->headScript()->appendFile('cart.js');
+          if ($domain = $cart->getCookieDomain()) {
+            $appendScripts[] = 'VuFind.cart.setDomain("' . $domain . '");';
+          }
+          if ($cookiePath = $cart->getCookiePath()) {
+            $appendScripts[] = 'VuFind.cart.setCookiePath("' . $cookiePath . '");';
+          }
+          if ($cookieSameSite = $cart->getCookieSameSite()) {
+            $appendScripts[] = 'VuFind.cart.setCookieSameSite("' . $cookieSameSite . '");';
+          }
+        }
+      }
+
+      // Session keep-alive
+      if ($this->keepAlive()) {
+          $appendScripts[] = 'var keepAliveInterval = ' . $this->keepAlive() . ';';
+          $this->headScript()->appendFile('keep_alive.js');
+      }
+
+      // Finna common
+      $cookie = $this->cookie();
+      $cookieSettings = [
+        'path' => $cookie->getCookiePath(),
+        'domain' => $cookie->getCookieDomain(),
+        'SameSite' => $cookie->getCookieSameSite(),
+      ];
+      $appendScripts[] = 'finna.common.setCookieSettings(' . json_encode($cookieSettings) . ');';
+
+      // If account ajax is active, load script and add language strings
+      $account = $this->auth()->getManager();
+      if ($account->ajaxEnabled()) {
+        $this->headScript()->appendFile('account_ajax.js');
+      }
+
+      if ($this->scriptSrc('custom.js')) {
+        $this->headScript()->appendFile('custom.js');
+      }
+
+      $root = rtrim($this->url('home'), '/');
+      $translations = '{}';
+      if (!isset($this->renderingError)) {
+        $this->render('finna-js-translations.phtml');
+        $translations = $this->render('js-translations.phtml');
+      }
+      $dsb = DEFAULT_SEARCH_BACKEND;
+      $cspNonce = $this->csp()->getNonce();
+      $searchId = json_encode($this->layout()->searchId);
+      $appendScripts[] = <<<JS
+          VuFind.path = '{$root}';
+          VuFind.defaultSearchBackend = '{$dsb}';
+          VuFind.addTranslations({$translations});
+          VuFind.addIcons({$icons});
+          VuFind.setCspNonce('{$cspNonce}');
+          VuFind.setCurrentSearchId($searchId);
+          JS;
+
+      if (!empty($lightboxParent)) {
+        $lightboxParent = json_encode((string)$lightboxParent);
+        $appendScripts[] = 'VuFind.lightbox.parent = ' . $lightboxParent;
+      }
+
+      if (!empty($lightboxChild)) {
+        $lightboxChild = json_encode((string)$lightboxChild);
+        $appendScripts[] = 'VuFind.lightbox.child = ' . $lightboxChild;
+      }
+
+      $this->headScript()->appendScript(implode("\n", $appendScripts));
+    ?>
+    <?=$this->cookieConsent()->render()?>
+    <?=$this->headScript()?>
+    <?php if ($template = $this->content()->findTemplateForLng('content/Additions/general-post-head')): ?>
+      <?=$this->render($template)?>
+    <?php endif; ?>
+  </head>
+  <body class="template-dir-<?=$this->templateDir?> template-name-<?=$this->templateName?> <?=$this->layoutClass('offcanvas-row')?><?php if ($this->layout()->rtl): ?> rtl<?php endif; ?>">
+    <?=$this->render('search/modals.phtml') ?>
+    <?php if (isset($this->layout()->srmessage)): // message for benefit of screen-reader users ?>
+      <span class="sr-only"><?=$this->layout()->srmessage ?></span>
+    <?php endif; ?>
+      <?php if (isset($this->layout()->skiplink)): // additional skip links ?>
+        <?=$this->layout()->skiplink ?>
+      <?php endif; ?>
+      <?php
+        $contentElementId = 'main';
+        if (!empty($this->layout()->finnaMainHeader)) {
+          $contentElementId = 'content-heading';
+        } elseif (!empty($this->layout()->finnaMainTabs)) {
+          $contentElementId = 'content-main-tabs';
+        }
+      ?>
+      <a class="skip-link" href="#<?=$contentElementId?>"><?=$this->transEsc('Skip to content') // skip to content ?></a>
+    <header class="hidden-print">
+      <?php if ($this->bazaarSession()->isActive()): ?>
+        <?=$this->partial('Helpers/bazaar-browse-bar.phtml');?>
+      <?php endif; ?>
+      <?php if (!empty($_SERVER['HTTP_USER_AGENT']) && preg_match('/(?i)Trident\/[0-7]/', $_SERVER['HTTP_USER_AGENT'])): ?>
+        <div class="container-fluid system-messages">
+          <?=$this->translate('outdated_browser_message_html');?>
+        </div>
+      <?php endif; ?>
+      <?=$this->render('Helpers/pre-production-warning.phtml')?>
+      <?php if ($messages = $this->systemMessages()): ?>
+        <div class="container-fluid system-messages">
+          <?php foreach ($messages as $message): ?>
+            <div>
+              <?=$message // intentionally not escaped so that markup can be used ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      <div class="container-fluid navbar">
+        <?=$this->render('navibar.phtml')?>
+      </div>
+    </header>
+    <section class="searchContent<?=$currentTabClass?>">
+      <?php if ($isLandingPage): ?>
+        <a class="btn btn-primary btn-uppercase floating-feedback-btn" href="<?=$this->url('feedback-home') ?>"><?=$this->transEsc('Feedback')?></a>
+      <?php endif; ?>
+      <h1 class="sr-only"><?=$this->transEsc('Search')?></h1>
+      <?php if (!empty($this->layout()->infoMessage)): ?>
+        <div class="alert alert-info street-info">
+          <div class="container">
+            <?=$this->layout()->infoMessage?>
+          </div>
+        </div>
+      <?php endif; ?>
+      <div class="search-form-container <?= ($this->searchMemory()->getLastSearchType() === 'advanced' ? 'advanced-container' : '') ?>">
+        <div class="container">
+          <?php if ($isLandingPage): ?>
+            <div class="logo clearfix">
+              <?=$this->render('search/logosection.phtml') ?>
+            </div>
+          <?php endif; ?>
+        <?php if (isset($this->layout()->introduction) && $this->resolver('search/introductiontext.phtml')): ?>
+        <div class="introduction">
+          <div class="introduction clearfix">
+            <?=$this->render('search/introductiontext.phtml') ?>
+          </div>
+        </div>
+        <?php endif; ?>
+
+        <?php if (!empty($this->layout()->searchbox)): ?>
+            <?=$this->layout()->searchbox ?>
+        <?php endif; ?>
+      </div>
+    </div>
+    <?php if ($isLandingPage && !$this->translationEmpty('search_bg_image_info_html')): ?>
+        <div aria-hidden="true" class="search-bg-image-info">
+          <div class="search-bg-image-info-content">
+            <?=$this->translate('search_bg_image_info_html')?>
+          </div>
+        </div>
+    <?php endif; ?>
+    <?php if ($isLandingPage && $template = $this->content()->findTemplateForLng('search/home/browsebar')): ?>
+      <?=$this->render($template)?>
+    <?php endif; ?>
+    </section>
+    <?php if (!empty($this->layout()->showBreadcrumbs ?? true) && !empty($this->layout()->breadcrumbs)): ?>
+      <nav class="breadcrumbs hidden-print" aria-label="<?=$this->transEsc('Breadcrumbs') ?>">
+        <div class="container">
+          <ul class="breadcrumb"><?=$this->layout()->breadcrumbs ?></ul>
+        </div>
+      </nav>
+    <?php endif; ?>
+    <?php // TODO: get rid of template-dir-* and template-name-* here ?>
+    <section id="main" role="main" class="main template-dir-<?=$this->templateDir?> template-name-<?=$this->templateName?><?=$this->browse ? ' browse' : '' ?><?=$currentTabClass?>">
+      <?php if (!empty($this->layout()->advSearchHeader)): ?>
+        <?=$this->layout()->advSearchHeader; ?>
+      <?php endif; ?>
+      <?php if (!empty($this->layout()->finnaFilters)): ?>
+        <div class="search-filters" role="region" aria-label="<?=$this->transEscAttr('Search Filters')?>">
+          <div class="container filters-container">
+            <?=$this->layout()->finnaFilters?>
+          </div>
+        </div>
+      <?php endif; ?>
+      <?php if (!empty($this->layout()->finnaStreetBar)): ?>
+        <?=$this->layout()->finnaStreetBar?>
+      <?php endif; ?>
+      <?php if (!empty($this->layout()->finnaMainHeader)): ?>
+        <div id="content-heading" class="finna-main-header">
+          <div class="container">
+            <?=$this->layout()->finnaMainHeader?>
+          </div>
+        </div>
+      <?php endif; ?>
+      <?php if (!empty($this->layout()->finnaMainTabs)): ?>
+        <div id="content-main-tabs" class="finna-main-tabs">
+          <div class="container">
+            <?=$this->layout()->finnaMainTabs?>
+          </div>
+        </div>
+      <?php endif; ?>
+      <div id="content" class="container main-content">
+        <?=$this->layout()->content ?>
+      </div>
+    </section>
+    <footer class="hidden-print">
+      <div class="container">
+        <?=$this->render('footer.phtml')?>
+        <?=$this->layout()->poweredBy ?>
+      </div>
+    </footer>
+    <?=$this->render('Helpers/analytics.phtml')?>
+    <?php if ($template = $this->content()->findTemplateForLng('content/Additions/general-post-body')): ?>
+      <div class="container-fluid general-post-body">
+        <div class="container">
+          <div>
+            <div>
+              <?=$this->render($template)?>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($finnaSurvey): ?>
+      <?=$this->finnaSurvey()->render()?>
+    <?php endif; ?>
+    <?php
+      // Show post-login followup in lightbox
+      $url = $this->followup()->retrieveAndClear('postLoginLightbox', null);
+      if ($url && !$this->inLightbox) {
+        $script = <<<EOT
+            $(document).ready(function handlePostLoginLightbox() {
+              finna.layout.showPostLoginLightbox('{$url}');
+            });
+            EOT;
+          echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+      }
+    ?>
+    <?=$this->footScript() ?>
+    
+    <?php
+        $script = <<<JS
+        window.helpdeskChatbotConfig = {
+            baseUrl: 'https://kyyti-helpdesk.biblioworks.ai',
+            token: '5MdMHbBW04LuaC1i'
+        };
+        var script = document.createElement('script');
+        script.src = "https://kyyti-helpdesk.biblioworks.ai/helpdesk-chatbot.min.js";
+        document.body.appendChild(script);
+        JS;
+        echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+      ?>
+
+  </body>
+</html>
+<!-- END of: finna - layout/layout.phtml -->
