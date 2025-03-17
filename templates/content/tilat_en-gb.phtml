@@ -1,0 +1,510 @@
+<? $this->headTitle('Spaces');
+$this->content()->setHeading('Spaces'); ?>
+
+<div class="row">
+    <div class="col-sm-3 sidebar">
+        <div class="content-navigation-menu"></div>
+    </div>
+
+    <div class="col-sm-9">
+        <img src="<?= $this->imageSrc('palvelut/tilat_banneri.jpg') ?>" alt="The library lounge featuring a red corner sofa, a table, and bookshelves" />
+        <div id="Kouvola" class="content-section">
+            <h2>Kouvola</h2>
+            <p>You can explore the spaces of the Kouvola libraries and book spaces via the Varaamo service.</p>
+            <p><a href="https://varaamo.kouvola.fi/" target="_blank">Go to Varaamo (varaamo.kouvola.fi)</a></p>
+        </div>
+
+        <div id="Kotka" class="content-section">
+            <h2>Kotka</h2>
+            <h3>Booking and use of spaces</h3>
+
+            <p><strong>In 2025, Kotka main library is undergoing a renovation and improvement project aimed at gradually developing and enhancing the services for all users – both within the library and in the bookable spaces available to customers.
+                    We may have to cancel existing bookings and reassign them to another space. We apologize for any inconvenience caused by the renovation and improvement project.</strong></p>
+
+            <p>The library offers several bookable spaces in various sizes. With the exception of the auditorium, booking spaces is free of charge. Spaces must not be used by companies for commercial purposes.</p>
+
+            <p>You can book the main library spaces either through
+            <ul class="list-bullets">
+                <li>the information service: <a href="mailto:kirjasto@kotka.fi">kirjasto@kotka.fi</a> / <a href="tel:+358406883754">040 688 3754</a> or</li>
+                <li>from the custodians: <a href="tel:+358400209674">040 020 9674</a>.</li>
+                <li>Auditorium booking requests are handled through the City of Kotka’s Timmi space booking system: <a href="https://www.kotka.fi/asioi-ja-osallistu/tilavaraus/timmi-tilavarausjarjestelman-ohjeet/" target="blank">Link to the booking system</a></li>
+            </ul>
+            <p>You can book the spaces at the Karhula library by email: <a href="mailto:karhula.kirjasto@kotka.fi">karhula.kirjasto@kotka.fi</a> or by phone: <a href="tel:+358406883587">040 688 3587</a>.</p>
+
+            <p>Please specify your equipment requirements when booking. The equipment available in each space is listed in the space descriptions. In addition, you can borrow a laptop from customer service with your library card.</p>
+
+            <p>The library offers wireless internet:</p>
+            <ul class="list-bullets">
+                <li>Network name: Kirjasto-vierailija</li>
+                <li>Password: kirjasto</li>
+            </ul>
+
+            <p>Café services are provided by Café Sonetti: phone <a href="tel:+358449851556">044 985 1556</a>, email <a href="mailto:makuharmonia@gmail.com">makuharmonia@gmail.com</a>.</p>
+
+            <p>You can view the current booking status for each space by tapping the "Booking calendar" link in the space details. The calendar does not allow you to book spaces directly.</p>
+
+            <br>
+            <h3 id="Paakirjasto">Kotka main library spaces</h3>
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/remontoitu_auditorio_25.jpg') ?>" alt="Auditorium" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Auditorio"></a>Auditorium</h4>
+                    <p style="color:#000">A large space for public events</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000" title="number of people"></i> 266 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> laptop, data projector, sound system, 4 wired microphones, 2 wireless microphones + one headset, document camera, internet connection, guest network, grand piano, flip chart</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Bookable during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-regular fa-credit-card" aria-hidden="true" style="color:#000"></i> Paid – <a href="https://kyyti.finna.fi/Content/maksut-kotka#tilat">see booking prices here</a></p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 1st floor (<a href="<?= $this->imageSrc('pohjapiirrokset/1_kerros_25.jpg') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5936&adminAreaId=3">Booking calendar (view-only)</a></p>
+                </div>
+            </div>
+
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_katariinan_kammari_11_2_2024.jpg') ?>" alt="Katariina’s Room" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Katariinan-kammari"></a>Katariina’s chamber</h4>
+                    <p style="color:#000">A workshop and meeting room</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000" title="number of people"></i> 18 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> computer, television, presentation equipment</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Bookable during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 3rd floor (<a href="<?= $this->imageSrc('pohjapiirrokset/3_kerros_2024.jpg') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5927&adminAreaId=3" target="blank" style="color:#007091;">Booking calendar (view-only)</a></p>
+                </div>
+            </div>
+
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_uusittumediatila_2_2024.jpg') ?>" alt="Media Space" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Mediatila"></a>Media space</h4>
+                    <p style="color:#000">A multi-function venue for events</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 40 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> computer, presentation equipment, DVD/Blu-ray player, flip chart</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Bookable during library opening hours. On Tuesdays, reserved for the library’s own use.</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 3rd floor (<a href="<?= $this->imageSrc('pohjapiirrokset/3_kerros_2024.jpg') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5928&adminAreaId=3" target="blank" style="color:#007091;">Booking calendar (view-only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/vaihtokirjapiste1_25.jpg') ?>" alt="Book Exchange Point" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Hildan-huone"></a>Book exchange point</h4>
+                    <p style="color:#000">The book exchange point is being implemented as a trial lasting at least until the end of August 2025.</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000"></i> You can drop off a reasonable number (1–5 pieces) of clean, intact books. You may not drop off withdrawn books, encyclopedias, or books from the “Valittujen Palojen Kirjavaliot” series. Please do not bring books that have been stored in humid conditions.</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> 17 meters of shelving for exchange books, two tables, four chairs, one waste bin designated for plastics</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Open during library hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 1st floor (<a href="<?= $this->imageSrc('pohjapiirrokset/1_kerros_25.jpg') ?>" target="blank">map</a>)</p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_stage_2.jpg') ?>" alt="Stage (Performance Platform)" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Stage"></a>Stage</h4>
+                    <p style="color:#000">Performance platform</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 90 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> computer, presentation equipment, piano</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Bookable during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 2nd floor (<a href="<?= $this->imageSrc('pohjapiirrokset/2_kerros_2024.png') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5925&adminAreaId=3" target="blank" style="color:#007091;">Booking calendar (view-only)</a></p>
+                </div>
+            </div>
+
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img src="<?= $this->imageSrc('tilat/kotka_tilat_ryhmatyotila_2_2024.jpg') ?>" alt="Group Workspaces" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Ryhmätyötilat"></a>Group workspaces</h4>
+                    <p style="color:#000">Three small group work areas</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 4 people</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Bookable during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000"></i> You can book a workspace for up to one week at a time. If you do not collect the key within an hour after your booking starts, the space may be released to another customer.</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 3rd floor (<a href="<?= $this->imageSrc('pohjapiirrokset/3_kerros_2024.jpg') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5932&adminAreaId=3" target="blank" style="color:#007091;">Workspace 1 booking calendar (view-only)</a></p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5930&adminAreaId=3" target="blank" style="color:#007091;">Workspace 2 booking calendar (view-only)</a></p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5920&adminAreaId=3" target="blank" style="color:#007091;">Workspace 3 booking calendar (view-only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img src="<?= $this->imageSrc('tilat/kotka_tilat_tutkijanhuone.jpg') ?>" alt="Research Room" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="ResearchRoom"></a>Research room</h4>
+                    <p style="color:#000">A workspace that can be reserved for a longer period</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 1 person</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> cabinet, network connection</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> available during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000"></i> You can reserve the space for up to three months at a time.</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 3rd floor (<a href="<?= $this->imageSrc('pohjapiirrokset/3_kerros_2024.jpg') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5931&adminAreaId=3" target="blank" style="color:#007091;">Booking calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_näyttelytila_2.jpg') ?>" alt="Näyttelytila" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="ExhibitionSpaces"></a>Exhibition spaces</h4>
+                    <p style="color:#000">The library has two exhibition spaces in the ground floor lobby and on the 2nd floor.</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> available during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000;"></i> Reservations for the ground floor exhibition space are managed by librarian Jaana Elsilä, tel. <a href="tel:+358408454280">040 845 4280</a>, email <a href="mailto:jaana.elsila@kotka.fi">jaana.elsila@kotka.fi</a>.</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000;"></i> The 2nd-floor exhibition space can be reserved through the library's information service: <a href="mailto:kirjasto@kotka.fi">kirjasto@kotka.fi</a>, tel. <a href="tel:+358406883754">040 688 3754</a>.</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Main library, 1st floor (<a href="<?= $this->imageSrc('pohjapiirrokset/1_kerros_25.jpg') ?>" target="blank">map</a>)</p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_3D_ja_digitointi_2_2024.jpg') ?>" alt="3D printing/digitization" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="3D-printing/digitization"></a>3D printing / digitization</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 1 person</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> Prenta Duo XL SE printer (2 units), Simplify3D slicing software, LG video recorder, Adobe Premiere Pro CC video editing software, Epson Perfection V500 Photo flatbed scanner, Photoshop Elements 12 image editing software, Reflecta film scanner (Super 8 and Normal 8)</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> available during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> main library, 3rd floor (<a href="<?= $this->imageSrc('pohjapiirrokset/3_kerros_2024.jpg') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000;"></i> For 3D printing and digitization you can book guidance from the library’s information service at <a href="mailto:kirjasto@kotka.fi">kirjasto@kotka.fi</a>, tel. <a href="tel:+358406883754">040 688 3754</a>.</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=88919&adminAreaId=3" target="blank" style="color:#007091;">Booking Calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_aanistudio_2_2024.jpg') ?>" alt="Studio" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Studio"></a>Studio</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 4 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> <a href="https://bit.ly/3tGzbVV" target="blank" style="color:#007091;"> Equipment and Software List (Google Docs)</a> </p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> available during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> main library, 3rd floor (<a href="<?= $this->imageSrc('pohjapiirrokset/3_kerros_2024.jpg') ?>" target="blank">map</a>)</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000;"></i> The studio is available free of charge for customers over 15 years of age during the library’s opening hours and can be booked for up to four hours at a time. In the studio you can play, record and practice your own instrument, use the library’s instruments or even record a podcast.
+                        <br><br>
+                        You don’t need to be a music professional or an expert to use the recording studio. A studio guide is present at the start of your booking to assist if needed.
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5926&adminAreaId=3" target="blank" style="color:#007091;">Booking Calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <br>
+            <h3 id="Karhula">Rooms of the Karhula library</h3>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_riihi_25_1.jpg') ?>" alt="Riihi" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Riihi"></a>Riihi</h4>
+                    <p style="color:#000">Meeting room</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 12 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> presentation equipment, flipchart</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> available during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Karhula Library</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://kotka.timmi.fi/WebTimmi/login.do?loginName=GUEST&password=NO&roomId=5982&adminAreaId=3" target="blank" style="color:#007091;">Booking Calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img class="marginauto" src="<?= $this->imageSrc('tilat/kotka_tilat_näyttelytila_karhula_2.jpg') ?>" alt="Karhula Exhibition Space" />
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Näyttelytila-Raami"></a>Exhibition space Raami</h4>
+                    <p style="color:#000">You can book the exhibition space by phone at <a href="tel:+358405596827">040 559 6827</a> or by email at <a href="mailto:anne.vilska@kotka.fi">anne.vilska@kotka.fi</a>.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div id="Hamina" class="content-section">
+            <h2>Hamina</h2>
+            <h3>Room usage</h3>
+            <p>Use of the library rooms is free except for booking the Kasper hall and the Aladin workspace. You can check the booking rates from the
+                <a href="https://kyyti.finna.fi/Content/maksut-hamina#tilat">rate list</a>. The Aladin workspace can also be used for free when it is not booked. Free spaces may not be used for commercial purposes by businesses.
+            </p>
+            <p>Contact Information:</p>
+            <ul class="list-bullets">
+                <li>Main Library: <a href="mailto:kirjasto@hamina.fi">kirjasto@hamina.fi</a> / <a href="tel:+358401991310">040 199 1310</a></li>
+                <li>Ruissalo Library: <a href="mailto:ruissalo.kirjasto@hamina.fi">ruissalo.kirjasto@hamina.fi</a> / <a href="tel:+358401991322">040 199 1322</a></li>
+            </ul>
+            <p>Ruissalo library is located in the Vehkalahti building, which also houses the Vehkalahti hall and the club room. You can book these spaces through Vehkalahti school.</p>
+            <p><a href="https://www.hamina.fi/peruskoulut/vehkalahden-koulu/vehkalahtitalo/" target="_blank">Go to the Vehkalahti building page (hamina.fi)</a></p>
+            <p>When booking, please specify which equipment you need. The equipment for the different rooms is listed in their descriptions.</p>
+            <p>The library offers a wireless network:</p>
+            <ul class="list-bullets">
+                <li>Network name: Kirjasto-vierailija</li>
+                <li>Password: kirjasto</li>
+            </ul>
+            <p>If you do not collect the keys for the group workspaces or offices (Ester, Elli, Hugo, Helvi) within a minute of the booking start time, the space may be reallocated to another customer.</p>
+
+            <h3>Hamina main library</h3>
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_kasper.jpg') ?>" alt="Kasper Hall" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000" id="Kasper-sali">Kasper hall</h4>
+                    <p style="color:#000">Paid multifunctional event space</p>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 80 persons</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> laptop, presentation equipment, microphone, DVD/Blu-ray player, flip chart, piano</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> available for booking outside regular library hours</p>
+                    <p style="color:#000"><i class="fa fa-regular fa-credit-card" aria-hidden="true" style="color:#000"></i> paid, <a href="https://kyyti.finna.fi/Content/maksut-hamina#tilat">see booking prices here</a></p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> 1st floor, entrance from the main door</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://asp3.timmi.fi/WebTimmi/login.do?loginName=GUEST_HAMINA&password=NO&roomId=513021&adminAreaId=2591" target="blank" style="color:#007091;">Booking calendar (view-only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_aladin.jpg') ?>" alt="Quiet workspace" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="aladin"></a>Quiet workspace Aladin</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 20 persons</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> laptop, presentation equipment, microphone</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> open during library hours</p>
+                    <p style="color:#000"><i class="fa fa-regular fa-credit-card" aria-hidden="true" style="color:#000"></i> Free to use. Booking for events is paid. <a href="https://kyyti.finna.fi/Content/maksut-hamina#tilat">See booking prices here.</a></p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> 1st floor</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://asp3.timmi.fi/WebTimmi/login.do?loginName=GUEST_HAMINA&password=NO&roomId=1065486&adminAreaId=2591" target="blank" style="color:#007091;">Booking calendar (view-only)</a></p>
+                </div>
+            </div>
+
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_esteri.jpg') ?>" alt="Group Workspace" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Tyotila"></a>Group workspace Ester</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 4 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> PlayStation 5 console, television</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Available free of charge during library hours. To secure a time slot, you can reserve the space for two hours at a time. The gaming station is booked through customer service and cannot be reserved in advance.</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> 1st floor</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://asp3.timmi.fi/WebTimmi/login.do?loginName=GUEST_HAMINA&password=NO&roomId=1065482&adminAreaId=2591" target="blank" style="color:#007091;">Reservation calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_elli.jpg') ?>" alt="Quiet Workstation" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Rauhallinen_tyotila"></a>Quiet workstation Elli</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 1 person</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Available free of charge during library hours. To secure a time slot, you can reserve the space for two hours at a time.</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> 1st floor</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://asp3.timmi.fi/WebTimmi/login.do?loginName=GUEST_HAMINA&password=NO&roomId=1065483&adminAreaId=2591" target="blank" style="color:#007091;">Reservation calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_hugo.jpg') ?>" alt="Hugo's Workroom" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Työhuoneet"></a>Workroom Hugo</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 1 person</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Can be booked for one day at a time during library hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Ground floor</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://asp3.timmi.fi/WebTimmi/login.do?loginName=GUEST_HAMINA&password=NO&roomId=1065484&adminAreaId=2591" target="blank" style="color:#007091;">Reservation calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_helvi.jpg') ?>" alt="Helvi's Workroom" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Työhuoneet"></a>Workroom Helvi</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 1 person</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Can be booked for four hours at a time during library hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Ground floor</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://asp3.timmi.fi/WebTimmi/login.do?loginName=GUEST_HAMINA&password=NO&roomId=1065485&adminAreaId=2591" target="blank" style="color:#007091;">Reservation calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_pelle.jpg') ?>" alt="Pelle's Music Room" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="MusicRoom"></a>Music room Pelle</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 6 people</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> Electric piano, electric drums, microphone, two electric guitars, four ukuleles</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Available for booking with a library card at customer service during library opening hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> Basement floor</p>
+                    <p style="color:#000"><i class="fa fa-info-circle fa-lg" aria-hidden="true" style="color:#000"></i> You can also play your own instruments. The room is soundproof.</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> <a href="https://asp3.timmi.fi/WebTimmi/login.do?loginName=GUEST_HAMINA&password=NO&roomId=1065117&adminAreaId=2591" target="blank" style="color:#007091;"> Booking calendar (view only)</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_kirjastogalleria.jpg') ?>" alt="Library Gallery" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="LibraryGallery"></a>Library gallery</h4>
+                    <p style="color:#000">170 square meter exhibition space</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> You can book the exhibition space through the cultural producer by phone <a href="tel:+358407223687">040 722 3687</a> or email <a href="mailto:henni.kiri@hamina.fi">henni.kiri@hamina.fi</a>.</p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_kotiseutukokoelma.jpg') ?>" alt="Local Heritage Room" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="LocalHeritageRoom"></a>Local heritage room</h4>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> CD player, microfilm scanner, printer</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Open during library hours</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> 1st floor</p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_lasilinnut.jpg') ?>" alt="Oiva Toikka Glass Birds" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="lasilintukokoelma"></a>Oiva Toikka glass birds collection</h4>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Open during the library's opening hours when the Kasper hall is not booked for other events.</p>
+                    <p style="color:#000"><i class="fa fa-location-arrow fa-lg" aria-hidden="true" style="color:#000"></i> 1st floor, Kasper hall</p>
+                </div>
+            </div>
+
+            <h3>Ruissalo library</h3>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img class="marginauto" src="<?= $this->imageSrc('tilat/hamina_tilat_ryhmatyohuone.jpg') ?>" alt="Group Workspace" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Ryhmätyötila"></a>Group workspace</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 6 persons</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Bookable when library staff is present</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> Flip chart, sewing machine</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Iitti" class="content-section">
+            <h2>Iitti</h2>
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img src="<?= $this->imageSrc('tilat/iitti_tilat_kirmo.jpg') ?>" alt="Multi-purpose Room Kirmo" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="kirmo"></a>Multi-purpose room Kirmo</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 20 persons</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> The exhibition space can be booked for one month at a time. It cannot be self-booked for meeting use, but if the room is free, it is available (except the projector).</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> Projector and screen</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> Bookings: <a href="tel:+358404833800"> 040 483 3800</a> / <a href="mailto:kirjasto@iitti.fi">kirjasto@iitti.fi</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img src="<?= $this->imageSrc('tilat/iitti_tilat_pelihuone.jpg') ?>" alt="Game Room" />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="pelihuone"></a>Game room</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 4 persons</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Can be booked for a maximum of one hour at a time. The same players can book up to two sessions per day. Each player must bring a library card which will be held as collateral during gameplay.</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> PS4 gaming console</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> Bookings: <a href="tel:+358404833800"> 040 483 3800</a> / <a href="mailto:kirjasto@iitti.fi">kirjasto@iitti.fi</a></p>
+                </div>
+            </div>
+
+            <div class="row infobox">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="verticalcenter">
+                        <img src="<?= $this->imageSrc('tilat/iitti_tilat_tutkijanhuone.jpg') ?>" alt="Researcher's room" />
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h4 style="color:#000"><a id="Tutkijanhuone_iitti"></a>Researcher's room</h4>
+                    <p style="color:#000"><i class="fa fa-user-circle fa-lg" aria-hidden="true" style="color:#000"></i> 1 person</p>
+                    <p style="color:#000"><i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:#000"></i> Available during the library's opening hours (doors locked)</p>
+                    <p style="color:#000"><i class="fa fa-laptop fa-lg" aria-hidden="true" style="color:#000"></i> Microfilm reader</p>
+                    <p style="color:#000"><i class="fa fa-calendar fa-lg" aria-hidden="true" style="color:#000;"></i> Bookings: <a href="tel:+358404833800"> 040 483 3800</a> / <a href="mailto:kirjasto@iitti.fi">kirjasto@iitti.fi</a></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Virolahti" class="content-section">
+            <h2>Virolahti</h2>
+            <h3>Meeting room</h3>
+            <p>The Virolahti library has a meeting room available for small events, gatherings, or workspace use during library hours. The room is free to use. The library provides a projector, document camera, speakers, and a screen for borrowing. Reservations: <a href="tel:+358407107352">040 710 7352</a> or <a href="mailto:kirjasto.virolahti@virolahti.fi">kirjasto.virolahti@virolahti.fi</a>.</p>
+            <h3>Exhibition Space</h3>
+            <p>The Virolahti library has an exhibition space that can be reserved for one month at a time. Inquiries and reservations: <a href="tel:+358407107352">040 710 7352</a> or <a href="mailto:kirjasto.virolahti@virolahti.fi">kirjasto.virolahti@virolahti.fi</a>.</p>
+        </div>
+        <p><em>Artificial intelligence was used as an assisting technology in translating this page from Finnish into English.</em></p>
+    </div>
+</div>
