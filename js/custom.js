@@ -16,6 +16,16 @@ function finnaCustomInit() {
     });
 }
 
+/* Tietyissä tilanteissa käyttäjän on mahdollista päätyä tapahtumaponnahdusikkunaan siten, 
+että inline "onClick" tapahtumakäsittelijöitä ei olla muutettu
+CSP-yhteensopiviksi ja ikkunan sulkunappi ei tällöin toimi. Seuraava korjaa tilanteen */
+$(() => {
+    if (window.location.href.includes('#localhub-content-popup=true')) {
+        let eventCardId = (window.location.href.split('&'))[2].replace('page_id=','');
+        handleCloseButton(eventCardId);
+    }
+});
+
 /*
 Localhubin tapahtumawidgettien toimintaan vaikuttavat skriptit
 */
