@@ -229,15 +229,15 @@ i.fa.fa-map-marker {
             }
             
             table {
-                th,
+                /* th,
                 td {
                     width: 50%;
                     white-space:nowrap;
-                }
-                th:nth-of-type(2),
+                } */
+                /* th:nth-of-type(2),
                 td:nth-of-type(2) {
                     display: none;
-                }
+                } */
                 .job-title {
                     display: block;
                     padding-left:0.5em;
@@ -278,4 +278,9 @@ color: #000;
 }
 .leaflet-container .leaflet-control-attribution {
     background: #fff;
-}   
+}
+
+/* Korjataan tilanne jossa palvelupisteiden kuvaukset menivät solmuun liiasta tekstistä */
+.organisation-info-page .location-details .finna-panel .location-description > * {
+    display: inline-block;
+}
