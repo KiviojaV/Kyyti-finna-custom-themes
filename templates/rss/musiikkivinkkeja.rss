@@ -2,6 +2,21 @@
     <channel>
         <title>Musiikkivinkkeja</title>
         <language>fi-fi</language>
+        
+        <item>
+            <title>Äänekkäitä äänitteitä</title>
+            <link>https://kyyti.finna.fi/MyResearch/MyList/1866044</link>
+            <description>Näistä levyistä saat irti rouheaa ääntä ja useammasta löydät kokeellista, jopa taiteellista otetta. Rock-punk-akselilla liikutaan, mutta mukana myös muutama rap-levy.</description>
+            <enclosure url='/themes/custom/images/musiikkivinkkeja/aanekkaita_aanitteita.jpg' length="" alt="Kitaristi" type="image/jpg"/>
+        </item>
+
+        
+        <item>
+            <title>Suomalaista rockia ja poppia 1970-luvulta</title>
+            <link>https://kyyti.finna.fi/MyResearch/MyList/1861354</link>
+            <description>70-luvulla suomalainen rock lähti toden teolla lentoon. Tässä listassa on tarjolla kaikenlaista suoraviivaisesta rock and rollista progressiiviseen hämyilyyn. Karusellin kuva: Raymond Petrik / Pexels</description>
+            <enclosure url='/themes/custom/images/musiikkivinkkeja/suomalaista_rockia_ja_poppia_1970_luvulta_25.jpg' length="" alt="Kitaristi" type="image/jpg"/>
+        </item>
 
         <item>
             <title>Mielenrauhaa musiikista</title>
@@ -182,159 +197,5 @@
             <enclosure url='/themes/custom/images/musiikkivinkkeja/musateollisuus.jpg' length="" type="image/jpeg"/>
         </item>
 
-        <item>
-            <title>Emma-ehdokkaita 2023</title>
-            <link>https://kyyti.finna.fi/List/1267097</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/emma.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Grammy-ehdokkaita 2023</title>
-            <link>https://kyyti.finna.fi/List/1266113</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/grammy.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Puhaltimien juhlaa</title>
-            <link>https://kyyti.finna.fi/List/1256378</link>
-            <description>
-
-            </description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/trumpet.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Retkiä nykymusiikkiin</title>
-            <link>https://kyyti.finna.fi/List/1237231</link>
-            <description>
-    Tuntuuko uudempi taidemusiikki vaikeasti lähestyttävältä? Listan vinkkien avulla voit tutustua nykymusiikkiin ja sen säveltäjiin.
-            </description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/tima.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Musiikki mukaan ryhmätoimintaan</title>
-            <link>https://kyyti.finna.fi/MyResearch/MyList/1205131</link>
-            <description>
-    Ideoita musiikkikasvatukseen sekä musiikillisten hetkien järjestämiseen lasten ja aikuisten ryhmissä   
-            </description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/ryhma.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Livemusaa! </title>
-            <link>https://kyyti.finna.fi/List/1198108</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/concert.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Swing</title>
-            <link>https://kyyti.finna.fi/List/1173817</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/swing.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Laulumusiikin helmiä</title>
-            <link>https://kyyti.finna.fi/List/1120058</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/laulumusiikki_helmi.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Fuusiojazz - jazzin rajamailla</title>
-            <link>https://kyyti.finna.fi/List/1109798</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/fuusiojazz.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Maailman parhaita kitaristeja (Rolling Stone)</title>
-            <link>https://kyyti.finna.fi/List/1060112</link>
-            <description>Rolling Stone -lehdessä maailman parhaiksi kitaristeiksi valittujen artistien levyjä.</description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/clapton.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Maailman parhaimpia levyjä (Rolling Stone)</title>
-            <link>https://kyyti.finna.fi/List/1034571</link>
-            <description>Rolling Stone -lehdessä maailman parhaiksi valittuja musiikkilevyjä.</description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/rolling.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Mitä sanat kertovat?</title>
-            <link>https://kyyti.finna.fi/List/985315</link>
-            <description>Rakkaus ja varsinkin sen menetys ovat tuttuakin tutumpi laulun aihe, mutta mitä muita tarinoita laulut kertovat? 
-    Syntyykö ensin sävel vai sanat? Kurkista vinkkilistan teoksia ja pureudu syvemmälle laululyriikan saloihin.</description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/lyriikat.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Suomalaista outoilua</title>
-            <link>https://kyyti.finna.fi/List/977513</link>
-            <description>Valtavirran ulkopuolista, monimuotoista suomalaista indie-outoilua.</description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/outoilua.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Kymenlaaksolaisia muusikoita ja yhtyeitä</title>
-            <link>https://kyyti.finna.fi/List/962500</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/pelle.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Nuotteja ukulelelle</title>
-            <link>https://kyyti.finna.fi/List/950697</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/ukulele2.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Soul- ja funk-levyjä</title>
-            <link>https://kyyti.finna.fi/List/931768</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/soul.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Maisemakuvia Suomesta</title>
-            <link>https://kyyti.finna.fi/List/906911</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/maisemia.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Slide-kitara</title>
-            <link>https://kyyti.finna.fi/List/892034</link>
-            <description>Kitara laulaa. Bongaa listan albumeilta slide-soittoa ja sen mestareita. Tyylin juuret ovat Länsi-Afrikassa, josta se kulkeutui afroamerikalaiseen bluesmusiikkiin. 
-    Bluesista slide-kitarointi on levinnyt myös rockin ja countryn piiriin. Slide-kitara on tyypillistä myös perinteisessä havaijilaisessa musiikissa.</description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/kitara.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Nuotteja eri soittimille</title>
-            <link>https://kyyti.finna.fi/List/901932</link>
-            <description>Varsinaisten soitonoppaiden lisäksi kirjastosta löytyy paljon eri soittimille sovitettuja nuotteja - poppia, rockia, jazzia, soulia, elokuva-, taide- ja kansanmusiikkia...</description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/nuotteja.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Uusia elämäkertoja</title>
-            <link>https://kyyti.finna.fi/List/906707</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/elamakerrat.jpg' length="" type="image/jpeg"/>
-        </item>
-
-        <item>
-            <title>Voimia ja kestämistä korona-arkeen</title>
-            <link>https://kyyti.finna.fi/List/906617</link>
-            <description></description>
-            <enclosure url='/themes/custom/images/musiikkivinkkeja/rentoutus.jpg' length="" type="image/jpeg"/>
-        </item>
     </channel>
 </rss>
