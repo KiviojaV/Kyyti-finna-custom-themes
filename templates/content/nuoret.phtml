@@ -1,0 +1,84 @@
+<? $this->headTitle('Nuorille');
+$this->content()->setHeading('Nuorille'); ?>
+
+<div class="nuoret">
+        <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed("nuorten_kirjavinkkeja"); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed("varatuimmat_na_kirjat"); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+    
+        <div class="col-md-8">
+            <h2>Kirjalistat ja yläkoulun lukudiplomi</h2>
+            <p>
+                Alla on kirjastojen keräämiä suosituslistoja eri aiheista.
+                Voit kuitenkin aina lukea lukudiplomia varten näiden kirjalistojen ulkopuolelta oman
+                valitsemasi kirjan. Listasta näet kirjojen tiedot ja saatavuuden.
+                Kirjautumalla sisään voit myös varata kirjan. Voit tulostaa lukudiplomilomakkeen kotona tai noutaa sen maksutta kirjastosta.
+            </p>
+        </div>
+    </div>
+    
+    <div class="row"></div>
+        
+        <div class="col-md-12">
+            
+            <?= $this->feed('lanu_ylakoulu'); ?>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <h3>Luettuasi...</h3>
+            <ul class="list-bullets">
+                <li>Palauta lukudiplomilomake kirjastoon saadaksesi todistuksen diplomin suorittamisesta</li>
+                <li>Kultadiplomin saat lukemalla tai kuuntelemalla yhteensä 6 kirjaa</li>
+                <li>Platinadiplomin saat lukemalla tai kuuntelemalla yhteensä 11 kirjaa</li>
+            </ul>
+        </div>
+        <div class="infobox diplomiohjeet col-md-5">
+            <h3>Voit hyödyntää diplomin suorittamisessa myös...</h3>
+            <ul class="list-bullets">
+                <li>kaverien kirjavinkkejä</li>
+                <li>verkosta löytämiäsi kirjavinkkejä</li>
+                <li>äänikirjoja</li>
+                <li>lukemisesteisten Celia-kirjastoa</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="diplomi-tulostettavat">
+    
+            <ul>
+    
+                <li><a href="<?= $this->fileSrc('ylakoulun_kirjasuosituslista_2025.pdf') ?>" target="_blank">Kirjasuosituslista (pdf)</a></li>
+    
+                <li><a href="<?= $this->fileSrc('ylakoulun_lukudiplomilomake_2025.pdf') ?>" target="_blank">Lukudiplomilomake (pdf)</a></li>
+    
+                <li><a href="<?= $this->fileSrc('ylakoulun_diplomi_2025.pdf') ?>" target="_blank">Lukudiplomi (pdf)</a></li>
+    
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <?= $this->feed("sivupiirikaruselli"); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('verkkovinkit_nuoret'); ?>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,92 @@
+<!-- START of: content/lapset.phtml -->
+<? $this->headTitle('Lasten omat sivut');
+$this->content()->setHeading('Lasten omat sivut'); ?>
+<div class="lapset-sivu">
+
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('lasten_kirjavinkkeja'); ?>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2 class="infoboksi-header">Lukudiplomit</h2>
+
+        <div class="col-sm-6">
+            <figure class="figure">
+                <img src="<?= $this->imageSrc('lanu/lukudiplomit.jpg') ?>" class="figure-img img-fluid rounded responsive" alt="Punatukkainen tyttö lukee kirjaa" />
+            </figure>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="lukudiplomilista">
+                <ul>
+                    <li id="satudiplomi"><a href="<?= $this->url('content-page',  ['page' => 'satudiplomi']) ?>">Satudiplomi </a></li>
+                    <li id="lukeva-kouvola"><a href="<?= $this->url('content-page',  ['page' => 'lukuhaaste_lukudiplomi']) ?>">Lukeva Kouvolan lukuhaaste (eskarit-2.lk)</a></li>
+                    <li id="lukukipina"><a href="<?= $this->url('content-page',  ['page' => 'lanu_lukukipina_1-2_lk']) ?>">Lukukipinä (1.-2.lk) </a></li>
+                    <li id="lukuliekki"><a href="<?= $this->url('content-page',  ['page' => 'lanu_lukuliekki_3-4_lk']) ?>">Lukuliekki (3.-4.lk) </a></li>
+                    <li id="lukuliekki-peli"><a href="<?= $this->url('content-page',  ['page' => 'lukuliekki-peli']) ?>">Lukuliekki-peli (3.-4.lk)</a></li>
+                    <li id="lukuroihu"><a href="<?= $this->url('content-page',  ['page' => 'lanu_lukuroihu_5-6_lk']) ?>">Lukuroihu (5.-6.lk)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('lanu_uutuudet'); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!--<h2>Lukijoiden omat vinkit</h2>-->
+        <div class="col-md-12">
+            <div id="lasten-omat-vinkit">
+                <?= $this->feed('lukijoiden_omat_vinkit'); ?>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('varatuimmat_lanukirjat'); ?>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->feed('verkkovinkit-lapset'); ?>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-4">
+            <h3 class="infoboksi-header">Pikkuvarpaat sananjalkapolulla</h3>
+            <a id="pikkuvarpaat-sananjalkapolulla-banneri" href="https://kyyti.finna.fi/Content/pikkuvarpaat_sananjalkapolulla">
+                <img src="<?= $this->imageSrc('pikkuvarpaat_sananjalkapolulla/peikkomummo_ilman_taustaa.png') ?>" class="figure-img img-fluid rounded responsive" alt="Pikkuvarpaat sananjalkapolulla hankkeen peikkomummo" />
+            </a>
+        </div>
+
+        <div class="col-sm-7">
+            <div class="mobile-margin visible-xs"></div>
+            <h3 class="infoboksi-header">Vierailut ja opetus</h3>
+
+            <figure class="figure">
+                <img src="<?= $this->imageSrc('ryhmat.jpg') ?>" class="figure-img img-fluid rounded responsive" alt="Tyttö ottaa kirjaa kirjaston hyllystä" />
+            </figure>
+
+            <p>Kirjastot järjestävät vierailuja ja mediataitojen opetusta kouluille, päiväkodeille ja muille ryhmille.</p>
+            <ul class="kirjasto-vierailut">
+                <li><a href="<?= $this->url('content-page',  ['page' => 'ryhmakaynnit']) ?>#Hamina">Hamina</a></li>
+                <li><a href="<?= $this->url('content-page',  ['page' => 'ryhmakaynnit']) ?>#Iitti">Iitti</a></li>
+                <li><a href="<?= $this->url('content-page',  ['page' => 'ryhmakaynnit']) ?>#Kotka">Kotka</a></li>
+                <li><a href="<?= $this->url('content-page',  ['page' => 'ryhmakaynnit']) ?>#Kouvola">Kouvola</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- END of: content/lapset.phtml -->
