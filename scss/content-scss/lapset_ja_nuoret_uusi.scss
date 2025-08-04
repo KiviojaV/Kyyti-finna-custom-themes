@@ -1,0 +1,256 @@
+.lukudiplomilista > .feed-container .list-feed li {
+  list-style-type: disc;
+  font-size: 16px;
+  padding-left: 1em;
+  margin-top: -0.3em;
+  margin-left: 1em;
+}
+
+.lukudiplomilista {
+    ul {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    li {
+        width:80%;
+        font-size: 1.2em;
+        padding:10px 5px 10px 5px;
+        margin:10px 0px 10px 0px;
+        // border: solid 2px #8c0052;
+        border-radius:2em;
+        text-align:center;
+        transition: all 0.3s ease;
+        a {
+            color:#023449;
+        }
+    }
+    
+    li:hover {
+         transform: scale(1.1);
+    }
+    
+    #satudiplomi {
+        background-color:#FAE7EB;
+        // background-color:#F8EDEB;
+        // background-color:#A9CDD7;
+
+    }
+    
+    #lukeva-kouvola {
+        background-color:#E0D4E7;
+        // background-color:#FEC89A;
+        // background-color:#D0EDEF;
+
+    }
+    
+    #lukukipina {
+         background-color:#DBEEF7;
+         // background-color:#FCD5C5;
+        // background-color:#A9E4DE;
+
+    }
+    
+    #lukuliekki {
+         background-color:#BDD2E4;
+         // background-color: #FFDAB9;
+         // background-color: #E1F6F2;
+    }
+    
+    #lukuliekki-peli {
+        background-color:#EECEDA;
+        // background-color: #F49595;
+        // background-color:#83B8C6;
+
+    }
+    
+    #lukuroihu {
+         background-color:#CCDCEB;
+         // background-color: #F1CEBE;
+        background-color:#F3D17C;
+
+    }
+}
+
+.lapset-sivu {
+    finna-feed.carousel.splide--ltr .feed-item-holder .carousel-text {
+        background:rgb(169 228 222 / 85%);
+        color: #023449;
+    }
+    
+    .carousel .carousel-header {
+        padding: 0;
+    }
+    
+    finna-feed .carousel-hover-title {
+        font-size: 14px;
+        font-weight: 750;
+        color: #023449;
+    }
+
+    .row {
+        margin-bottom:2em;
+        margin-top:2em;
+        padding:0 0.8em 0 0.8em;
+    }
+    
+    finna-feed.carousel.splide--ltr .feed-item-holder .carousel-slide-header > span {
+        display: block;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        min-height: 30px;
+        z-index: 1;
+        padding: 5px 10px;
+        color: #023449;
+        background: rgb(169 228 222 / 85%);
+        font-size: 14px;
+        font-weight: 750;
+        margin: 0;
+        margin-bottom: 0;
+        letter-spacing: 0.2px;
+        text-shadow:1px 1px 10px #afe0c3;
+    }
+    
+    .figure-img {
+        padding:0 1rem 0 1rem;
+    }
+    
+    .col-sm-6 {
+        align-items:center;
+    }
+    
+    .kirjasto-vierailut {
+        text-align:center;
+        
+        li {
+            justify-content:center;
+            display:inline-flex;
+            width:20%;
+            font-size: 1.3em;
+            border-radius:1em;
+            padding:1em 1.5em 1em 1.5em;
+            margin:1rem 1rem 1rem 1rem;
+            background-color:rgba(169, 228, 222, 1);
+            transition: all 0.3s ease;
+            
+            a {
+                font-size:1em;
+                color:#023449;
+            }
+        }
+        
+        li:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 450px) {
+            
+            li {
+                width:70%;
+                margin: 1em 0 1em 0;
+            }
+        }
+    }
+    
+    @media (min-width: 451px) {
+        #lasten-omat-vinkit {
+            .splide__slide {
+                height:500px !important;
+            } 
+        }
+    }
+    
+    @media (max-width: 450px) {
+        div.slider-text-part > div > div > h3 {
+            display:none;
+        }
+        
+        #lasten-omat-vinkit .feed-item-holder .feed-link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            align-items:center;
+        }
+        
+        .kirjasto-vierailut {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        
+        #lasten-omat-vinkit .carousel-slider.splide--ltr .slider-image {
+            display: flex;
+            justify-content: center;
+            width: 80% !important;
+        }
+        
+        #lasten-omat-vinkit .carousel-slider.splide--ltr .slider-text-part {
+            color: #121212;
+            max-width: 90%;
+            height: 100%;
+        }
+    }
+    
+}
+
+#pikkuvarpaat-sananjalkapolulla-banneri {
+    img {
+        padding: 2em 2em 2em 2em;
+    }
+}
+
+.diplomiohjeet {
+    border-radius:5px;
+    margin:5px 15px 5px 15px;
+    box-shadow:#cbebeb 3px 2px;
+    flex-shrink:1;
+    margin-left:2em;
+}
+
+@media (max-width: 450px) {
+    .diplomiohjeet {
+        margin-left:1em;
+    }
+}
+
+.diplomi-tulostettavat {
+    text-align:center;
+    margin:2em 0 2em 0;
+    
+    li {
+        justify-content:center;
+        display:inline-flex;
+        width:30%;
+        font-size: 1.3em;
+        border-radius:0.5em;
+        padding:1em 1.5em 1em 1.5em;
+        margin:1rem 1rem 1rem 1rem;
+        background-color:rgb(87 3 52);
+        transition: all 0.3s ease;
+        
+        a {
+            font-size:1em;
+            color:white;
+        }
+    }
+    
+    li:hover {
+         transform: scale(1.1);
+    }
+    
+    @media (max-width: 450px) {
+        
+        li {
+            width:70%;
+            margin: 1em 0 1em 0;
+        }
+    }
+}
+
+.nuoret {
+    .carousel .carousel-header {
+        padding: 0;
+    }
+}
