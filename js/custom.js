@@ -16,19 +16,10 @@ function finnaCustomInit() {
     });
 }
 
-/* Tietyissä tilanteissa käyttäjän on mahdollista päätyä tapahtumaponnahdusikkunaan siten, 
-että inline "onClick" tapahtumakäsittelijöitä ei olla muutettu
-CSP-yhteensopiviksi ja ikkunan sulkunappi ei tällöin toimi. Seuraava korjaa tilanteen */
-$(() => {
-    if (window.location.href.includes('#localhub-content-popup=true')) {
-        let eventCardId = (window.location.href.split('&'))[2].replace('page_id=','');
-        handleCloseButton(eventCardId);
-    }
-});
-
 /*
 Localhubin tapahtumawidgettien toimintaan vaikuttavat skriptit
 */
+
 const waitForWidgets = function (searchTerms, numberOfWidgets = 1) {
     const interval = setInterval(() => {
         if (typeof document.BUBSTER_WIDGETS.rendered !== 'undefined'
@@ -63,7 +54,8 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
         let currentCategory = searchTermFilter.value;
 
         // Tarkista onko widgetissä hakupalkkkia  ja jos on, käsittele siihen kuuluvat elementit
-        let widgetSearchPanel = document.getElementById(widgetId).querySelector('form').children[1];
+        let widgetSearchform = document.getElementById(widgetId).querySelector('form');
+        let widgetSearchPanel = (typeof widgetSearchform !== 'undefined') ? widgetSearchform.children[1] : null;
 
         if (widgetSearchPanel) {
             handleSearchForm(widgetId, currentCategory, searchTerms);
@@ -81,8 +73,7 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
             handleEmptyButton(widgetId, currentCategory, searchTerms);
         }
 
-        const bubsterList = document.getElementById(widgetId).
-                            getElementsByClassName('bubster-list-4 bubster-widgets-plugin bubster-css-default')[0].children;
+        const bubsterList = document.getElementById(widgetId).getElementsByClassName('bubster-list-4 bubster-widgets-plugin bubster-css-default')[0].children;
 
         // Viimeinen elementti bubsterListissä on joko lisää-painike tai tapahtumakortti. Tarkistetaan
         // onko lisää-painiketta samalla kun se käsitellään ja päätellään näin mitkä ovat tapahtumakortteja
@@ -234,3 +225,13 @@ const handleCloseButton = function (cardId) {
         }
     }, 200);
 }
+
+/* Tietyissä tilanteissa käyttäjän on mahdollista päätyä tapahtumaponnahdusikkunaan siten, 
+että inline "onClick" tapahtumakäsittelijöitä ei olla muutettu
+CSP-yhteensopiviksi ja ikkunan sulkunappi ei tällöin toimi. Seuraava korjaa tilanteen */
+$(() => {
+    if (window.location.href.includes('#localhub-content-popup=true')) {
+        let eventCardId = (window.location.href.split('&'))[2].replace('page_id=','');
+        handleCloseButton(eventCardId);
+    }
+});
