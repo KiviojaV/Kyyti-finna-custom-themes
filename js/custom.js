@@ -55,7 +55,7 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
 
         // Tarkista onko widgetissä hakupalkkkia  ja jos on, käsittele siihen kuuluvat elementit
         let widgetSearchform = document.getElementById(widgetId).querySelector('form');
-        let widgetSearchPanel = (typeof widgetSearchform !== 'undefined') ? widgetSearchform.children[1] : null;
+        let widgetSearchPanel = widgetSearchform ? widgetSearchform.children[1] : null;
 
         if (widgetSearchPanel) {
             handleSearchForm(widgetId, currentCategory, searchTerms);
@@ -74,14 +74,16 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
         }
 
         const bubsterList = document.getElementById(widgetId).getElementsByClassName('bubster-list-4 bubster-widgets-plugin bubster-css-default')[0].children;
+        
+        const preIndex = widgetSearchPanel ? 2 : 0;
 
         // Viimeinen elementti bubsterListissä on joko lisää-painike tai tapahtumakortti. Tarkistetaan
         // onko lisää-painiketta samalla kun se käsitellään ja päätellään näin mitkä ovat tapahtumakortteja
         let moreButtonExists = handleMoreButton(widgetId);
         let eventCards 
         = moreButtonExists 
-            ? Array.from(bubsterList).slice(2, -1)
-            : Array.from(bubsterList).slice(2);
+            ? Array.from(bubsterList).slice(preIndex, -1)
+            : Array.from(bubsterList).slice(preIndex);
 
         if (eventCards && eventCards.length != 0 && !eventCards[0].classList.contains('bubster-no-content')) {
             handleEventCards(eventCards, widgetId);
