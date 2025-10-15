@@ -68,6 +68,8 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
 
             widgetSearchPanel.insertBefore(searchTermFilter, searchAreaFilter);
 
+            handleCategoryFilter(widgetId, currentCategory, searchTerms);
+            
             handleGroupFilter(widgetId, currentCategory, searchTerms);
 
             handleEmptyButton(widgetId, currentCategory, searchTerms);
@@ -156,13 +158,31 @@ const handleAreaFilter = function (widgetId, searchAreaFilter, currentCategory) 
 
 const handleGroupFilter = function (widgetId, currentCategory) {
     let searchGroupFilter = document.getElementById(widgetId).
-                            getElementsByClassName("bubster-search-filter bubster-search-filter-category")[0];
+                            getElementsByClassName("bubster-search-filter bubster-search-filter-age")[0];
     if (searchGroupFilter) {
         searchGroupFilter.ariaLabel = "Valitse tapahtuman kohderyhmä";
-        searchGroupFilter.options[0].textContent = "Valitse kohderyhmä";
         searchGroupFilter.options[1].textContent = "Lapset ja nuoret";
         searchGroupFilter.removeAttribute('onchange');
         searchGroupFilter.addEventListener('change', () => {
+            document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
+            const interval = setInterval(() => {
+                if (document.getElementById(widgetId).
+                    getElementsByClassName("bubster-search-filter bubster-search-filter-age")[0].
+                        hasAttribute('onChange')) {
+                    clearInterval(interval);
+                    handleEventlisteners(searchTerms, currentCategory);
+                }
+            }, 200);
+        });
+    }
+}
+
+const handleCategoryFilter = function (widgetId, currentCategory) {
+    let searchCategoryFilter = document.getElementById(widgetId).
+                            getElementsByClassName("bubster-search-filter bubster-search-filter-category")[0];
+    if (searchCategoryFilter) {
+        searchCategoryFilter.removeAttribute('onchange');
+        searchCategoryFilter.addEventListener('change', () => {
             document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
             const interval = setInterval(() => {
                 if (document.getElementById(widgetId).
@@ -175,6 +195,7 @@ const handleGroupFilter = function (widgetId, currentCategory) {
         });
     }
 }
+
 
 const handleSearchTermFilter = function (searchTermFilter, widgetId, currentCategory) {
     searchTermFilter.addEventListener('change', () => {
