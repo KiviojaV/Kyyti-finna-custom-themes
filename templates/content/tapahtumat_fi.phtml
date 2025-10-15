@@ -5,27 +5,28 @@
 <!-- Välilehdet -->
 <div class="row">
     <div class="col-sm-12">
-        <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/66f517ed9ac88141ab5522f4'>
-        </script><div id='EVENTZWIDGET-66f517ed9ac88141ab5522f4' class='EVENTZWIDGET'></div>
+        <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/682ed2c1ee8c161fe0edf7a3'>
+        </script><div id='EVENTZWIDGET-682ed2c1ee8c161fe0edf7a3' class='EVENTZWIDGET'></div>
         
         <?php
         $script = <<<JS
         const searchTerms = new Map([
                     ['Valitse aihe',''],
                     ['Digiopastukset','Digiopastus'],
-                    ['Elokuvat','Elokuvat'],
+                    ['Elokuvat','Elokuvvtatt'],
                     ['Kirjailijavieraat','kirjailija'],
                     ['Kirjallisuus','Kirjallisuus'],
                     ['Lukukoirat','lukukoiratt'],
                     ['Lukupiirit','lukupiiiri'],
                     ['Musiikki','Musiikki'],
                     ['Näyttelyt','Näyttelyt'],
+                    ['Pelaaminen','Pelaaminen'],
                     ['Satutuokiot','satutuokio']
         ]);
                     
         waitForWidgets(searchTerms);
         JS;
-        echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+        echo $this->assetManager()->outputInlineScriptString($script);
         ?>
     </div>
 </div>
