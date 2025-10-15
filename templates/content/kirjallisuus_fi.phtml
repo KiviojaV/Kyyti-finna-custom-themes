@@ -3,13 +3,13 @@
 
 <div class="row">
     <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="margin-bottom: 30px;">  
-        <p><a href="https://kyyti.finna.fi/Content/lukuhaaste"><img src="<?=$this->imageLink('lukuhaaste24_banneri_pieni.jpg');?>" alt="Kyyti-kirjastojen lukuhaaste 2024"></a></p>
+        <p><a href="https://kyyti.finna.fi/Content/lukuhaaste"><img src="<?=$this->imageLink('lukuhaaste25_banneri.jpg');?>" alt="Kyyti-kirjastojen lukuhaaste 2025"></a></p>
     </div>
 </div>
    
 <div class="row">
     <div class="col-sm-12 hidden-xs" style="margin-bottom: 30px;">
-        <p><a href="https://kyyti.finna.fi/Content/lukuhaaste"><img src="<?=$this->imageLink('lukuhaaste24_banneri.jpg');?>" alt="Kyyti-kirjastojen lukuhaaste 2024"></a></p>
+        <p><a href="https://kyyti.finna.fi/Content/lukuhaaste"><img src="<?=$this->imageLink('lukuhaaste25_banneri.jpg');?>" alt="Kyyti-kirjastojen lukuhaaste 2025"></a></p>
     </div>
 </div>
 
@@ -80,21 +80,22 @@
     
     <!--Kirjallisuustapahtumat-->
     <div class="col-sm-12 col-md-12">
-        <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/659e58856ab6f64e269bab2c'>
-        </script><div id='EVENTZWIDGET-659e58856ab6f64e269bab2c' class='EVENTZWIDGET'></div>
+        <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/66cedb11380f441121243a8a'>
+        </script><div id='EVENTZWIDGET-66cedb11380f441121243a8a' class='EVENTZWIDGET'></div>
         
         <?php
         $script = <<<JS
          const searchTerms = new Map([
-                    ['kaikki',''],
-                    ['Kirjailijavieraat','kirjailija'],
-                    ['Lukupiirit','lukupiiiri'],
-                    ['Runopiirit', 'runopiiri'],
-                    ['Satutuokiot','satutuokio']]);
+                    ['kaikki','kirjallisuus'],
+                    ['Kirjailijavieraat','kirjallisuus kirjailija'],
+                    ['Lukupiirit','kirjallisuus lukupiiiri'],
+                    ['Runopiirit', 'kirjallisuus runopiiri'],
+                    ['Satutuokiot','kirjallisuus satutuokio']]);
                     
         waitForWidgets(searchTerms);
+        
         JS;
-        echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+        echo $this->assetManager()->outputInlineScriptString($script);
         ?>
     </div>
 
