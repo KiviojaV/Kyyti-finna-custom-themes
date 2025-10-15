@@ -1,25 +1,26 @@
 <div class="row">
-    <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/664d93ae8fe43a042bd26f38'></script>
-    <div id='EVENTZWIDGET-664d93ae8fe43a042bd26f38' class='EVENTZWIDGET'></div>
+    <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/66ced9efe83d471552a0da7d'>
+    </script><div id='EVENTZWIDGET-66ced9efe83d471552a0da7d' class='EVENTZWIDGET'></div>
     
     <?php
     $script = <<<JS
     const searchTerms = new Map([
-                ['Valitse aihe',''],
-                ['Digiopastukset','Digiopastus'],
-                ['Elokuvat','Elokuvat'],
-                ['Kirjailijavieraat','kirjailija'],
-                ['Kirjallisuus','Kirjallisuus'],
-                ['Lukukoirat','lukukoiratt'],
-                ['Lukupiirit','lukupiiiri'],
-                ['Musiikki','Musiikki'],
-                ['Näyttelyt','Näyttelyt'],
-                ['Satutuokiot','satutuokio']
+        ['Valitse aihe',''],
+        ['Digiopastukset','Digiopastus'],
+        ['Elokuvat','Elokuvvtatt'],
+        ['Kirjailijavieraat','kirjailija'],
+        ['Kirjallisuus','Kirjallisuus'],
+        ['Lukukoirat','lukukoiratt'],
+        ['Lukupiirit','lukupiiiri'],
+        ['Musiikki','Musiikki'],
+        ['Näyttelyt','Näyttelyt'],
+        ['Pelaaminen','Pelaaminen'],
+        ['Satutuokiot','satutuokio']
     ]);
                 
     waitForWidgets(searchTerms);
     JS;
-    echo $this->inlineScript(\Laminas\View\Helper\HeadScript::SCRIPT, $script, 'SET');
+    echo $this->assetManager()->outputInlineScriptString($script);
     ?>
 </div>
 <div class="row">
@@ -27,5 +28,5 @@
         <?= $this->feed('e-aineistojen_nosto'); ?>
     </div>
 </div>
-</br>
-</br>
+<br>
+<br>
