@@ -1,0 +1,80 @@
+<!-- START of: finna - myresearch/change-messaging-settings-driver.phtml -->
+<?php
+    // Set up page title:
+    $this->headTitle($this->translate('request_messaging_settings_change'));
+
+    // Set up myresearch menu
+    $this->layout()->finnaMainTabs = $this->context($this)->renderInContext("myresearch/menu.phtml", ['active' => 'profile']);
+    // Set up breadcrumbs:
+    $this->layout()->breadcrumbs = '<li class="breadcrumb"><a href="' . $this->url('myresearch-home') . '">' . $this->transEsc('Your Account') . '</a></li> <li class="breadcrumb active">' . $this->transEsc('Profile') . '</li>';
+?>
+<h2><?=$this->transEsc('request_messaging_settings_change'); ?></h2>
+<?=$this->flashmessages()?>
+<?php if (empty($profile['email'])): ?>
+  <div class="alert alert-danger">
+    <?=$this->transEsc('no_email_address')?>
+    <?=$this->transEsc('no_email_address_text')?>
+  </div>
+<?php endif; ?>
+  <?php if (!isset($this->requestCompleted) || !$this->requestCompleted): ?>
+    <form name="changeMessagingSettings" method="post" action="<?=$this->url('myresearch-changemessagingsettings') ?>" class="messaging-settings-form profile-form">
+      <?php foreach ($this->services as $serviceId => $service): ?>
+        <div class="form-group">
+          <h3><?=$this->transEsc('messaging_settings_type_' . $service['type'], null, $service['type'])?></h3>
+        </div>
+        <?php foreach ($service['settings'] as $settingId => $setting): ?>
+        
+          <?php if (!empty($setting['readonly'])) { continue; } ?>
+          
+          <div class="form-group">
+            <?php $name = !empty($setting['name']) ? $setting['name'] : $settingId; ?>
+            <label<?='select' == $setting['type'] ? ' class="control-label"' : ''?>><?=$this->transEsc("messaging_settings_setting_$name", null, $name) ?>:</label>
+            <?php if ('boolean' == $setting['type']): ?>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="<?=$this->escapeHtmlAttr($serviceId . '_' . $settingId)?>" value="1"<?php if ($setting['active']): ?> checked<?php endif; ?><?php if (!empty($setting['readonly'])): ?> disabled<?php endif; ?>>
+                  <?=$this->transEsc("messaging_settings_setting_$name", null, $name) ?> <?=$this->transEsc("messaging_settings_option_active");?>
+                </label>
+              </div>
+            <?php elseif ('multiselect' == $setting['type']): ?>
+                <?php foreach($setting['options'] as $optionId => $option): ?>
+                  <?php $fullId = $serviceId . '_' . $settingId . '_' . $optionId; ?>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" id="<?=$this->escapeHtmlAttr($fullId)?>" name="<?=$this->escapeHtmlAttr($fullId)?>" value="1"<?php if ($option['active']): ?> checked<?php endif; ?><?php if (!empty($setting['readonly'])): ?> disabled<?php endif; ?>>
+                      <?php $name = $option['name'] ?? $optionId; ?>
+                      <?=$this->transEsc("messaging_settings_option_$name", null, $name) ?>
+                    </label>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            <?php elseif ('select' == $setting['type']): ?>
+              <select name="<?=$this->escapeHtmlAttr($serviceId . '_' . $settingId)?>" class="form-control form-select" <?php if (!empty($setting['readonly'])): ?> readonly<?php endif; ?>>
+                <?php foreach($setting['options'] as $optionId => $option): ?>
+                  <?php $name = $option['name'] ?? $optionId; ?>
+                  <option value="<?=$this->escapeHtmlAttr($optionId)?>"<?php if ($optionId == $setting['value']): ?> selected<?php endif; ?>><?=$this->transEsc("messaging_settings_option_$name", null, $name)?></option>
+                <?php endforeach; ?>
+              </select>
+            <?php endif; ?>
+          </div>
+        <?php endforeach; ?>
+      <?php endforeach; ?>
+      <div class="form-group">
+        <input name="messaging_update_request" class="btn btn-primary" type="submit" value="<?=$this->transEscAttr('Send') ?>" />
+      </div>
+    </form>
+  <?php endif; ?>
+  <?php if ($this->approvalRequired): ?>
+    <span class="messaging-settings-change-description">
+      <?=$this->transEsc('request_change_description_html') ?>
+    </span>
+  <?php endif; ?>
+  <script nonce="<?=$this->csp()->getNonce()?>">
+    $("#Hold_Reminder_transport_types_email").parent().parent().parent().css("display", "none");
+    $("#Hold_Reminder_transport_types_email").parent().parent().parent().prev().css("display", "none");
+    
+    $("input[name='Advance_Notice_digest']").prop("checked", true).parent().parent().parent().css("display", "none");
+    $("input[name='Item_Due_digest']").prop("checked", true).parent().parent().parent().css("display", "none");
+    $("input[name='Hold_Filled_digest']").prop("checked", false).prop("disabled", "disabled").parent().parent().parent().css("display", "none");
+  </script>
+<!-- END of: finna - myresearch/change-messaging-settings-driver.phtml -->
