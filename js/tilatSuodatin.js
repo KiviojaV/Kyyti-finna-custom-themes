@@ -132,6 +132,7 @@ class TilatSuodatin {
             puh. <a href="tel: +358${phonenumNro.slice(1)}">${phoneNumber.number}</a></p>
         `;
         phoneDiv.innerHTML = phonenumberHTML;
+        console.log(phoneDiv);
         return phoneDiv;
     }
 
@@ -173,7 +174,7 @@ class TilatSuodatin {
 
             let phoneDiv;
             if (room.reservedThrough !== "Timmi") {
-                const phoneDiv = this.createPhoneNumberDiv(room.library);
+                phoneDiv = this.createPhoneNumberDiv(room.library);
             }
             const varausEle = document.createElement("p");
             varausEle.textContent = varaamisTieto;
