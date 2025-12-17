@@ -122,6 +122,19 @@ class TilatSuodatin {
         return "Ei puhelinnumerotietoa.";
     }
 
+    createPhoneNumberDiv(library) {
+        let phoneNums = this.contactInfo[library].phoneNumbers;
+        const phoneNumber = this.findPhoneNumber(phoneNums);
+        const phoneDiv = document.createElement("div");
+        let phonenumNro = phoneNumber.number;
+        const phonenumberHTML = `
+            <p>${phoneNumber.name}<br>
+            puh. <a href="tel: +358${phonenumNro.slice(1)}">${phoneNumber.number}</a></p>
+        `;
+        phoneDiv.innerHTML = phonenumberHTML;
+        return phoneDiv;
+    }
+
     renderRooms() {
         this.container.innerHTML = '';
 
@@ -158,17 +171,9 @@ class TilatSuodatin {
                     ? "Voit varata tilan kirjautumalla Timmiin joko kirjastokorttisi numerolla ja tunnusluvullasi tai tunnuksilla ja salasanalla."
                     : `Ota yhteyttä ${room.library}on varataksesi tämän tilan.`;
 
-            let phoneDiv = null;
+            let phoneDiv;
             if (room.reservedThrough !== "Timmi") {
-                let phoneNums = this.contactInfo[room.library].phoneNumbers;
-                const phoneNumber = this.findPhoneNumber(phoneNums);
-                phoneDiv = document.createElement("div");
-                let phonenumNro = phoneNumber.number;
-                const phonenumberHTML = `
-                    <p>${phoneNumber.name}<br>
-                    puh. <a href="tel: +358${phonenumNro.slice(1)}">${phoneNumber.number}</a></p>
-                `;
-                phoneDiv.innerHTML = phonenumberHTML;
+                const phoneDiv = this.createPhoneNumberDiv(room.library);
             }
             const varausEle = document.createElement("p");
             varausEle.textContent = varaamisTieto;
@@ -203,14 +208,22 @@ class TilatSuodatin {
             
             const tilanKuvausEle = document.createElement("div");
             const kuvaus = document.createElement("p");
-            kuvaus.textContent = room.description;
+            kuvaus.appendChild(document.createTextNode(room.description));
             
             const varusteet = document.createElement("p");
             varusteet.textContent = `Tilan varusteet: ${room.devices.join(', ')}`
             
-            tilanKuvausEle.appendChild(kuvaus);
-            tilanKuvausEle.appendChild(varusteet);
-
+            const varausAika = document.createElement("p");
+            varausAika.appendChild(document.createTextNode(`Varauksen kesto: ${room.varausaika}`));
+            
+            if (room.description && room.description !== "") {
+                tilanKuvausEle.appendChild(kuvaus);
+            }
+            
+            if (room.devices && room.devices.length !== 0) {
+                tilanKuvausEle.appendChild(varusteet);
+            }
+            
             const img = document.createElement("img");
             img.src = tilakuva;
             img.alt = "Tilan kuva";
@@ -219,6 +232,11 @@ class TilatSuodatin {
             infoDiv.appendChild(kirjastoTieto);
             infoDiv.appendChild(title);
             infoDiv.appendChild(tilanKuvausEle);
+            
+            if (room.varausaika && room.varausaika !== "") {
+                infoDiv.appendChild(varausAika);   
+            }
+            
             infoDiv.appendChild(varausEle);
             if (phoneDiv && phoneDiv !== undefined) {
                 infoDiv.appendChild(phoneDiv);
