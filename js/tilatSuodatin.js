@@ -9,6 +9,7 @@ class TilatSuodatin {
         this.filterElements = filters.map(id => document.getElementById(`${containerId}-${id}`));
         this.resetButton = document.getElementById(`${containerId}-resetFilters`);
         this.filters = { access: '', price: '', library: '', purpose: '' };
+        this.timmiKirjautumissivu = "https://asp3.timmi.fi/WebTimmi/index_v2.html#/2340";
         this.init();
     }
 
@@ -132,7 +133,6 @@ class TilatSuodatin {
             puh. <a href="tel: +358${phonenumNro.slice(1)}">${phoneNumber.number}</a></p>
         `;
         phoneDiv.innerHTML = phonenumberHTML;
-        console.log(phoneDiv);
         return phoneDiv;
     }
 
@@ -169,7 +169,7 @@ class TilatSuodatin {
 
             const varaamisTieto
                 = room.reservedThrough === "Timmi"
-                    ? "Voit varata tilan kirjautumalla Timmiin joko kirjastokorttisi numerolla ja tunnusluvullasi tai tunnuksilla ja salasanalla."
+                    ? `Voit varata tilan <a target="blank" href="${this.timmiKirjautumissivu}" alt="linkki Timmin kirjautumissivulle">kirjautumalla Timmiin </a> joko kirjastokorttisi numerolla ja tunnusluvullasi tai Timmi-tunnuksilla ja salasanalla.`
                     : `Ota yhteyttä ${room.library}on varataksesi tämän tilan.`;
 
             let phoneDiv;
@@ -177,7 +177,7 @@ class TilatSuodatin {
                 phoneDiv = this.createPhoneNumberDiv(room.library);
             }
             const varausEle = document.createElement("p");
-            varausEle.textContent = varaamisTieto;
+            varausEle.innerHTML = varaamisTieto;
 
             const priceEle = document.createElement("p");
             if (room.price === "maksuton") {
@@ -202,10 +202,12 @@ class TilatSuodatin {
             const kirjastoTieto = document.createElement('h6');
             kirjastoTieto.textContent = room.library;
 
+            const anchorP = document.createElement("p");
             const anchor = document.createElement("a");
             anchor.href = suoralinkki;
-            anchor.textContent = "Siirry tilan sivulle";
+            anchor.textContent = "voit tarkistaa tilan varaustilanteen täältä";
             anchor.target = "_blank";
+            anchorP.appendChild(anchor);
             
             const tilanKuvausEle = document.createElement("div");
             const kuvaus = document.createElement("p");
@@ -243,7 +245,9 @@ class TilatSuodatin {
                 infoDiv.appendChild(phoneDiv);
             }
             infoDiv.appendChild(priceEle);
-            infoDiv.appendChild(anchor);
+            if (room.reservedThrough !== "Timmi") {
+                infoDiv.appendChild(anchorP);
+            }
 
             mainDiv.appendChild(imgDiv);
             mainDiv.appendChild(infoDiv);
