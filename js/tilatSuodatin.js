@@ -1,5 +1,6 @@
 class TilatSuodatin {
     constructor(containerId, filters, cityId, roomDataFile = "rooms.json") {
+        this.language = 'fin';
         this.containerId = containerId;
         this.roomDataFile = roomDataFile;
         this.cityId = cityId;
@@ -11,12 +12,14 @@ class TilatSuodatin {
         this.filters = { access: '', price: '', library: '', purpose: '' };
         this.timmiKirjautumissivu = "https://asp3.timmi.fi/WebTimmi/index_v2.html#/2340";
         this.init();
+        
     }
-
+    
     // Ladataan tilojen tiedot JSON:sta Finnasta
     async loadRooms() {
         try {
-            const response = await fetch(`https://kyyti.finna-pre.fi/themes/custom/files/Tilat/${this.roomDataFile}`);
+            const url = './../../themes/custom/files/Tilat';
+            const response = await fetch(`${url}/${this.roomDataFile}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -25,13 +28,14 @@ class TilatSuodatin {
             console.error('Tilojen lataaminen epäonnistui:', error);
         }
     }
+    
 
     // Haetaan yhteystiedot Kirkannasta
     async getContactInfo() {
         try {
             const baseUrl = 'https://api.kirjastot.fi/v4/library';
             const params = new URLSearchParams({
-                lang: 'fin',
+                lang: this.language,
                 city: this.cityId,
             });
             params.append('with[]', 'emailAddresses');
@@ -169,7 +173,8 @@ class TilatSuodatin {
 
             const varaamisTieto
                 = room.reservedThrough === "Timmi"
-                    ? `Voit varata tilan <a target="blank" href="${this.timmiKirjautumissivu}" alt="linkki Timmin kirjautumissivulle">kirjautumalla Timmiin </a> joko kirjastokorttisi numerolla ja tunnusluvullasi tai Timmi-tunnuksilla ja salasanalla.`
+                    ? (`Voit varata tilan <a target="blank" href="${this.timmiKirjautumissivu}" alt="linkki Timmin kirjautumissivulle">
+                    kirjautumalla Timmiin </a> joko kirjastokorttisi numerolla ja tunnusluvullasi tai Timmi-tunnuksilla ja salasanalla.`)
                     : `Ota yhteyttä ${room.library}on varataksesi tämän tilan.`;
 
             let phoneDiv;
@@ -205,7 +210,7 @@ class TilatSuodatin {
             const anchorP = document.createElement("p");
             const anchor = document.createElement("a");
             anchor.href = suoralinkki;
-            anchor.textContent = "voit tarkistaa tilan varaustilanteen täältä";
+            anchor.textContent = "Voit tarkistaa tilan varaustilanteen täältä";
             anchor.target = "_blank";
             anchorP.appendChild(anchor);
             
@@ -229,6 +234,7 @@ class TilatSuodatin {
             
             const img = document.createElement("img");
             img.src = tilakuva;
+            img.classList = "room-photo";
             img.alt = "Tilan kuva";
             imgDiv.appendChild(img);
 
