@@ -9,7 +9,7 @@ function finnaCustomInit() {
         let $newContent = $accountName.text().split('.')[1];
         $accountName.text($newContent);
     });
-    
+
     /* Asettaa mobiilivälilehdistä etusivulla ensimmäisen linkin aktiiviseksi sivun latautuessa */
     $(() => {
         $(".mobiilivalilehdet li.active a").first().attr("class", "active");
@@ -20,17 +20,17 @@ function finnaCustomInit() {
 Localhubin tapahtumawidgettien toimintaan vaikuttavat skriptit
 */
 
-const waitForWidgets = function (searchTerms, numberOfWidgets = 1) {
+const waitForWidgets = function ({ searchTerms = [], numberOfWidgets = 1, language = 'fin' }) {
     const interval = setInterval(() => {
         if (typeof document.BUBSTER_WIDGETS.rendered !== 'undefined'
             && Object.keys(document.BUBSTER_WIDGETS.rendered).length === numberOfWidgets) {
             clearInterval(interval);
-            handleEventlisteners(searchTerms);
+            handleEventlisteners({ searchTerms, language });
         }
     }, 500);
 }
 
-const handleEventlisteners = function (searchTerms, chosenCategory = '') {
+const handleEventlisteners = function ({ searchTerms, chosenCategory = '', language }) {
     Object.keys(document.BUBSTER_WIDGETS.rendered).forEach((widgetId) => {
 
         // Luo aihevalitsin
@@ -40,6 +40,11 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
         searchTermFilter.classList.add('search-term-filter');
         searchTermFilter.ariaLabel = "Valitse tapahtuman aihe";
         searchTermFilter.tabIndex = 0;
+
+        // Piilotetaan hakusanavalitsin tapauksissa, joissa hakusanoja ei  olla annettu sivupohjassa
+        if (!searchTerms || searchTerms.length === 0) {
+            searchTermFilter.style.display = 'none';
+        }
 
         // Lisää sivun hakutermit aihevalitsimeen
         searchTerms.forEach((value, searchTerm) => {
@@ -58,35 +63,29 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
         let widgetSearchPanel = widgetSearchform ? widgetSearchform.children[1] : null;
 
         if (widgetSearchPanel) {
-            handleSearchForm(widgetId, currentCategory, searchTerms);
+            handleSearchForm({ widgetId, currentCategory, searchTerms, language });
 
             let searchAreaFilter = document.getElementById(widgetId).
-                                    getElementsByClassName("bubster-search-filter bubster-search-filter-area")[0];
-            handleAreaFilter(widgetId, searchAreaFilter, currentCategory, searchTerms);
-
-            handleSearchTermFilter(searchTermFilter, widgetId, currentCategory, searchTerms);
+                getElementsByClassName("bubster-search-filter bubster-search-filter-area")[0];
+            handleAreaFilter({ widgetId, searchAreaFilter, currentCategory, searchTerms, language });
 
             widgetSearchPanel.insertBefore(searchTermFilter, searchAreaFilter);
 
-            handleCategoryFilter(widgetId, currentCategory, searchTerms);
-            
-            handleGroupFilter(widgetId, currentCategory, searchTerms);
+            handleCategoryFilter({ widgetId, currentCategory, searchTerms, language });
 
-            handleEmptyButton(widgetId, currentCategory, searchTerms);
+            handleGroupFilter({ widgetId, currentCategory, searchTerms, language });
+
+            handleEmptyButton({ widgetId, currentCategory, searchTerms, language });
+
+            if (searchTermFilter && typeof(searchTermFilter) !== 'undefined') {
+                handleSearchTermFilter({ searchTermFilter, widgetId, currentCategory, searchTerms, language });
+            }
         }
 
-        const bubsterList = document.getElementById(widgetId).getElementsByClassName('bubster-list-4 bubster-widgets-plugin bubster-css-default')[0].children;
-        
-        const preIndex = widgetSearchPanel ? 2 : 0;
+        let bubsterList = document.getElementById(widgetId).getElementsByClassName('bubster-widgets-plugin bubster-css-default')[0];
 
-        // Viimeinen elementti bubsterListissä on joko lisää-painike tai tapahtumakortti. Tarkistetaan
-        // onko lisää-painiketta samalla kun se käsitellään ja päätellään näin mitkä ovat tapahtumakortteja
         let moreButtonExists = handleMoreButton(widgetId);
-        let eventCards 
-        = moreButtonExists 
-            ? Array.from(bubsterList).slice(preIndex, -1)
-            : Array.from(bubsterList).slice(preIndex);
-
+        let eventCards = bubsterList.querySelectorAll('.bubster-page');
         if (eventCards && eventCards.length != 0 && !eventCards[0].classList.contains('bubster-no-content')) {
             handleEventCards(eventCards, widgetId);
         }
@@ -94,7 +93,7 @@ const handleEventlisteners = function (searchTerms, chosenCategory = '') {
 }
 
 
-const handleSearchForm = function (widgetId) {
+const handleSearchForm = function ({ widgetId, language, searchTerms }) {
     let searchForm = document.getElementById(widgetId).querySelector('form');
     searchForm.removeAttribute('onsubmit');
     searchForm.addEventListener('submit', (event) => {
@@ -102,7 +101,7 @@ const handleSearchForm = function (widgetId) {
         event.preventDefault();
         async () => {
             await document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
-            handleEventlisteners(searchTerms, currentCategory);
+            handleEventlisteners({ searchTerms, language });
         };
     });
 }
@@ -117,11 +116,11 @@ const handleMoreButton = function (widgetId) {
     return false;
 }
 
-const handleEmptyButton = function (widgetId, currentCategory) {
+const handleEmptyButton = function ({ widgetId, currentCategory, language, searchTerms }) {
     let emptyFiltersButton = document.
-                            getElementById(widgetId).
-                            getElementsByClassName(
-                            "bubster-search-filter bubster-search-filter-button bubster-search-filter-button-reset")[0]
+        getElementById(widgetId).
+        getElementsByClassName(
+            "bubster-search-filter bubster-search-filter-button bubster-search-filter-button-reset")[0]
     if (emptyFiltersButton) {
         emptyFiltersButton.className = 'bubster-search-filter-button-reset';
         emptyFiltersButton.removeAttribute('onclick');
@@ -131,16 +130,16 @@ const handleEmptyButton = function (widgetId, currentCategory) {
             const interval = setInterval(() => {
                 if (document.getElementById(widgetId).
                     getElementsByClassName("bubster-search-filter bubster-search-filter-area")[0].
-                        hasAttribute('onChange')) {
+                    hasAttribute('onChange')) {
                     clearInterval(interval);
-                    handleEventlisteners(searchTerms, currentCategory);
+                    handleEventlisteners({ searchTerms, chosenCategory: currentCategory, language });
                 }
             }, 200);
         });
     }
 }
 
-const handleAreaFilter = function (widgetId, searchAreaFilter, currentCategory) {
+const handleAreaFilter = function ({ widgetId, searchAreaFilter, currentCategory, language, searchTerms }) {
 
     searchAreaFilter.removeAttribute('onchange');
     searchAreaFilter.addEventListener('change', () => {
@@ -148,38 +147,38 @@ const handleAreaFilter = function (widgetId, searchAreaFilter, currentCategory) 
         const interval = setInterval(() => {
             if (document.getElementById(widgetId).
                 getElementsByClassName("bubster-search-filter bubster-search-filter-area")[0].
-                    hasAttribute('onChange')) {
+                hasAttribute('onChange')) {
                 clearInterval(interval);
-                handleEventlisteners(searchTerms, currentCategory);
+                handleEventlisteners({ searchTerms, chosenCategory: currentCategory, language });
             }
         }, 200);
     });
 }
 
-const handleGroupFilter = function (widgetId, currentCategory) {
+const handleGroupFilter = function ({ widgetId, currentCategory, language, searchTerms }) {
     let searchGroupFilter = document.getElementById(widgetId).
-                            getElementsByClassName("bubster-search-filter bubster-search-filter-age")[0];
+        getElementsByClassName("bubster-search-filter bubster-search-filter-age")[0];
     if (searchGroupFilter) {
-        searchGroupFilter.ariaLabel = "Valitse tapahtuman kohderyhmä";
-        searchGroupFilter.options[1].textContent = "Lapset ja nuoret";
+        searchGroupFilter.ariaLabel = language === "eng" ? "Choose event target group" : "Valitse tapahtuman kohderyhmä";
+        searchGroupFilter.options[1].textContent = language === "eng" ? "Children and youth" : "Lapset ja nuoret";
         searchGroupFilter.removeAttribute('onchange');
         searchGroupFilter.addEventListener('change', () => {
             document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
             const interval = setInterval(() => {
                 if (document.getElementById(widgetId).
                     getElementsByClassName("bubster-search-filter bubster-search-filter-age")[0].
-                        hasAttribute('onChange')) {
+                    hasAttribute('onChange')) {
                     clearInterval(interval);
-                    handleEventlisteners(searchTerms, currentCategory);
+                    handleEventlisteners({ searchTerms, chosenCategory: currentCategory, language });
                 }
             }, 200);
         });
     }
 }
 
-const handleCategoryFilter = function (widgetId, currentCategory) {
+const handleCategoryFilter = function ({ widgetId, currentCategory, language, searchTerms }) {
     let searchCategoryFilter = document.getElementById(widgetId).
-                            getElementsByClassName("bubster-search-filter bubster-search-filter-category")[0];
+        getElementsByClassName("bubster-search-filter bubster-search-filter-category")[0];
     if (searchCategoryFilter) {
         searchCategoryFilter.removeAttribute('onchange');
         searchCategoryFilter.addEventListener('change', () => {
@@ -187,9 +186,9 @@ const handleCategoryFilter = function (widgetId, currentCategory) {
             const interval = setInterval(() => {
                 if (document.getElementById(widgetId).
                     getElementsByClassName("bubster-search-filter bubster-search-filter-category")[0].
-                        hasAttribute('onChange')) {
+                    hasAttribute('onChange')) {
                     clearInterval(interval);
-                    handleEventlisteners(searchTerms, currentCategory);
+                    handleEventlisteners({ searchTerms, chosenCategory: currentCategory, language });
                 }
             }, 200);
         });
@@ -197,19 +196,19 @@ const handleCategoryFilter = function (widgetId, currentCategory) {
 }
 
 
-const handleSearchTermFilter = function (searchTermFilter, widgetId, currentCategory) {
+const handleSearchTermFilter = function ({ searchTermFilter, widgetId, currentCategory, language, searchTerms }) {
     searchTermFilter.addEventListener('change', () => {
         let field = document.getElementById(widgetId).
-                    getElementsByClassName("bubster-search-filter bubster-search-filter-q")[0];
+            getElementsByClassName("bubster-search-filter bubster-search-filter-q")[0];
         field.value = searchTermFilter.value;
         document.BUBSTER_WIDGETS.rendered[widgetId].fnSearch();
         currentCategory = searchTermFilter.value;
         const interval = setInterval(() => {
             if (document.getElementById(widgetId).
                 querySelector('form').
-                    hasAttribute('onSubmit')) {
+                hasAttribute('onSubmit')) {
                 clearInterval(interval);
-                handleEventlisteners(searchTerms, currentCategory);
+                handleEventlisteners({ searchTerms, chosenCategory: currentCategory, language });
             }
         }, 200);
     });
@@ -254,7 +253,10 @@ että inline "onClick" tapahtumakäsittelijöitä ei olla muutettu
 CSP-yhteensopiviksi ja ikkunan sulkunappi ei tällöin toimi. Seuraava korjaa tilanteen */
 $(() => {
     if (window.location.href.includes('#localhub-content-popup=true')) {
-        let eventCardId = (window.location.href.split('&'))[2].replace('page_id=','');
+        let eventCardId = (window.location.href.split('&'))[2].replace('page_id=', '');
         handleCloseButton(eventCardId);
     }
 });
+
+
+
