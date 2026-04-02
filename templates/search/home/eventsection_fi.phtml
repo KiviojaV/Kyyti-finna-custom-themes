@@ -4,6 +4,8 @@
     
     <?php
     $script = <<<JS
+    console.log('we declare map her');
+    
     const searchTerms = new Map([
         ['Valitse aihe',''],
         ['Digiopastukset','Digiopastus'],
@@ -18,7 +20,7 @@
         ['Satutuokiot','satutuokio']
     ]);
                 
-    waitForWidgets(searchTerms);
+    waitForWidgets({searchTerms});
     JS;
     echo $this->assetManager()->outputInlineScriptString($script);
     ?>
