@@ -1,0 +1,31 @@
+<!-- START of: Content/tapahtumat.fi.phtml -->
+
+<? $this->headTitle(''); $this->content()->setHeading(''); ?>
+
+<div class="row">
+    <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/69cce31ec1736c7db1e53142'></script>
+    <div id='EVENTZWIDGET-69cce31ec1736c7db1e53142' class='EVENTZWIDGET'></div>
+    
+    <?php
+    $script = <<<JS
+    
+    const searchTerms = new Map([
+        ['Choose subject',''],
+        ['digital guidance','Digiopastus'],
+        ['Movies','Films'],
+        ['Visiting authors','kirjailija'],
+        ['Literature','Kirjallisuus'],
+        ['Reading dogs','lukukoiratt'],
+        ['Book clubs','lukupiiiri'],
+        ['Music','Musiikki'],
+        ['Exchibitions','Näyttelyt'],
+        ['Games and play','Pelaaminen'],
+        /*['Storytime','satutuokio']*/
+    ]);
+                
+    waitForWidgets({language:'eng'});    
+
+    JS;
+    echo $this->assetManager()->outputInlineScriptString($script);
+    ?>
+</div>
