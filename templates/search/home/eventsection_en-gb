@@ -1,0 +1,34 @@
+
+    
+    <script type='text/javascript' src='https://www.kymenlaaksonyt.fi/widget-loader/698de904a189a863389c2e80'></script>
+    <div id='EVENTZWIDGET-698de904a189a863389c2e80' class='EVENTZWIDGET'></div>
+    
+
+    
+    <?php
+    $script = <<<JS
+    
+    // Tällä hetkellä suurta osaa hakutermeistä ei käytetä tapahtumissa, joten luodaan widgetti ilman niitä
+    /*
+    const searchTerms = new Map([
+        ['Choose subject',''],
+        ['digital guidance','Digiopastus'],
+        ['Movies','Films'],
+        ['Visiting authors','kirjailija'],
+        ['Literature','Kirjallisuus'],
+        ['Reading dogs','lukukoiratt'],
+        ['Book clubs','lukupiiiri'],
+        ['Music','Musiikki'],
+        ['Exchibitions','Näyttelyt'],
+        ['Games and play','Pelaaminen'],
+        ['Storytime','satutuokio']
+    ]); */
+                
+    waitForWidgets({language:'eng'});    
+
+    JS;
+    echo $this->assetManager()->outputInlineScriptString($script);
+    ?>
+
+<br>
+<br>
