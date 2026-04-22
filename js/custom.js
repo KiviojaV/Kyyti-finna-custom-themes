@@ -236,7 +236,7 @@ const handleEventCards = function (eventCards, widgetId) {
 
 const handleCloseButton = function (cardId) {
     const interval = setInterval(() => {
-        let closeButton = document.getElementById(cardId).querySelector('i');
+        let closeButton = document.getElementById(cardId).querySelector('.bubster-widgets-close-icon');
         if (closeButton) {
             clearInterval(interval);
 
