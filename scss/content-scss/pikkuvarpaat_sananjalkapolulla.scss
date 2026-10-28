@@ -1,4 +1,54 @@
-.main.template-dir-content.template-name-content .pikkuvarpaat h3, .main.template-dir-feedcontent.template-name-content .pikkuvarpaat h3 {
+$pencil-color: rgba(117, 146, 146, 0.4);
+$paper-color: #fbfbfb;
+
+.pencil-texture {
+    background-color: $paper-color;
+    position: relative;
+    overflow: hidden;
+
+    // Luodaan kynän vedot kerrostamalla gradientteja
+    // Pehmennetty kynänjälki kerrostamalla haaleampia ja tiheämpiä gradientteja
+    background-image:
+        // Ensimmäinen suunta (erittäin tiheät ja haaleat vedot)
+        repeating-linear-gradient(45deg,
+            transparent,
+            $pencil-color 3px, // Ohuempi viiva
+            transparent 3px // Pienempi väli
+        ),
+        // Toinen suunta ristiin (erittäin haalea)
+        repeating-linear-gradient(-35deg,
+            transparent,
+            rgba(140, 140, 140, 0.2) 0.5px, // Erittäin ohut
+            transparent 3px // Pienempi väli
+        ),
+        // Pehmeämpiä tummempia läiskiä sulauttamiseen
+        radial-gradient(circle at 30% 40%,
+            rgba(150, 150, 150, 0.1), // Erittäin haalea
+            transparent 80% // Laajempi pehmennys
+        ),
+        radial-gradient(circle at 70% 60%,
+            rgba(150, 150, 150, 0.1), // Toinen haalea läiskä
+            transparent 60%);
+
+    // Lisätään rakeisuus SVG-filtterillä
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        pointer-events: none;
+
+        // SVG-kohina luo paperin tekstuurin
+        //filter: contrast(150%) brightness(100%);
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+}
+
+.main.template-dir-content.template-name-content .pikkuvarpaat h3,
+.main.template-dir-feedcontent.template-name-content .pikkuvarpaat h3 {
     font-size: 30px;
     margin: 0;
     padding-top: .2em;
@@ -7,10 +57,15 @@
 
 .pikkuvarpaat {
     
+    .row {
+        margin-bottom:1em;
+    }
+
     .hankelogot {
         img {
             padding: 1em;
             min-height: 22mm;
+
             @media (max-width: 768px) {
                 width: 100%;
 
@@ -25,7 +80,7 @@
             }
         }
     }
-    
+
     .carousel-slider.splide--ltr .slider-text-part .slider-header {
         font-size: 24px;
         font-weight: 150;
@@ -37,14 +92,16 @@
         height: 100% !important;
         object-fit: cover;
     }
-    
+
     .col-lg-6 {
-        margin-bottom:2em;
+        margin-bottom: 2em;
     }
+
 
     .tekstiosio {
         @media (min-width: 768px) {
             margin: 2em 0;
+
             li {
                 padding: 0.5rem 0rem 0.5rem 0.5rem;
                 font-size: 20px;
@@ -53,7 +110,11 @@
 
         @media (max-width: 768px) {
             margin: 2em 0 3em;
-            h3, h2, p, ul {
+
+            h3,
+            h2,
+            p,
+            ul {
                 padding: 1rem 0.2rem 1rem 0.7rem;
             }
 
@@ -66,6 +127,62 @@
         .taiteilija {
             p {
                 margin: 0 0 0 1rem;
+            }
+        }
+    }
+
+    .lukureseptit {
+        ul {
+            text-align: center;
+        }
+        li {
+            justify-content: center;
+            display: inline-flex;
+            width: 30%;
+            font-size: 1em;
+            padding: 1em 1.5em 1em 1.5em;
+            margin: 1rem 1rem 1rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 1em;
+        }
+
+        .vauvat {
+            background-color: #74b535 !important;
+        }
+
+        .yksivuotiaat {
+            background-color: #4495af;
+        }
+
+        .kaksivuotiaat {
+            background-color: #386000;
+        }
+
+        .kolmevuotiaat {
+            background-color: #0d607b;
+        }
+
+        .neljavuotiaat {
+            background-color: #4c8613;
+        }
+
+        .viisivuotiaat {
+            background-color: #36691f;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        
+        @media (max-width: 450px) {
+            .vauvat, .yksivuotiaat, .kaksivuotiaat, .kolmevuotiaat, .neljavuotiaat, .viisivuotiaat {
+            width: 90%;
+            margin: 1em 0 1em 0;                
             }
         }
     }
@@ -109,12 +226,12 @@
         word-break: normal !important;
         padding: 0 1rem !important;
     }
-    
+
 
     .finna-feed .carousel-slider .splide--ltr .slider-text-part .slider-header h2 {
         font-size: 24px !important;
         font-weight: 150;
-        margin:1em 1em 1em 1em;
+        margin: 1em 1em 1em 1em;
     }
 
     h2 {
@@ -140,34 +257,39 @@
     }
 
     @media (max-width: 768px) {
-        finna-feed.carousel-slider.splide--ltr .slider-image,
+        finna-feed.carousel-slider.splide--ltr .slider-image {
+            width: auto;
+            max-width: 100%;
+            max-height: 60%;
+        }
+
         finna-feed.carousel-slider.splide--ltr .slider-text-part {
             width: auto;
             max-width: 100%;
-            max-height: min-content;
+            max-height: 50%;
         }
-        
+
         .carousel-slider.splide--ltr .slider-text-part .slider-header {
-            font-size: 20px !important;
+            font-size: 1em !important;
             font-weight: 150;
-            margin: 0.8em 0em 0.8em 0em;
+            margin: 0.8rem 0rem 0.8rem 0em;
         }
 
         .splide__list {
             display: flex;
-            height: 400px;
             margin: 0 !important;
             padding: 0 !important;
         }
 
         finna-feed .feed-item-holder .feed-link {
             display: flex;
-            height: 400px;
+            flex-direction: column;
             width: 100%;
         }
-        
-        h3, h2 {
-            font-size: 26px !important;
+
+        h3,
+        h2 {
+            font-size: 2.4rem !important;
         }
     }
 }
