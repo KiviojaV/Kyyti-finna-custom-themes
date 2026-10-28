@@ -1,0 +1,496 @@
+/* =========================
+   Yleiset
+   ========================= */
+
+@view-transition {
+  navigation: auto;
+}
+
+.imagepopup-holder {
+  .image-information-holder {
+    margin-right: 1em;
+    padding-left: 2em;
+    border: 0;
+  }
+
+  .imagepopup-container .paginator-canvas {
+    padding: 2em;
+    background: #f4f6f6;
+
+    .non-zoomable.no-image {
+      .iconlabel::before {
+        top: 40%;
+        left: 45%;
+      }
+
+      img {
+        background: none;
+      }
+    }
+  }
+}
+
+.popup-arrow,
+.dedupInformation {
+  display: none !important;
+}
+
+.accordion-button {
+  .accordion-caret {
+    position: absolute;
+    right: 1em;
+  }
+
+  &:not(.collapsed) .accordion-caret {
+    transform: rotate(180deg);
+  }
+}
+
+#print-diplomi {
+  float: right !important;
+  margin-left: .5em;
+}
+
+span.callnumber-text {
+  padding-right: .5em;
+}
+
+.odd.clearfix,
+.even.clearfix {
+  padding-inline: .3em !important;
+}
+
+.header.holdings.available.clearfix {
+  padding-left: .3em !important;
+  padding-right: .8em !important;
+}
+
+.callnumAndLocation .actions .title-hold {
+  padding: .5em .3em;
+}
+
+#recordInfoAccordion {
+  text-align: left;
+}
+
+/* =========================
+   Navigaatio
+   ========================= */
+
+.diplominavigaatio {
+  &.finna-multi-level-nav-content {
+    padding: 1em;
+    border-radius: .5em;
+
+    @media (min-width: 992px) {
+      background: #89cfd1;
+    }
+
+    @media (max-width: 479.98px) {
+      padding: 0 .5em;
+    }
+  }
+
+  .nav-item .nav-link.active::after,
+  .nav-item .nav-link:hover::after {
+    background: none;
+  }
+
+  .nav-tabs .nav-link {
+    color: #022a3d;
+    margin: 0.2em 0.5em;
+    display: inline-block;
+    border-radius: 1em !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &.active,
+    &[aria-current="page"] {
+      box-shadow: 0 0 0 2px currentColor;
+    }
+
+    &:not(.active):not([aria-current="page"]):hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 2px currentColor;
+    }
+  }
+
+  .finna-navbar-content {
+    background: #fff;
+    border: 0;
+
+    .navbar-brand,
+    .navbar-brand > a {
+      color: #000;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-toggler {
+        border-radius: .5em;
+        padding: 0 2em;
+        margin-bottom: .5em;
+      }
+    }
+
+    @media (max-width: 479.98px) {
+      .navbar-brand:hover {
+        color: #000;
+        background: none !important;
+      }
+
+      .navbar-collapse,
+      .navbar-form {
+        height: 50vh;
+        border-color: #8c0052;
+        overflow-y: auto;
+        max-height: calc(80vh - 80px);
+      }
+    }
+
+    .is-scrolled & {
+      @media (max-width: 479.98px) {
+        .navbar-collapse,
+        .navbar-form {
+          height: 60vh;
+        }
+      }
+    }
+  }
+
+
+  .template-name-content {
+    .finna-multi-level-nav-content {
+      @media (max-width: 479.98px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.finna-multi-level-nav-content.finna-multi-level-nav-lg.finna-multi-level-nav {
+    @media (max-width: 479.98px) {
+      position: sticky;
+      top: 4em;
+      z-index: 100;
+      width: 102vw;
+      height: 90%;
+      margin-left: calc(49% - 50vw);
+      background: #fff;
+      border-radius: 0;
+      
+      &.is-scrolled {
+          box-shadow: 0 4px 2px -2px gray;
+      }
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.finna-nav.finna-nav-tabs {
+  border-bottom: 0;
+
+  > li {
+    background: none;
+  }
+}
+
+/* =========================
+   Suosikkilistat
+   ========================= */
+
+.suosikkilistakuvaus {
+  margin-block: auto;
+  background: #edc55f;
+  padding: 3em;
+  border-radius: .5em;
+
+  @media (max-width: 479.98px) {
+    margin: 1em !important;
+  }
+}
+
+.suosikkilista-kuva {
+  border-radius: .3em;
+
+  @media (max-width: 479.98px) {
+    width: 80%;
+  }
+}
+
+.suosikkilista-kuva-container {
+  text-align: center;
+}
+
+.public-list-embed .public-list-desc {
+  margin: 4em 0 5em;
+}
+
+/* =========================
+   Banneri
+   ========================= */
+
+.diplomi-banner-container {
+  text-align: center;
+  align-items: center;
+
+  img {
+    display: block;
+    margin-inline: auto;
+    width: fit-content !important;
+    height: 15rem;
+  }
+
+  #lukutuikku-diplomi-banner {
+    height: 20em;
+  }
+}
+
+/* =========================
+   Lukudiplomi
+   ========================= */
+
+.lukudiplomi {
+  .search-grid {
+    justify-content: center;
+  }
+
+  .grid-result {
+      
+    /* Pakotetaan linkki koskemaan koko kuva-aluetta myös ikoneissa */
+    position: relative;
+    .image-popup-trigger {
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 90;
+        }
+    } 
+    
+    .grid-image {
+      margin: .2em;
+      padding: .1em;
+      border-radius: .5em;
+      background:
+        radial-gradient(circle at top left, rgb(255 255 255 / .8) 0%, transparent 40%),
+        radial-gradient(circle at bottom right, rgb(255 255 255 / .5) 0%, transparent 35%),
+        linear-gradient(135deg, #f5f5f5 100%, #fefcfc 35%, #d9d9d9 100%);
+
+      @media print {
+        grid-row: span 8;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        img,
+        .iconlabel {
+          width: 150px;
+        }
+
+        .iconlabel {
+          box-shadow: inset 4px 1px 20px rgb(61 61 62 / 20%) !important;
+        }
+      }
+    }
+
+    .grid-title h2.title {
+      font-size: 18px;
+    }
+
+    @media print {
+      padding: .5em;
+
+      .grid-title {
+        h2.title,
+        .title.h2 {
+          white-space: normal;
+        }
+
+        .dateyeartype p {
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+
+      .dateyeartype p {
+        white-space: normal;
+      }
+    }
+  }
+
+  .result {
+    &#result0,
+    &:first-child {
+      border-top: 0;
+    }
+
+    &.grid {
+      @media (min-width: 991.99px) {
+        display: flex;
+        width: 22%;
+        margin: 1em;
+
+        &:hover {
+          transform: scale(1.05);
+          z-index: 2;
+          background: #fff;
+          transition: .3s ease;
+          box-shadow: 6px 3px 2px 1px rgb(61 61 62 / 20%);
+          overflow: visible;
+          border-radius: .3em;
+        }
+      }
+
+      @media (max-width: 479.98px) {
+        margin-bottom: 1em;
+      }
+
+      @media print {
+        width: 100%;
+        display: block;
+        break-inside: avoid;
+        overflow: visible;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .recordcover-container .image-popup-trigger.no-image .iconlabel {
+    background: unset;
+  }
+
+  .grid.result.no-image .recordcover-holder {
+    &:after,
+    &:before {
+      display: none !important;
+    }
+  }
+
+  @media print {
+    * {
+      all: unset;
+    }
+
+    p {
+      display: block;
+    }
+
+    break-after: page;
+
+    :last-child {
+      break-after: avoid;
+    }
+
+    .recordFormat {
+      display: none !important;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 5px;
+    }
+
+    .grid-body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin: 0 !important;
+      padding: 0 !important;
+      height: auto;
+    }
+
+    .list-note {
+      display: block !important;
+      grid-column-start: 2;
+      grid-row: 3 / span 6;
+      border: 0;
+      margin: 0 !important;
+      padding: 0 0 0 .7em;
+
+      p {
+        margin: 0;
+        font-size: 11px !important;
+      }
+    }
+
+    .text-center.grid-title {
+      padding-left: .7em !important;
+    }
+
+    a.title {
+      display: block;
+      font-size: 14px;
+    }
+
+    span.publish-year {
+      display: block;
+      font-size: 12px;
+    }
+
+    h2 {
+      font-size: 13px !important;
+    }
+
+    .clearfix .hidden-print {
+      display: block !important;
+    }
+  }
+}
+
+/* =========================
+   Tulostuksen yleiset / Muut
+   ========================= */
+
+@media print {
+  #content .clearfix.hidden-print {
+    display: block !important;
+
+    > div {
+      display: block !important;
+
+      h2 {
+        display: block !important;
+      }
+
+      .public-list-desc {
+        display: block !important;
+
+        p {
+          display: block !important;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.list-note {
+  font-size: 1.1em;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid #0a415a14;
+  box-shadow: 6px 3px 8px rgb(61 61 62 / 20%);
+}
+
+ul.lukutuikku {
+  li {
+    border-radius: 0.5em;
+    min-height: 2.5em;
+    margin: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    background-color: #e57dae94;
+
+    a {
+      color: #022a3d;
+    }
+
+    @media (max-width: 479.98px) {
+      width: 100%;
+    }
+  }
+}
