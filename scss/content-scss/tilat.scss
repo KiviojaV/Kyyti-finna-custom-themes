@@ -1,0 +1,78 @@
+/* Mobiili: Pinossa */
+.room-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+  margin-left:auto;
+  margin-right:auto;
+
+
+  > label {
+    display: flex;
+    flex-direction: column; /* Teksti ylös, select alle */
+    gap: 0.25rem;
+    margin: 0;
+    font-weight: 500;
+  }
+   select {
+       background:#fff;
+       border:1px solid black;
+   } 
+  .room-library-filter,
+  .room-purpose-filter,
+  .room-price-filter,
+  .room-access-filter,
+  .room-reset-button{
+    height: 2.5rem;
+    border-radius:0.3rem;
+  }
+
+  .room-reset-button {
+    align-self: flex-start;
+    background:#8c0052;
+    color:#fff;
+  }
+}
+
+.room-photo {
+    max-height: 24rem;
+    border-radius:3px;
+}
+
+/* Työpöytä: kaikki samalla rivillä, mutta labelin sisällä teksti edelleen ylhäällä */
+@media (min-width: 992px) {
+  .room-filters {
+    display: flex;
+    flex-direction: row;     /* elementit vierekkäin rivillä */
+    align-items: flex-start; /* labelien yläreunat linjaan */
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    > label {
+      flex-direction: column; /* pidetään teksti ylhäällä myös desktopissa */
+      align-items: flex-start;
+      gap: 0.25rem;
+      /* white-space: nowrap;  // ei tarvita, pidetään rivinvaihto sallittuna */
+    }
+
+    > label,
+    .room-reset-button {
+      flex: 0 0 auto;
+    }
+
+    .room-library-filter,
+    .room-purpose-filter,
+    .room-price-filter,
+    .room-access-filter,
+    .room-reset-button{
+      min-width: 12rem;
+    }
+
+    .room-reset-button {
+      margin-top: auto;
+      border:none !important;
+    }
+  }
+}
